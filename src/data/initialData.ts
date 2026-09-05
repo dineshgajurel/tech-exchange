@@ -146,48 +146,137 @@ export const INITIAL_LOUNGE_MESSAGES: LoungeMessage[] = [
 
 export const PODCAST_EPISODES: PodcastEpisode[] = [
   {
-    id: 'ep-01',
+    id: 'talk-01',
+    title: 'Tech Talk Live Show #42: Building Autonomous AI Agents & Local LLM Serving',
+    mediaType: 'show',
+    status: 'live',
+    duration: 'Live Stream',
+    publishedDate: 'Sep 2026',
+    timeAgo: 'Live Now',
+    location: 'YouTube Live & Tech Exchange Studio',
+    organizer: 'Tech Exchange Media',
+    description: 'Join our interactive live show discussing autonomous AI agent orchestration, local LLM serving with Ollama & vLLM, and real-world developer workflows in Nepal.',
+    youtubeUrl: 'https://youtube.com',
+    guest: {
+      name: 'Dinesh Gajurel',
+      role: 'Host & Software Architect @ Tech Exchange',
+      avatar: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150&auto=format&fit=crop&q=80'
+    },
+    topics: ['#LiveShow', '#AI', '#AgenticAI', '#Ollama', '#TechExchange'],
+    notes: [
+      '🔴 00:00 - Live Stream Kickoff & Q&A Setup',
+      '12:30 - Autonomous Multi-Agent Workflows vs Simple Copilots',
+      '25:40 - Running Local Llama-3 & DeepSeek Models on Apple Silicon & GPUs',
+      '40:15 - Audience Code Reviews & Q&A'
+    ]
+  },
+  {
+    id: 'talk-02',
+    title: 'Kathmandu Tech & AI Summit 2026',
+    mediaType: 'event',
+    status: 'upcoming',
+    duration: 'Full Day Event',
+    eventDate: 'Sep 25, 2026 @ 9:00 AM NPT',
+    publishedDate: 'Sep 2026',
+    timeAgo: 'Upcoming Event',
+    location: 'Kathmandu Tech Hub (Hattisar) & Online',
+    organizer: 'Tech Exchange x Fusemachines Community',
+    registrationUrl: 'https://example.com/register',
+    description: 'The premier annual gathering of 500+ software engineers, AI researchers, and tech founders in Kathmandu. Featuring keynotes, hands-on workshops, and community networking.',
+    speakers: [
+      {
+        name: 'Sameer Maskey',
+        role: 'Founder & CEO @ Fusemachines',
+        avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80'
+      },
+      {
+        name: 'Pratistha Amatya',
+        role: 'VP of Engineering @ Cotiviti Nepal',
+        avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80'
+      }
+    ],
+    topics: ['#Event', '#KathmanduTech', '#AIFellowship', '#Networking'],
+    notes: [
+      '09:00 AM - Opening Keynote: AI Transformation in South Asia',
+      '11:00 AM - High-Concurrency Web Systems Masterclass',
+      '02:00 PM - Startups & VC Pitch Competition',
+      '04:30 PM - Community Networking & Refreshments'
+    ]
+  },
+  {
+    id: 'talk-03',
+    title: 'Hands-on Seminar: High-Concurrency Microservices & Redis Cache Architecture',
+    mediaType: 'seminar',
+    status: 'upcoming',
+    duration: '2 Hours Masterclass',
+    eventDate: 'Oct 02, 2026 @ 6:00 PM NPT',
+    publishedDate: 'Oct 2026',
+    timeAgo: 'Live Online Seminar',
+    location: 'Virtual Masterclass Room (Zoom & YouTube)',
+    organizer: 'Cotiviti Engineering Lead',
+    registrationUrl: 'https://example.com/seminar',
+    description: 'An intensive 2-hour interactive technical seminar covering distributed locking, idempotency keys, rate-limiting algorithms, and sub-millisecond Redis cache invalidation.',
+    guest: {
+      name: 'Aarav Shrestha',
+      role: 'Principal Systems Engineer',
+      avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&auto=format&fit=crop&q=80'
+    },
+    topics: ['#Seminar', '#Microservices', '#Redis', '#SystemDesign'],
+    notes: [
+      '00:00 - Distributed Cache Invalidation Strategies',
+      '30:00 - Redis Sentinel & Cluster Failover Deep Dive',
+      '60:00 - Rate Limiting & Token Bucket Algorithms in Go',
+      '90:00 - Live Code Refactoring & Q&A'
+    ]
+  },
+  {
+    id: 'talk-04',
+    title: 'Video Demo: Building React 19 Fullstack Apps with Vite 6 & Tailwind',
+    mediaType: 'video',
+    status: 'recorded',
+    duration: '26 mins',
+    publishedDate: 'Sep 2026',
+    timeAgo: 'Yesterday',
+    location: 'Tech Exchange YouTube Channel',
+    youtubeUrl: 'https://youtube.com',
+    description: 'Step-by-step video code walkthrough demonstrating React 19 Server Actions, useActionState hook, and zero-bundle optimistic state updates.',
+    guest: {
+      name: 'Elena Rostova',
+      role: 'Senior UI Architect',
+      avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&auto=format&fit=crop&q=80'
+    },
+    topics: ['#VideoDemo', '#React19', '#Vite', '#TailwindCSS'],
+    notes: [
+      '00:00 - React 19 Setup with Vite 6',
+      '08:15 - Implementing useActionState & Server Actions',
+      '18:30 - Optimistic Updates with useOptimistic',
+      '24:00 - Production Build Benchmarks'
+    ]
+  },
+  {
+    id: 'talk-05',
+    title: 'Podcast Ep 24: Tech Salaries in Nepal, Remote US Companies & Career Growth',
+    mediaType: 'podcast',
+    status: 'recorded',
     episodeNumber: 24,
-    title: 'The Future of AI Engineers & Building Production Autonomous Agents',
     duration: '48 mins',
     publishedDate: 'Sep 2026',
-    description: 'We sit down with lead AI engineers to dissect the shift from prompt engineering to full autonomous agent architectures, memory stores, and vector databases in production.',
+    timeAgo: '3 days ago',
+    description: 'A deep dive discussion on compensation benchmarks in Nepal, navigating local NPR contracts vs overseas USD roles, and high-demand skillsets needed in 2026.',
     audioUrl: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3',
     spotifyUrl: 'https://spotify.com',
     youtubeUrl: 'https://youtube.com',
     guest: {
-      name: 'Dr. Sophia Vance',
-      role: 'Head of AI Research @ AI Labs',
-      avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80'
+      name: 'Bikram Thapa',
+      role: 'Engineering Director @ TechFlow Nepal',
+      avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&auto=format&fit=crop&q=80'
     },
-    topics: ['#TechTalk', '#AI', '#LLM', '#SoftwareArchitecture'],
+    topics: ['#Podcast', '#TechSalariesNepal', '#RemoteWork', '#Careers'],
     notes: [
-      '00:00 - Introduction & The Evolution of AI Engineering',
-      '12:30 - How Vector Databases handle long-term agent memory',
-      '27:15 - Function Calling & Tool Execution Security',
-      '41:00 - What to build in 2026'
-    ]
-  },
-  {
-    id: 'ep-02',
-    episodeNumber: 23,
-    title: 'Why Modern Monoliths are Winning Against Microservices in 2026',
-    duration: '35 mins',
-    publishedDate: 'Aug 2026',
-    description: 'Is microservice overhead hurting early-stage startups? We examine how modular monoliths in Go, Rust, and Next.js are delivering 10x faster shipping speed.',
-    audioUrl: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3',
-    spotifyUrl: 'https://spotify.com',
-    youtubeUrl: 'https://youtube.com',
-    guest: {
-      name: 'Julian Thorne',
-      role: 'Principal Architect',
-      avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80'
-    },
-    topics: ['#TechTalk', '#SystemDesign', '#Backend', '#Startups'],
-    notes: [
-      '00:00 - The Microservice Fatigue Problem',
-      '14:20 - Modular Monolith Architecture Patterns',
-      '29:00 - Benchmark comparisons & DevOps savings'
+      '00:00 - Current State of the Nepali Tech Market in 2026',
+      '14:20 - Negotiating NPR Salaries vs USD Remote Contracts',
+      '28:45 - High-Demand Skills: AI, DevOps & Fullstack TypeScript',
+      '42:10 - Advice for Junior & Mid-level Engineers'
     ]
   }
 ];
@@ -371,21 +460,81 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
 export const NEWS_ITEMS: NewsItem[] = [
   {
     id: 'news-1',
-    title: 'OpenAI Unveils GPT-4.5 with Enhanced Reasoning & Native Multimodal Tools',
-    category: 'AI & Frontier Models',
-    date: 'Sep 2026',
-    summary: 'The newest model brings landmark benchmark improvements in complex coding, system architecture design, and real-time execution.',
+    title: 'Kathmandu Tech Hub Unveils NPR 50M Seed Fund for Early-Stage Software Startups',
+    category: 'Nepal Tech Scene',
+    date: 'Today, 7:15 PM NPT',
+    timeAgo: '12 mins ago',
+    summary: 'A new venture fund backed by Nepal tech leaders and international investors launches in Kathmandu to fund early-stage AI, SaaS, and fullstack web applications.',
     source: 'Tech Exchange Newsdesk',
-    link: '#'
+    link: '#',
+    isBreaking: true,
+    readTime: '3 min read',
+    tags: ['#NepalTech', '#Startups', '#Kathmandu', '#Funding']
   },
   {
     id: 'news-2',
-    title: 'Rust 1.85 Released with Improved Async Trait Stabilization',
-    category: 'Programming Languages',
-    date: 'Aug 2026',
-    summary: 'Rust developers gain native support for async closures, faster incremental compilation, and memory management optimizations.',
-    source: 'Tech Exchange Newsdesk',
-    link: '#'
+    title: 'DeepSeek-R1 & Claude 3.7 Sonnet Push Autonomous Code Generation to New Highs',
+    category: 'AI & Frontier Models',
+    date: 'Today, 6:40 PM NPT',
+    timeAgo: '45 mins ago',
+    summary: 'Frontier AI models introduce novel chain-of-thought architectures that dramatically improve multi-file software engineering, bug diagnosis, and automated refactoring.',
+    source: 'AI Engineering Dispatch',
+    link: '#',
+    isBreaking: true,
+    readTime: '4 min read',
+    tags: ['#AI', '#DeepSeek', '#Claude', '#LLM']
+  },
+  {
+    id: 'news-3',
+    title: 'React 19 Official Production Release Brings Native Server Actions & Zero-Bundle Async Hooks',
+    category: 'Web & Mobile',
+    date: 'Today, 5:15 PM NPT',
+    timeAgo: '2 hours ago',
+    summary: 'The React team announces general availability of React 19, featuring built-in form state actions, useActionState, and native asset preloading.',
+    source: 'React Official Blog',
+    link: '#',
+    isBreaking: false,
+    readTime: '5 min read',
+    tags: ['#React19', '#WebDev', '#TypeScript', '#Frontend']
+  },
+  {
+    id: 'news-4',
+    title: 'Fusemachines & Tribhuvan University Partner to Launch Advanced AI Engineering Fellowship',
+    category: 'Nepal Tech Scene',
+    date: 'Today, 3:30 PM NPT',
+    timeAgo: '4 hours ago',
+    summary: 'Selected computer science graduates in Kathmandu will receive full tuition coverage, high-performance hardware stipends, and direct mentorship from global AI researchers.',
+    source: 'Kathmandu Tech Dispatch',
+    link: '#',
+    isBreaking: false,
+    readTime: '3 min read',
+    tags: ['#NepalTech', '#Fusemachines', '#Education', '#AI']
+  },
+  {
+    id: 'news-5',
+    title: 'Go 1.24 Released with Native WebAssembly (WASM) Support & Multi-Core GC Optimizations',
+    category: 'Systems & Cloud',
+    date: 'Today, 1:10 PM NPT',
+    timeAgo: '6 hours ago',
+    summary: 'The Go core team releases version 1.24 featuring a 15% lower memory footprint, enhanced sync.Map performance under high concurrency, and direct WASM target tooling.',
+    source: 'Go Release Notes',
+    link: '#',
+    isBreaking: false,
+    readTime: '4 min read',
+    tags: ['#Golang', '#WASM', '#Backend', '#Performance']
+  },
+  {
+    id: 'news-6',
+    title: 'Docker Introduces Micro-VM Container Isolation for Zero-Trust Local Microservices',
+    category: 'DevOps & Security',
+    date: 'Yesterday',
+    timeAgo: '1 day ago',
+    summary: 'New hypervisor-backed micro-VM runtime allows developers to test untrusted npm packages and multi-container environments locally with near-zero latency overhead.',
+    source: 'DevOps Weekly',
+    link: '#',
+    isBreaking: false,
+    readTime: '4 min read',
+    tags: ['#Docker', '#DevOps', '#Security', '#Containers']
   }
 ];
 

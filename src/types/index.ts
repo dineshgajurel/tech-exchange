@@ -3,11 +3,19 @@ export type SectionTab = 'home' | 'podcast' | 'tutorials' | 'services' | 'portfo
 export interface PodcastEpisode {
   id: string;
   title: string;
-  episodeNumber: number;
+  mediaType: 'podcast' | 'show' | 'video' | 'seminar' | 'event';
+  episodeNumber?: number;
   duration: string;
   publishedDate: string;
+  timeAgo?: string;
   description: string;
+  location?: string; // e.g. "Kathmandu Tech Hub, Hattisar" or "YouTube Live"
+  status?: 'upcoming' | 'live' | 'recorded';
+  eventDate?: string;
+  organizer?: string;
+  registrationUrl?: string;
   audioUrl?: string;
+  videoUrl?: string;
   spotifyUrl?: string;
   youtubeUrl?: string;
   guest?: {
@@ -15,6 +23,11 @@ export interface PodcastEpisode {
     role: string;
     avatar: string;
   };
+  speakers?: {
+    name: string;
+    role: string;
+    avatar: string;
+  }[];
   topics: string[];
   notes: string[];
 }
@@ -63,9 +76,13 @@ export interface NewsItem {
   title: string;
   category: string;
   date: string;
+  timeAgo: string;
   summary: string;
   source: string;
   link: string;
+  isBreaking?: boolean;
+  readTime?: string;
+  tags?: string[];
 }
 
 export interface JobListing {
