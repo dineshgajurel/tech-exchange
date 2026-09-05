@@ -3,6 +3,7 @@ import { Header } from './components/Header';
 import { HeroReferenceBanner } from './components/HeroReferenceBanner';
 import { PodcastSection } from './components/PodcastSection';
 import { TutorialsSection } from './components/TutorialsSection';
+import { CoursesSection } from './components/CoursesSection';
 import { ServicesSection } from './components/ServicesSection';
 import { PortfolioSection } from './components/PortfolioSection';
 import { NewsSection } from './components/NewsSection';
@@ -227,6 +228,7 @@ export function App() {
             </div>
           </section>
 
+          <CoursesSection />
           <TutorialsSection />
         </>
       )}
@@ -234,6 +236,8 @@ export function App() {
       {activeTab === 'podcast' && <PodcastSection />}
 
       {activeTab === 'tutorials' && <TutorialsSection />}
+
+      {activeTab === 'courses' && <CoursesSection />}
 
       {activeTab === 'services' && (
         <ServicesSection onOpenConsultation={() => setIsConsultationOpen(true)} />

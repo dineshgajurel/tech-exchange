@@ -1,4 +1,35 @@
-export type SectionTab = 'home' | 'podcast' | 'tutorials' | 'services' | 'portfolio' | 'news' | 'forum' | 'jobs' | 'about';
+export type SectionTab = 'home' | 'podcast' | 'tutorials' | 'courses' | 'services' | 'portfolio' | 'news' | 'forum' | 'jobs' | 'about';
+
+export interface Course {
+  id: string;
+  title: string;
+  slug: string;
+  category: 'Fullstack Web' | 'AI & LLM Engineering' | 'Data & Python' | 'DevOps & Cloud' | 'Mobile Dev';
+  level: 'Beginner' | 'Intermediate' | 'Advanced';
+  duration: string;
+  lessonsCount: number;
+  studentsEnrolled: number;
+  rating: number;
+  reviewsCount: number;
+  price: string;
+  originalPrice?: string;
+  badge?: string;
+  description: string;
+  instructor: {
+    name: string;
+    role: string;
+    avatar: string;
+  };
+  syllabus: {
+    week: number;
+    title: string;
+    topics: string[];
+    duration: string;
+  }[];
+  prerequisites: string[];
+  skillsLearned: string[];
+  certificateIncluded: boolean;
+}
 
 export interface PodcastEpisode {
   id: string;

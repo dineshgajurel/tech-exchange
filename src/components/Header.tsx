@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mic, BookOpen, Briefcase, Code, Newspaper, MessageSquare, Sparkles, Sun, Moon, Menu, X, ArrowRight, Building2, Users, Tv, Calendar, Video } from 'lucide-react';
+import { Mic, BookOpen, Briefcase, Code, Newspaper, MessageSquare, Sparkles, Sun, Moon, Menu, X, ArrowRight, Building2, Users, Tv, Calendar, Video, GraduationCap } from 'lucide-react';
 import { TechExchangeLogo } from './TechExchangeLogo';
 import { SectionTab } from '../types';
 
@@ -24,6 +24,7 @@ export const Header: React.FC<HeaderProps> = ({
     { id: 'home', label: 'Home', icon: <Sparkles className="w-4 h-4" /> },
     { id: 'podcast', label: 'Tech Talk & Events', icon: <Tv className="w-4 h-4" /> },
     { id: 'tutorials', label: 'Tech Explained', icon: <BookOpen className="w-4 h-4" /> },
+    { id: 'courses', label: 'Courses', icon: <GraduationCap className="w-4 h-4" /> },
     { id: 'services', label: 'Services & Consult', icon: <Briefcase className="w-4 h-4" /> },
     { id: 'portfolio', label: 'Build Showcase', icon: <Code className="w-4 h-4" /> },
     { id: 'news', label: 'Tech News', icon: <Newspaper className="w-4 h-4" /> },

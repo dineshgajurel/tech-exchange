@@ -1,4 +1,4 @@
-import { PodcastEpisode, Tutorial, PortfolioProject, TechService, NewsItem, Post, LoungeMessage, JobListing } from '../types';
+import { PodcastEpisode, Tutorial, PortfolioProject, TechService, NewsItem, Post, LoungeMessage, JobListing, Course } from '../types';
 
 export interface Channel {
   id: 'tech-talk' | 'tech-explained' | 'build-with-tech' | 'whats-happening';
@@ -666,5 +666,287 @@ export const INITIAL_JOBS: JobListing[] = [
     postedDate: '1 week ago',
     applyUrl: 'https://example.com/apply',
     featured: false
+  }
+];
+
+export const COURSES: Course[] = [
+  {
+    id: 'course-1',
+    title: 'Full-Stack Next.js 15 & React 19 Production Masterclass',
+    slug: 'fullstack-nextjs-react19-masterclass',
+    category: 'Fullstack Web',
+    level: 'Intermediate',
+    duration: '6 Weeks (Self-paced)',
+    lessonsCount: 34,
+    studentsEnrolled: 1840,
+    rating: 4.9,
+    reviewsCount: 182,
+    price: 'NPR 4,999',
+    originalPrice: 'NPR 9,999',
+    badge: 'Bestseller',
+    description: 'Master enterprise modern web development. Build production-grade SaaS applications using Next.js 15 App Router, React 19 Server Actions, TypeScript, Tailwind CSS, Prisma, and PostgreSQL.',
+    instructor: {
+      name: 'Dinesh Gajurel',
+      role: 'Host & Lead Architect @ Tech Exchange',
+      avatar: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150&auto=format&fit=crop&q=80'
+    },
+    syllabus: [
+      {
+        week: 1,
+        title: 'React 19 Core Fundamentals & Async Server Actions',
+        topics: ['useActionState & useOptimistic', 'Form Actions & Zero-Bundle Transitions', 'TypeScript Strict Typing'],
+        duration: '5 Lessons • 3 hrs'
+      },
+      {
+        week: 2,
+        title: 'Next.js 15 App Router & Server Components Architecture',
+        topics: ['Server vs Client Components', 'Streaming & Suspense Boundaries', 'Parallel & Intercepting Routes'],
+        duration: '6 Lessons • 4 hrs'
+      },
+      {
+        week: 3,
+        title: 'Database Modeling with Prisma ORM & PostgreSQL',
+        topics: ['Schema Design & Relational Joins', 'Database Migrations', 'Connection Pooling in Serverless'],
+        duration: '6 Lessons • 4 hrs'
+      },
+      {
+        week: 4,
+        title: 'Authentication, Authorization & Security Best Practices',
+        topics: ['NextAuth / Auth.js Integration', 'JWT vs Session Cookies', 'CSRF, XSS & Security Headers'],
+        duration: '5 Lessons • 3.5 hrs'
+      },
+      {
+        week: 5,
+        title: 'Payment Gateway Integration (eSewa, Khalti & Stripe)',
+        topics: ['Webhook Handlers & Idempotency', 'Transaction Logging', 'Subscription Billing'],
+        duration: '6 Lessons • 4 hrs'
+      },
+      {
+        week: 6,
+        title: 'CI/CD Deployment, Monitoring & Vercel Optimization',
+        topics: ['GitHub Actions Workflows', 'Vercel Deployment & Custom Domains', 'Core Web Vitals & Analytics'],
+        duration: '6 Lessons • 3.5 hrs'
+      }
+    ],
+    prerequisites: ['Basic JavaScript (ES6+)', 'HTML & CSS Fundamentals', 'Familiarity with Git'],
+    skillsLearned: ['Next.js 15', 'React 19', 'TypeScript', 'Prisma ORM', 'PostgreSQL', 'Tailwind CSS', 'eSewa Integration'],
+    certificateIncluded: true
+  },
+  {
+    id: 'course-2',
+    title: 'Autonomous AI Agents & RAG Pipelines with Python & Vector DBs',
+    slug: 'ai-agents-rag-pipelines-python',
+    category: 'AI & LLM Engineering',
+    level: 'Advanced',
+    duration: '5 Weeks (Hands-on)',
+    lessonsCount: 28,
+    studentsEnrolled: 2350,
+    rating: 4.95,
+    reviewsCount: 240,
+    price: 'NPR 6,999',
+    originalPrice: 'NPR 12,999',
+    badge: 'Hot & Trending',
+    description: 'Build production multi-agent workflows, long-term memory stores, RAG document search engines, and function-calling bots using Python, LangChain, LlamaIndex, Qdrant, and OpenAI / Anthropic APIs.',
+    instructor: {
+      name: 'Dr. Sameer Maskey',
+      role: 'Founder & CEO @ Fusemachines',
+      avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80'
+    },
+    syllabus: [
+      {
+        week: 1,
+        title: 'LLM Foundations & Prompt Orchestration',
+        topics: ['OpenAI & Anthropic API Architectures', 'Structured JSON Output Generation', 'Tokenizer Mechanics'],
+        duration: '5 Lessons • 3.5 hrs'
+      },
+      {
+        week: 2,
+        title: 'Retrieval Augmented Generation (RAG) Systems',
+        topics: ['Text Chunking & Embedding Models', 'Vector DB Indexing (Qdrant & Pinecone)', 'Hybrid Dense-Sparse Search'],
+        duration: '6 Lessons • 4.5 hrs'
+      },
+      {
+        week: 3,
+        title: 'Autonomous Tool Execution & Function Calling',
+        topics: ['Custom Python Tool Definition', 'Database Query Agents', 'Web Search & API Integration'],
+        duration: '5 Lessons • 4 hrs'
+      },
+      {
+        week: 4,
+        title: 'Multi-Agent Systems & State Machines (LangGraph)',
+        topics: ['Supervisor-Worker Multi-Agent Graphs', 'Human-in-the-Loop Approval Intercepts', 'Agent Memory Persistence'],
+        duration: '6 Lessons • 5 hrs'
+      },
+      {
+        week: 5,
+        title: 'Production Local Serving & Cost Optimization',
+        topics: ['Running Ollama & vLLM locally', 'Prompt Caching & Guardrails', 'Deployment on AWS / Modal'],
+        duration: '6 Lessons • 4 hrs'
+      }
+    ],
+    prerequisites: ['Intermediate Python', 'Basic understanding of REST APIs'],
+    skillsLearned: ['Python', 'LangGraph', 'LangChain', 'Qdrant Vector DB', 'RAG Pipelines', 'Ollama', 'Function Calling'],
+    certificateIncluded: true
+  },
+  {
+    id: 'course-3',
+    title: 'Modern Python for Beginners: From Zero to Data Structures',
+    slug: 'modern-python-beginners-zero-to-hero',
+    category: 'Data & Python',
+    level: 'Beginner',
+    duration: '4 Weeks (Foundational)',
+    lessonsCount: 30,
+    studentsEnrolled: 4120,
+    rating: 4.85,
+    reviewsCount: 310,
+    price: 'FREE',
+    badge: 'Free Course',
+    description: 'The ultimate beginner programming course. Learn core Python syntax, algorithms, object-oriented programming (OOP), file I/O, and data processing with practical exercises.',
+    instructor: {
+      name: 'Dr. Sophia Vance',
+      role: 'Head of AI Research @ AI Labs',
+      avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80'
+    },
+    syllabus: [
+      {
+        week: 1,
+        title: 'Variables, Types & Flow Control',
+        topics: ['Setup VS Code & Python Runtime', 'Conditionals & Loops', 'String Manipulation'],
+        duration: '7 Lessons • 3 hrs'
+      },
+      {
+        week: 2,
+        title: 'Lists, Dictionaries & Sets',
+        topics: ['List Comprehensions', 'Dictionary Operations', 'Set Operations & Performance'],
+        duration: '7 Lessons • 3.5 hrs'
+      },
+      {
+        week: 3,
+        title: 'Functions & Object-Oriented Programming',
+        topics: ['Function Parameters & Lambda', 'Classes & Inheritance', 'Dunder Methods'],
+        duration: '8 Lessons • 4 hrs'
+      },
+      {
+        week: 4,
+        title: 'File Processing, API Requests & Final Project',
+        topics: ['Reading JSON & CSV Files', 'Requests Library & REST APIs', 'Building a CLI Expense Tracker'],
+        duration: '8 Lessons • 4 hrs'
+      }
+    ],
+    prerequisites: ['No prior programming experience required!'],
+    skillsLearned: ['Python 3.12', 'Data Structures', 'OOP', 'File Processing', 'CLI Applications'],
+    certificateIncluded: true
+  },
+  {
+    id: 'course-4',
+    title: 'Production DevOps: Kubernetes, Docker, Terraform & AWS CI/CD',
+    slug: 'production-devops-kubernetes-docker-terraform',
+    category: 'DevOps & Cloud',
+    level: 'Advanced',
+    duration: '6 Weeks (Hands-on)',
+    lessonsCount: 32,
+    studentsEnrolled: 1150,
+    rating: 4.88,
+    reviewsCount: 95,
+    price: 'NPR 5,499',
+    originalPrice: 'NPR 10,000',
+    badge: 'Certificate Included',
+    description: 'Architect, automate, and secure production cloud infrastructure. Containerize apps with Docker, manage Kubernetes clusters, provision AWS resources with Terraform, and build GitHub Actions pipelines.',
+    instructor: {
+      name: 'Bikram Thapa',
+      role: 'Engineering Director @ TechFlow Nepal',
+      avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&auto=format&fit=crop&q=80'
+    },
+    syllabus: [
+      {
+        week: 1,
+        title: 'Production Docker Containerization',
+        topics: ['Multi-Stage Dockerfiles', 'Distroless & Micro Images', 'Docker Compose Orchestration'],
+        duration: '5 Lessons • 3 hrs'
+      },
+      {
+        week: 2,
+        title: 'Infrastructure as Code (IaC) with Terraform',
+        topics: ['HCL Syntax & Modules', 'AWS VPC, EC2 & RDS Provisioning', 'Remote State & Locking'],
+        duration: '5 Lessons • 4 hrs'
+      },
+      {
+        week: 3,
+        title: 'Kubernetes Cluster Architecture & Deployments',
+        topics: ['Pods, Services & Ingress Controllers', 'ConfigMaps & Secrets Management', 'Helm Charts'],
+        duration: '6 Lessons • 4.5 hrs'
+      },
+      {
+        week: 4,
+        title: 'Automated CI/CD Workflows & GitOps',
+        topics: ['GitHub Actions Production Pipelines', 'ArgoCD GitOps Deployment', 'Zero-Downtime Releases'],
+        duration: '5 Lessons • 4 hrs'
+      },
+      {
+        week: 5,
+        title: 'Monitoring & Observability Stack',
+        topics: ['Prometheus Metrics Collection', 'Grafana Dashboard Visualization', 'Loki Log Aggregation'],
+        duration: '5 Lessons • 3.5 hrs'
+      },
+      {
+        week: 6,
+        title: 'Cloud Security & Disaster Recovery',
+        topics: ['SOC2 Compliance & IAM Policies', 'TLS Certificate Auto-renewal', 'Database Backup Automation'],
+        duration: '6 Lessons • 4 hrs'
+      }
+    ],
+    prerequisites: ['Linux Terminal Basics', 'Understanding of Web Networking'],
+    skillsLearned: ['Docker', 'Kubernetes', 'Terraform', 'AWS', 'GitHub Actions', 'Prometheus', 'Grafana'],
+    certificateIncluded: true
+  },
+  {
+    id: 'course-5',
+    title: 'Cross-Platform Mobile App Development with React Native & Expo',
+    slug: 'react-native-expo-cross-platform-mobile',
+    category: 'Mobile Dev',
+    level: 'Intermediate',
+    duration: '4 Weeks (Project-based)',
+    lessonsCount: 24,
+    studentsEnrolled: 1290,
+    rating: 4.82,
+    reviewsCount: 112,
+    price: 'NPR 3,999',
+    originalPrice: 'NPR 7,500',
+    badge: 'New',
+    description: 'Build native iOS and Android mobile apps from a single codebase. Learn Expo Router, React Native Reanimated gestures, offline SQLite storage, push notifications, and App Store publishing.',
+    instructor: {
+      name: 'Elena Rostova',
+      role: 'Fullstack Architect @ Tech Exchange',
+      avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&auto=format&fit=crop&q=80'
+    },
+    syllabus: [
+      {
+        week: 1,
+        title: 'React Native Fundamentals & Expo SDK',
+        topics: ['Expo Router File-based Navigation', 'Flexbox Mobile Layouts', 'Native Paper & Styling'],
+        duration: '6 Lessons • 3.5 hrs'
+      },
+      {
+        week: 2,
+        title: 'Fluid Animations & Touch Gestures',
+        topics: ['React Native Reanimated 3', 'Gesture Handler Swipe Actions', 'Haptic Feedback'],
+        duration: '6 Lessons • 4 hrs'
+      },
+      {
+        week: 3,
+        title: 'Offline Storage & Device Hardware Access',
+        topics: ['Expo SQLite & Async Storage', 'Camera & Biometric Auth', 'Push Notifications'],
+        duration: '6 Lessons • 4 hrs'
+      },
+      {
+        week: 4,
+        title: 'App Store & Google Play Publishing',
+        topics: ['EAS Build & Submissions', 'App Icon & Splash Screen Setup', 'Over-The-Air (OTA) Updates'],
+        duration: '6 Lessons • 3.5 hrs'
+      }
+    ],
+    prerequisites: ['React & JavaScript Fundamentals'],
+    skillsLearned: ['React Native', 'Expo Router', 'TypeScript', 'Reanimated 3', 'SQLite', 'EAS Build'],
+    certificateIncluded: true
   }
 ];
