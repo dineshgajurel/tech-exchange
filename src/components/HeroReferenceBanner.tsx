@@ -53,7 +53,7 @@ export const HeroReferenceBanner: React.FC<HeroReferenceBannerProps> = ({
         {/* Brand Pillars Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-12">
           
-          {/* Pillar 1: Tech Talk (Podcast) */}
+          {/* Pillar 1: Tech Talk (Podcasts, Shows & Events) */}
           <Link 
             to="/podcast"
             className="group flex items-start gap-4 p-4.5 rounded-2xl bg-white dark:bg-slate-800/80 hover:bg-blue-50/70 dark:hover:bg-slate-800 border border-slate-200/80 dark:border-slate-700/80 transition-all shadow-xs hover:shadow-md hover:border-blue-300 dark:hover:border-blue-700"
@@ -63,10 +63,10 @@ export const HeroReferenceBanner: React.FC<HeroReferenceBannerProps> = ({
             </div>
             <div>
               <div className="text-base font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-                Tech Talk <span className="font-normal text-slate-500 dark:text-slate-400">— Podcast</span>
+                Tech Talk <span className="font-normal text-slate-500 dark:text-slate-400">— Media & Events</span>
               </div>
               <div className="text-xs text-slate-600 dark:text-slate-400 mt-1 leading-normal">
-                Engineering conversations, guest interviews, and show recordings.
+                Podcasts, live tech shows, video demos, seminars & expert talks.
               </div>
             </div>
           </Link>
@@ -81,10 +81,10 @@ export const HeroReferenceBanner: React.FC<HeroReferenceBannerProps> = ({
             </div>
             <div>
               <div className="text-base font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-                Courses <span className="font-normal text-slate-500 dark:text-slate-400">— Curriculum</span>
+                Programming Courses <span className="font-normal text-slate-500 dark:text-slate-400">— Masterclasses</span>
               </div>
               <div className="text-xs text-slate-600 dark:text-slate-400 mt-1 leading-normal">
-                Hands-on masterclasses in Next.js, AI Agents, Python & DevOps.
+                Hands-on curriculum in Next.js, AI Agents, Python & DevOps.
               </div>
             </div>
           </Link>
@@ -107,20 +107,20 @@ export const HeroReferenceBanner: React.FC<HeroReferenceBannerProps> = ({
             </div>
           </Link>
 
-          {/* Pillar 4: Community Forum */}
+          {/* Pillar 4: Tech Jobs */}
           <Link 
-            to="/forum"
+            to="/jobs"
             className="group flex items-start gap-4 p-4.5 rounded-2xl bg-white dark:bg-slate-800/80 hover:bg-blue-50/70 dark:hover:bg-slate-800 border border-slate-200/80 dark:border-slate-700/80 transition-all shadow-xs hover:shadow-md hover:border-blue-300 dark:hover:border-blue-700"
           >
             <div className="w-12 h-12 rounded-xl border-2 border-blue-600 bg-blue-50 dark:bg-slate-900 flex items-center justify-center text-blue-600 dark:text-blue-400 shrink-0 group-hover:scale-110 transition-transform shadow-xs">
-              <MessageSquare className="w-6 h-6" />
+              <Briefcase className="w-6 h-6" />
             </div>
             <div>
               <div className="text-base font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-                Community <span className="font-normal text-slate-500 dark:text-slate-400">— Discussions</span>
+                Tech Jobs <span className="font-normal text-slate-500 dark:text-slate-400">— Careers</span>
               </div>
               <div className="text-xs text-slate-600 dark:text-slate-400 mt-1 leading-normal">
-                Share projects, debate tech topics, and connect with developers.
+                Curated software developer positions, full-time & remote roles.
               </div>
             </div>
           </Link>
