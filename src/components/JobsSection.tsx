@@ -47,7 +47,7 @@ export const JobsSection: React.FC<JobsSectionProps> = ({ jobs, onAddJob }) => {
   const [newJobCompany, setNewJobCompany] = useState('');
   const [newJobLocation, setNewJobLocation] = useState('');
   const [newJobType, setNewJobType] = useState<'Full-time' | 'Part-time' | 'Contract' | 'Remote'>('Remote');
-  const [newJobCategory, setNewJobCategory] = useState<'Frontend' | 'Backend' | 'Fullstack' | 'AI & ML' | 'DevOps & Cloud' | 'Mobile'>('Fullstack');
+  const [newJobCategory, setNewJobCategory] = useState<'Frontend' | 'Backend' | 'Fullstack' | 'AI & ML' | 'DevOps & Cloud' | 'Mobile' | 'Media & Growth'>('Fullstack');
   const [newJobLevel, setNewJobLevel] = useState<'Entry Level' | 'Mid Level' | 'Senior' | 'Lead' | 'Executive'>('Senior');
   const [newJobSalary, setNewJobSalary] = useState('NPR 1,50,000 - 2,20,000 / mo');
   const [newJobDescription, setNewJobDescription] = useState('');

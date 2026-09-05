@@ -536,131 +536,46 @@ export const NEWS_ITEMS: NewsItem[] = [
 export const INITIAL_JOBS: JobListing[] = [
   {
     id: 'job-1',
-    title: 'Senior Full-Stack AI Engineer',
-    company: 'Fusemachines Nepal',
+    title: 'Full-Stack Developer (React / Node.js / TS)',
+    company: 'Tech Exchange',
     companyLogo: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=120&auto=format&fit=crop&q=80',
-    location: 'Kathmandu / Remote (Nepal)',
+    location: '100% Remote',
     type: 'Remote',
     category: 'Fullstack',
-    experienceLevel: 'Senior',
-    salaryRange: 'NPR 1,80,000 - 2,60,000 / mo',
-    description: 'Seeking a Senior Full-Stack AI Engineer in Nepal to build next-generation enterprise intelligent apps. Architect React/Next.js frontends while orchestrating Python LLM backend workflows, RAG pipelines, and vector DBs.',
+    experienceLevel: 'Mid Level',
+    salaryRange: 'Competitive Salary',
+    description: 'We are looking for a Full-Stack Developer to build platform features, interactive web applications, developer utilities, and high-performance backend services.',
     requirements: [
-      '4+ years of experience with modern TypeScript/React and Node.js or Python backend systems.',
-      'Hands-on experience deploying LLM orchestration, RAG pipelines, or AI agents (LangChain, LlamaIndex, OpenAI/Anthropic APIs).',
-      'Proficiency with relational (PostgreSQL) and vector databases (pgvector, Pinecone, Qdrant).',
-      'Based in Nepal with strong English communication skills for global tech collaboration.'
+      'Strong proficiency in React, TypeScript, and Node.js backend development.',
+      'Experience with relational or NoSQL database design (PostgreSQL, MongoDB, Redis).',
+      'Knowledge of responsive UI layouts, CSS, and modern API architecture (REST/GraphQL).',
+      'Self-driven and comfortable collaborating in a 100% remote, async-first team.'
     ],
-    skills: ['TypeScript', 'React', 'Next.js', 'Python', 'FastAPI', 'Vector DBs', 'Tailwind CSS'],
-    postedDate: '1 day ago',
-    applyUrl: 'https://example.com/apply',
+    skills: ['React', 'TypeScript', 'Node.js', 'Tailwind CSS', 'PostgreSQL', 'REST API'],
+    postedDate: 'Just now',
+    applyUrl: 'https://techexchange.com/apply',
     featured: true
   },
   {
     id: 'job-2',
-    title: 'Lead Cloud & DevOps Infrastructure Architect',
-    company: 'Cotiviti Nepal',
-    companyLogo: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=120&auto=format&fit=crop&q=80',
-    location: 'Hattisar, Kathmandu / Hybrid',
-    type: 'Full-time',
-    category: 'DevOps & Cloud',
-    experienceLevel: 'Lead',
-    salaryRange: 'NPR 2,20,000 - 3,20,000 / mo',
-    description: 'Lead the design, cloud security, and automation of multi-region Kubernetes clusters, CI/CD pipelines, and microservices infrastructure serving global healthcare & fintech platforms.',
-    requirements: [
-      '6+ years in DevOps, SRE, or Infrastructure Engineering leadership.',
-      'Mastery of Kubernetes, Terraform, Docker, AWS, and GitOps workflows (ArgoCD).',
-      'Deep knowledge of monitoring & observability (Prometheus, Grafana, Datadog).',
-      'Experience in zero-downtime deployments and SOC2 enterprise security.'
-    ],
-    skills: ['Kubernetes', 'Docker', 'Terraform', 'AWS', 'Go', 'Nginx', 'Prometheus'],
-    postedDate: '2 days ago',
-    applyUrl: 'https://example.com/apply',
-    featured: true
-  },
-  {
-    id: 'job-3',
-    title: 'Senior Frontend UI/UX Engineer (React & Tailwind)',
-    company: 'Leapfrog Technology',
+    title: 'Content Creator & Media Manager',
+    company: 'Tech Exchange',
     companyLogo: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=120&auto=format&fit=crop&q=80',
-    location: 'Jhamsikhel, Lalitpur / Remote',
+    location: '100% Remote',
     type: 'Remote',
-    category: 'Frontend',
-    experienceLevel: 'Senior',
-    salaryRange: 'NPR 1,40,000 - 2,10,000 / mo',
-    description: 'Craft stunning, high-performance web interfaces and component design systems for US & international clients. Collaborate closely with product designers to implement responsive micro-interactions.',
-    requirements: [
-      '4+ years building production web applications using React, TypeScript, and Tailwind CSS.',
-      'Strong eye for visual UI aesthetics, accessibility (a11y), and CSS performance.',
-      'Experience with state management, web vitals optimization, and modern bundle tools.'
-    ],
-    skills: ['React', 'TypeScript', 'Tailwind CSS', 'Next.js', 'Framer Motion', 'Redux'],
-    postedDate: '3 days ago',
-    applyUrl: 'https://example.com/apply',
-    featured: false
-  },
-  {
-    id: 'job-4',
-    title: 'Backend Systems Engineer (Rust / Go)',
-    company: 'LogPoint Nepal',
-    companyLogo: 'https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?w=120&auto=format&fit=crop&q=80',
-    location: 'Jawalakhel, Lalitpur / Hybrid',
-    type: 'Full-time',
-    category: 'Backend',
+    category: 'Media & Growth',
     experienceLevel: 'Mid Level',
-    salaryRange: 'NPR 1,50,000 - 2,20,000 / mo',
-    description: 'Join our core cybersecurity engineering team in Lalitpur to build low-latency distributed log processors, high-throughput gRPC microservices, and telemetry streaming pipelines in Rust and Go.',
+    salaryRange: 'Competitive Salary',
+    description: 'Lead content production for Tech Talk podcasts, write step-by-step developer tutorials, curate tech news updates, and foster developer community growth.',
     requirements: [
-      '3+ years experience with Rust or Go building concurrent backend services.',
-      'Solid grasp of distributed systems, message queues (Kafka, NATS), and concurrency.',
-      'Familiarity with PostgreSQL, Redis, and Linux kernel fundamentals.'
+      'Experience in technical writing, podcast hosting/editing, or developer community management.',
+      'Strong written and verbal communication skills with a focus on software engineering topics.',
+      'Ability to independently plan content schedules, interview tech leaders, and publish developer guides.'
     ],
-    skills: ['Rust', 'Go', 'gRPC', 'Kafka', 'PostgreSQL', 'Redis', 'Docker'],
-    postedDate: '4 days ago',
-    applyUrl: 'https://example.com/apply',
-    featured: false
-  },
-  {
-    id: 'job-5',
-    title: 'AI Research Scientist — NLP & LLMs',
-    company: 'Deerhold Nepal',
-    companyLogo: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=120&auto=format&fit=crop&q=80',
-    location: 'Siphal, Kathmandu / On-site',
-    type: 'Full-time',
-    category: 'AI & ML',
-    experienceLevel: 'Senior',
-    salaryRange: 'NPR 2,00,000 - 3,00,000 / mo',
-    description: 'Drive fundamental research and model optimization in Nepali & English multi-modal language processing, domain fine-tuning (RLHF/DPO), and medical AI models.',
-    requirements: [
-      'Master’s or Bachelor’s degree in Computer Science, AI, or quantitative field.',
-      'Strong project or research record in PyTorch, Transformer fine-tuning, and NLP.',
-      'Experience scaling GPU training workflows (PyTorch, Hugging Face, DeepSpeed).'
-    ],
-    skills: ['PyTorch', 'Python', 'CUDA', 'Transformers', 'NLP', 'LLM Fine-tuning'],
-    postedDate: '5 days ago',
-    applyUrl: 'https://example.com/apply',
+    skills: ['Technical Writing', 'Podcast Editing', 'Community Management', 'Content Strategy', 'Social Media'],
+    postedDate: 'Just now',
+    applyUrl: 'https://techexchange.com/apply',
     featured: true
-  },
-  {
-    id: 'job-6',
-    title: 'Mobile Engineer (Flutter / React Native)',
-    company: 'eSewa (F1Soft Group)',
-    companyLogo: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=120&auto=format&fit=crop&q=80',
-    location: 'Pulchowk, Lalitpur / Hybrid',
-    type: 'Full-time',
-    category: 'Mobile',
-    experienceLevel: 'Mid Level',
-    salaryRange: 'NPR 1,30,000 - 1,90,000 / mo',
-    description: 'Build sleek, secure digital payment & financial service mobile applications serving millions of users across Nepal. Optimize offline storage, biometric login, and payment gateways.',
-    requirements: [
-      '3+ years experience with Flutter or React Native development.',
-      'Track record shipping apps on iOS App Store & Google Play Store.',
-      'Experience integrating REST APIs, WebSockets, and secure local storage.'
-    ],
-    skills: ['Flutter', 'React Native', 'Dart', 'TypeScript', 'Mobile Security', 'REST API'],
-    postedDate: '1 week ago',
-    applyUrl: 'https://example.com/apply',
-    featured: false
   }
 ];
 

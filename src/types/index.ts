@@ -123,7 +123,7 @@ export interface JobListing {
   companyLogo?: string;
   location: string;
   type: 'Full-time' | 'Part-time' | 'Contract' | 'Remote';
-  category: 'Frontend' | 'Backend' | 'Fullstack' | 'AI & ML' | 'DevOps & Cloud' | 'Mobile';
+  category: 'Frontend' | 'Backend' | 'Fullstack' | 'AI & ML' | 'DevOps & Cloud' | 'Mobile' | 'Media & Growth';
   experienceLevel: 'Entry Level' | 'Mid Level' | 'Senior' | 'Lead' | 'Executive';
   salaryRange: string;
   description: string;
