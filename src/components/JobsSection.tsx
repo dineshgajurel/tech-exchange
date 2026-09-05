@@ -49,7 +49,7 @@ export const JobsSection: React.FC<JobsSectionProps> = ({ jobs, onAddJob }) => {
   const [newJobType, setNewJobType] = useState<'Full-time' | 'Part-time' | 'Contract' | 'Remote'>('Remote');
   const [newJobCategory, setNewJobCategory] = useState<'Frontend' | 'Backend' | 'Fullstack' | 'AI & ML' | 'DevOps & Cloud' | 'Mobile'>('Fullstack');
   const [newJobLevel, setNewJobLevel] = useState<'Entry Level' | 'Mid Level' | 'Senior' | 'Lead' | 'Executive'>('Senior');
-  const [newJobSalary, setNewJobSalary] = useState('$150,000 - $180,000 / yr');
+  const [newJobSalary, setNewJobSalary] = useState('NPR 1,50,000 - 2,20,000 / mo');
   const [newJobDescription, setNewJobDescription] = useState('');
   const [newJobRequirements, setNewJobRequirements] = useState('');
   const [newJobSkills, setNewJobSkills] = useState('');
@@ -113,7 +113,7 @@ export const JobsSection: React.FC<JobsSectionProps> = ({ jobs, onAddJob }) => {
     onAddJob({
       title: newJobTitle,
       company: newJobCompany,
-      location: newJobLocation || 'Remote',
+      location: newJobLocation || 'Kathmandu / Remote',
       type: newJobType,
       category: newJobCategory,
       experienceLevel: newJobLevel,
@@ -172,15 +172,15 @@ export const JobsSection: React.FC<JobsSectionProps> = ({ jobs, onAddJob }) => {
           <div className="max-w-2xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-extrabold bg-blue-500/20 border border-blue-400/30 text-blue-200 mb-3">
               <Sparkles className="w-3.5 h-3.5 text-blue-300" />
-              <span>Tech Exchange Job Board & Careers</span>
+              <span>Tech Exchange Nepal — Jobs & Careers</span>
             </div>
 
             <h1 className="font-heading text-3xl sm:text-4xl font-extrabold tracking-tight">
-              Engineering & Tech Jobs
+              Engineering & Tech Jobs in Nepal
             </h1>
 
             <p className="text-sm sm:text-base text-blue-100/90 mt-2 leading-relaxed">
-              Discover top technical positions from AI labs, cloud platforms, and innovative software teams. Applied directly by developers, for developers.
+              Discover top technical positions from AI labs, cloud platforms, and innovative software teams across Kathmandu, Lalitpur, and Remote Nepal.
             </p>
 
             {/* Quick Metrics */}
@@ -194,12 +194,12 @@ export const JobsSection: React.FC<JobsSectionProps> = ({ jobs, onAddJob }) => {
                 <div className="text-xs text-blue-200">Remote / Hybrid</div>
               </div>
               <div>
-                <div className="text-xl sm:text-2xl font-black text-amber-300">$165k</div>
-                <div className="text-xs text-blue-200">Avg Tech Compensation</div>
+                <div className="text-xl sm:text-2xl font-black text-amber-300">NPR 1.8L</div>
+                <div className="text-xs text-blue-200">Avg Monthly Tech Pay</div>
               </div>
               <div>
                 <div className="text-xl sm:text-2xl font-black text-blue-200">Verified</div>
-                <div className="text-xs text-blue-200">Direct Employer Listings</div>
+                <div className="text-xs text-blue-200">Direct Employers</div>
               </div>
             </div>
           </div>

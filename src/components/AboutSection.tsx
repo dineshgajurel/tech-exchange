@@ -38,61 +38,61 @@ const INTERNAL_ROLES: OpenRole[] = [
   {
     id: 'te-role-1',
     title: 'Senior Full-Stack Engineer (React / Node / TS)',
-    department: 'Core Engineering',
-    location: 'Remote (Global)',
+    department: 'Core Platform Lab',
+    location: 'Kathmandu / Remote (Nepal)',
     type: 'Full-time',
-    salary: '$130,000 - $170,000 / yr',
-    description: 'Help build and scale the core Tech Exchange platform, developer submodules, and internal media tools.',
+    salary: 'NPR 1,50,000 - 2,20,000 / mo',
+    description: 'Help architect and scale Tech Exchange platform modules, internal media tools, and high-concurrency developer APIs in Nepal.',
     requirements: [
-      '5+ years experience building production React/TypeScript applications',
+      '4+ years experience building production React/TypeScript applications',
       'Strong expertise in Node.js, GraphQL, PostgreSQL, and Redis',
       'Experience with performance optimization and SSR frameworks (Next.js/Vite)',
-      'Passion for developer tools and open-source software'
+      'Passion for building developer tools and contributing to tech community'
     ]
   },
   {
     id: 'te-role-2',
-    title: 'AI & Systems Engineer (Python / LangChain / Rust)',
-    department: 'AI & Innovation Lab',
-    location: 'Remote (US / EU / Asia)',
+    title: 'AI & Agent Developer (Python / LangChain / Rust)',
+    department: 'AI Innovation Lab',
+    location: 'Lalitpur / Remote (Nepal)',
     type: 'Full-time',
-    salary: '$140,000 - $185,000 / yr',
-    description: 'Engineer autonomous AI agents, LLM pipelines, and custom knowledge retrieval systems for client projects.',
+    salary: 'NPR 1,80,000 - 2,60,000 / mo',
+    description: 'Engineer autonomous AI agents, LLM orchestration pipelines, and custom knowledge retrieval systems for Nepali and global clients.',
     requirements: [
-      '3+ years hands-on experience deploying LLM applications and vector stores',
+      '3+ years hands-on experience deploying LLM applications and vector databases',
       'Proficiency in Python, PyTorch, LangChain, or LlamaIndex',
       'Solid understanding of API design and distributed system microservices',
-      'Background in RAG architectures and fine-tuning lightweight models'
+      'Experience with RAG architectures and fine-tuning lightweight models'
     ]
   },
   {
     id: 'te-role-3',
-    title: 'Technical Writer & Developer Advocate',
+    title: 'Technical Writer & Tech Talk Host',
     department: 'Media & Education',
-    location: 'Remote (Global)',
+    location: 'Kathmandu / Remote',
     type: 'Full-time',
-    salary: '$95,000 - $130,000 / yr',
-    description: 'Create high-impact tech tutorials, host developer podcast discussions, and author deep-dive engineering guides.',
+    salary: 'NPR 90,000 - 1,40,000 / mo',
+    description: 'Author high-impact developer tutorials, host Tech Talk podcast episodes with Nepali tech leaders, and publish daily technology news.',
     requirements: [
-      'Proven track record writing technical blogs, documentation, or tutorials',
-      'Ability to explain complex software concepts simply with code samples',
+      'Proven track record writing technical articles, documentation, or code blogs',
+      'Ability to explain complex software engineering concepts simply with code',
       'Comfortable hosting technical interviews and interacting with developer communities',
       'Familiarity with modern web technology stacks and cloud tools'
     ]
   },
   {
     id: 'te-role-4',
-    title: 'DevOps & Infrastructure Architect',
+    title: 'DevOps & Cloud Infrastructure Architect',
     department: 'Cloud Operations',
-    location: 'Remote (Global)',
+    location: 'Remote (Nepal / Global)',
     type: 'Full-time / Contract',
-    salary: '$135,000 - $175,000 / yr',
-    description: 'Maintain CI/CD pipelines, Kubernetes infrastructure, and cloud security frameworks for high-availability systems.',
+    salary: 'NPR 1,60,000 - 2,40,000 / mo',
+    description: 'Maintain CI/CD pipelines, Kubernetes clusters, AWS cloud infrastructure, and zero-downtime security frameworks for enterprise projects.',
     requirements: [
-      '4+ years managing AWS / GCP / Azure multi-region cloud infrastructure',
+      '4+ years managing AWS / GCP multi-region cloud infrastructure',
       'Proficiency with Terraform, Docker, Kubernetes, and GitHub Actions',
-      'Deep knowledge of zero-downtime deployments and monitoring (Prometheus/Grafana)',
-      'Security-first mindset with experience handling SOC2 compliance'
+      'Deep knowledge of monitoring & observability (Prometheus/Grafana)',
+      'Security-first mindset with experience handling cloud compliance'
     ]
   }
 ];
@@ -288,27 +288,27 @@ export const AboutSection: React.FC = () => {
         {/* Benefits Grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           <div className="p-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 text-center space-y-1">
-            <span className="text-2xl">🌍</span>
-            <div className="font-bold text-xs sm:text-sm text-slate-900 dark:text-white">100% Remote</div>
-            <div className="text-[11px] text-slate-500">Work from anywhere</div>
+            <span className="text-2xl">🇳🇵</span>
+            <div className="font-bold text-xs sm:text-sm text-slate-900 dark:text-white">Remote & Hybrid</div>
+            <div className="text-[11px] text-slate-500">Kathmandu, Pokhara & Remote</div>
           </div>
 
           <div className="p-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 text-center space-y-1">
             <span className="text-2xl">💻</span>
-            <div className="font-bold text-xs sm:text-sm text-slate-900 dark:text-white">$4K Tech Stipend</div>
-            <div className="text-[11px] text-slate-500">Top MacBook & gear</div>
+            <div className="font-bold text-xs sm:text-sm text-slate-900 dark:text-white">NPR 3L Tech Allowance</div>
+            <div className="text-[11px] text-slate-500">MacBook & 4K monitor gear</div>
           </div>
 
           <div className="p-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 text-center space-y-1">
-            <span className="text-2xl">📚</span>
-            <div className="font-bold text-xs sm:text-sm text-slate-900 dark:text-white">$2K/yr Learning</div>
-            <div className="text-[11px] text-slate-500">Books, courses & events</div>
+            <span className="text-2xl">🎁</span>
+            <div className="font-bold text-xs sm:text-sm text-slate-900 dark:text-white">Dashain & Tihar Bonus</div>
+            <div className="text-[11px] text-slate-500">1 Month extra festival pay</div>
           </div>
 
           <div className="p-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 text-center space-y-1">
-            <span className="text-2xl">🚀</span>
-            <div className="font-bold text-xs sm:text-sm text-slate-900 dark:text-white">20% Open Source Time</div>
-            <div className="text-[11px] text-slate-500">Friday side-projects</div>
+            <span className="text-2xl">🏥</span>
+            <div className="font-bold text-xs sm:text-sm text-slate-900 dark:text-white">SSF & Health Insurance</div>
+            <div className="text-[11px] text-slate-500">Medical cover for family</div>
           </div>
         </div>
 
