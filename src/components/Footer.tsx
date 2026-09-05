@@ -29,10 +29,10 @@ export const Footer: React.FC<FooterProps> = ({
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           
           {/* Col 1: Brand & Tagline */}
-          <div className="md:col-span-2 space-y-4">
+          <div className="space-y-4">
             <TechExchangeLogo size="md" showTagline={true} />
 
-            <p className="text-sm text-slate-600 dark:text-slate-400 max-w-md leading-relaxed">
+            <p className="text-sm text-slate-600 dark:text-slate-400 max-w-sm leading-relaxed">
               Tech chats were scattered everywhere — different servers, different groups. So here's one place for it.
             </p>
 
@@ -41,40 +41,52 @@ export const Footer: React.FC<FooterProps> = ({
             </p>
           </div>
 
-          {/* Col 2: Quick Links & Sections */}
+          {/* Col 2: Talk & Learn */}
           <div>
             <h4 className="font-heading text-xs font-extrabold uppercase tracking-wider text-slate-900 dark:text-white mb-3">
-              Explore Sections
+              Talk & Learn
             </h4>
             <ul className="space-y-2 text-xs font-medium text-slate-600 dark:text-slate-400">
               <li>
-                <Link to="/podcast" onClick={() => onSelectTab && onSelectTab('podcast')} className="hover:text-blue-600 cursor-pointer">🎙️ Tech Talk</Link>
+                <Link to="/podcast" onClick={() => onSelectTab && onSelectTab('podcast')} className="hover:text-blue-600 cursor-pointer">🎙️ Tech Talk (Podcast)</Link>
               </li>
               <li>
-                <Link to="/tutorials" onClick={() => onSelectTab && onSelectTab('tutorials')} className="hover:text-blue-600 cursor-pointer">📚 Tutorials</Link>
+                <Link to="/forum" onClick={() => onSelectTab && onSelectTab('forum')} className="hover:text-blue-600 cursor-pointer">💬 Community Forum</Link>
+              </li>
+              <li>
+                <Link to="/tutorials" onClick={() => onSelectTab && onSelectTab('tutorials')} className="hover:text-blue-600 cursor-pointer">📚 Tech Explained</Link>
               </li>
               <li>
                 <Link to="/courses" onClick={() => onSelectTab && onSelectTab('courses')} className="hover:text-blue-600 cursor-pointer">🎓 Courses</Link>
               </li>
               <li>
-                <Link to="/services" onClick={() => onSelectTab && onSelectTab('services')} className="hover:text-blue-600 cursor-pointer">⚡ Services</Link>
+                <Link to="/news" onClick={() => onSelectTab && onSelectTab('news')} className="hover:text-blue-600 cursor-pointer">📰 Tech News</Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Col 3: Build & Hire */}
+          <div>
+            <h4 className="font-heading text-xs font-extrabold uppercase tracking-wider text-slate-900 dark:text-white mb-3">
+              Build & Hire
+            </h4>
+            <ul className="space-y-2 text-xs font-medium text-slate-600 dark:text-slate-400">
+              <li>
+                <Link to="/portfolio" onClick={() => onSelectTab && onSelectTab('portfolio')} className="hover:text-blue-600 cursor-pointer">🚀 Build Showcase</Link>
               </li>
               <li>
-                <Link to="/portfolio" onClick={() => onSelectTab && onSelectTab('portfolio')} className="hover:text-blue-600 cursor-pointer">🚀 Portfolio</Link>
+                <Link to="/services" onClick={() => onSelectTab && onSelectTab('services')} className="hover:text-blue-600 cursor-pointer">⚡ Services & Consult</Link>
               </li>
               <li>
                 <Link to="/jobs" onClick={() => onSelectTab && onSelectTab('jobs')} className="hover:text-blue-600 cursor-pointer">💼 Tech Jobs</Link>
               </li>
               <li>
-                <Link to="/about" onClick={() => onSelectTab && onSelectTab('about')} className="hover:text-blue-600 cursor-pointer">🏢 About Us & Careers</Link>
-              </li>
-              <li>
-                <Link to="/forum" onClick={() => onSelectTab && onSelectTab('forum')} className="hover:text-blue-600 cursor-pointer">💬 Community Forum</Link>
+                <Link to="/about" onClick={() => onSelectTab && onSelectTab('about')} className="hover:text-blue-600 cursor-pointer">🏢 About Us</Link>
               </li>
             </ul>
           </div>
 
-          {/* Col 3: Community & Social */}
+          {/* Col 4: Community Channels & Social */}
           <div>
             <h4 className="font-heading text-xs font-extrabold uppercase tracking-wider text-slate-900 dark:text-white mb-3">
               Community Channels

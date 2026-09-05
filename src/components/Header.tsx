@@ -26,12 +26,12 @@ export const Header: React.FC<HeaderProps> = ({
   const navItems: { id: SectionTab; path: string; label: string; icon: React.ReactNode }[] = [
     { id: 'home', path: '/', label: 'Home', icon: <Sparkles className="w-4 h-4" /> },
     { id: 'podcast', path: '/podcast', label: 'Tech Talk', icon: <Tv className="w-4 h-4" /> },
+    { id: 'forum', path: '/forum', label: 'Community Forum', icon: <MessageSquare className="w-4 h-4" /> },
     { id: 'tutorials', path: '/tutorials', label: 'Tech Explained', icon: <BookOpen className="w-4 h-4" /> },
     { id: 'courses', path: '/courses', label: 'Courses', icon: <GraduationCap className="w-4 h-4" /> },
-    { id: 'services', path: '/services', label: 'Services & Consult', icon: <Briefcase className="w-4 h-4" /> },
-    { id: 'portfolio', path: '/portfolio', label: 'Build Showcase', icon: <Code className="w-4 h-4" /> },
     { id: 'news', path: '/news', label: 'Tech News', icon: <Newspaper className="w-4 h-4" /> },
-    { id: 'forum', path: '/forum', label: 'Community Forum', icon: <MessageSquare className="w-4 h-4" /> },
+    { id: 'portfolio', path: '/portfolio', label: 'Build Showcase', icon: <Code className="w-4 h-4" /> },
+    { id: 'services', path: '/services', label: 'Services & Consult', icon: <Briefcase className="w-4 h-4" /> },
     { id: 'jobs', path: '/jobs', label: 'Tech Jobs', icon: <Building2 className="w-4 h-4" /> },
     { id: 'about', path: '/about', label: 'About Us', icon: <Users className="w-4 h-4" /> },
   ];
