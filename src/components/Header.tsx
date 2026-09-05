@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mic, BookOpen, Briefcase, Code, Newspaper, MessageSquare, Sparkles, Sun, Moon, Menu, X, ArrowRight } from 'lucide-react';
+import { Mic, BookOpen, Briefcase, Code, Newspaper, MessageSquare, Sparkles, Sun, Moon, Menu, X, ArrowRight, Building2, Users } from 'lucide-react';
 import { TechExchangeLogo } from './TechExchangeLogo';
 import { SectionTab } from '../types';
 
@@ -28,6 +28,8 @@ export const Header: React.FC<HeaderProps> = ({
     { id: 'portfolio', label: 'Build Showcase', icon: <Code className="w-4 h-4" /> },
     { id: 'news', label: 'Tech News', icon: <Newspaper className="w-4 h-4" /> },
     { id: 'forum', label: 'Community Forum', icon: <MessageSquare className="w-4 h-4" /> },
+    { id: 'jobs', label: 'Tech Jobs', icon: <Building2 className="w-4 h-4" /> },
+    { id: 'about', label: 'About Us', icon: <Users className="w-4 h-4" /> },
   ];
 
   return (

@@ -1,4 +1,4 @@
-import { PodcastEpisode, Tutorial, PortfolioProject, TechService, NewsItem, Post, LoungeMessage } from '../types';
+import { PodcastEpisode, Tutorial, PortfolioProject, TechService, NewsItem, Post, LoungeMessage, JobListing } from '../types';
 
 export interface Channel {
   id: 'tech-talk' | 'tech-explained' | 'build-with-tech' | 'whats-happening';
@@ -386,5 +386,136 @@ export const NEWS_ITEMS: NewsItem[] = [
     summary: 'Rust developers gain native support for async closures, faster incremental compilation, and memory management optimizations.',
     source: 'Tech Exchange Newsdesk',
     link: '#'
+  }
+];
+
+export const INITIAL_JOBS: JobListing[] = [
+  {
+    id: 'job-1',
+    title: 'Senior Full-Stack AI Engineer',
+    company: 'TechFlow Systems',
+    companyLogo: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=120&auto=format&fit=crop&q=80',
+    location: 'San Francisco, CA / Remote',
+    type: 'Remote',
+    category: 'Fullstack',
+    experienceLevel: 'Senior',
+    salaryRange: '$160,000 - $210,000 / yr',
+    description: 'We are seeking a Senior Full-Stack AI Engineer to build next-generation intelligent applications. You will architect frontend interfaces with Next.js & React, while integrating backend LLM orchestration, RAG pipelines, and high-performance vector databases.',
+    requirements: [
+      '5+ years of experience with modern TypeScript/React and Node.js or Python backend ecosystems.',
+      'Hands-on experience deploying LLM applications, RAG pipelines, or autonomous agent frameworks (LangChain, LlamaIndex, OpenAI/Anthropic APIs).',
+      'Proficiency with relational (PostgreSQL) and vector databases (Pinecone, Qdrant, Pgvector).',
+      'Track record of building clean, accessible, and responsive user experiences.'
+    ],
+    skills: ['TypeScript', 'React', 'Next.js', 'Python', 'FastAPI', 'Vector DBs', 'Tailwind CSS'],
+    postedDate: '1 day ago',
+    applyUrl: 'https://example.com/apply',
+    featured: true
+  },
+  {
+    id: 'job-2',
+    title: 'Lead Cloud & DevOps Infrastructure Architect',
+    company: 'CloudScale Labs',
+    companyLogo: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=120&auto=format&fit=crop&q=80',
+    location: 'Austin, TX / Hybrid',
+    type: 'Full-time',
+    category: 'DevOps & Cloud',
+    experienceLevel: 'Lead',
+    salaryRange: '$180,000 - $230,000 / yr',
+    description: 'Lead the design and automation of multi-cloud Kubernetes clusters, blue/green CI/CD pipelines, and zero-downtime microservices infrastructure serving millions of daily requests.',
+    requirements: [
+      '7+ years in DevOps, SRE, or Infrastructure Engineering leadership.',
+      'Expert mastery of Kubernetes, Terraform, Docker, AWS, and GitOps workflows (ArgoCD).',
+      'Deep knowledge of monitoring & observability tools (Prometheus, Grafana, Datadog).',
+      'Experience in sub-second failover systems and high-security enterprise compliance.'
+    ],
+    skills: ['Kubernetes', 'Docker', 'Terraform', 'AWS', 'Go', 'Nginx', 'Prometheus'],
+    postedDate: '2 days ago',
+    applyUrl: 'https://example.com/apply',
+    featured: true
+  },
+  {
+    id: 'job-3',
+    title: 'Senior Frontend UI/UX Engineer (React & WebGL)',
+    company: 'Nexus Studio',
+    companyLogo: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=120&auto=format&fit=crop&q=80',
+    location: 'London, UK / Remote',
+    type: 'Remote',
+    category: 'Frontend',
+    experienceLevel: 'Senior',
+    salaryRange: '£90,000 - £120,000 / yr',
+    description: 'Craft stunning, high-performance web interfaces and 3D data visualizers. You will work closely with product designers to implement smooth micro-animations, component design systems, and WebGL visualizations.',
+    requirements: [
+      '4+ years building complex web apps using React, Three.js, Framer Motion, and Tailwind CSS.',
+      'Strong eye for visual aesthetic, micro-interactions, responsive design, and CSS performance.',
+      'Experience with state management, client performance tuning, and WebAssembly integration.'
+    ],
+    skills: ['React', 'TypeScript', 'Tailwind CSS', 'Three.js', 'Framer Motion', 'WebGL'],
+    postedDate: '3 days ago',
+    applyUrl: 'https://example.com/apply',
+    featured: false
+  },
+  {
+    id: 'job-4',
+    title: 'Backend Systems Engineer (Rust / Go)',
+    company: 'HyperMetric Engine',
+    companyLogo: 'https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?w=120&auto=format&fit=crop&q=80',
+    location: 'New York, NY / Remote',
+    type: 'Full-time',
+    category: 'Backend',
+    experienceLevel: 'Mid Level',
+    salaryRange: '$140,000 - $175,000 / yr',
+    description: 'Join our core platform engineering team to build low-latency distributed event processors, high-throughput gRPC services, and real-time telemetry streaming platforms in Rust and Go.',
+    requirements: [
+      '3+ years experience with Rust or Go building concurrent backend services.',
+      'Solid grasp of distributed systems, message queues (Kafka, NATS), and concurrency models.',
+      'Familiarity with PostgreSQL, Redis, and Linux kernel fundamentals.'
+    ],
+    skills: ['Rust', 'Go', 'gRPC', 'Kafka', 'PostgreSQL', 'Redis', 'Docker'],
+    postedDate: '4 days ago',
+    applyUrl: 'https://example.com/apply',
+    featured: false
+  },
+  {
+    id: 'job-5',
+    title: 'AI Research Scientist — Multi-Modal Models',
+    company: 'Cognitive Dynamics',
+    companyLogo: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=120&auto=format&fit=crop&q=80',
+    location: 'Seattle, WA / On-site',
+    type: 'Full-time',
+    category: 'AI & ML',
+    experienceLevel: 'Senior',
+    salaryRange: '$190,000 - $250,000 / yr',
+    description: 'Drive fundamental research and model optimization in multi-modal vision-language architecture, agent reasoning, and post-training alignment (RLHF / DPO).',
+    requirements: [
+      'MS or PhD in Computer Science, Machine Learning, or related quantitative field.',
+      'Strong publication or project record in PyTorch, Transformer fine-tuning, or model compression.',
+      'Experience scaling GPU training clusters (SLURM, DeepSpeed, Ray).'
+    ],
+    skills: ['PyTorch', 'Python', 'CUDA', 'Transformers', 'RLHF', 'Distributed Training'],
+    postedDate: '5 days ago',
+    applyUrl: 'https://example.com/apply',
+    featured: true
+  },
+  {
+    id: 'job-6',
+    title: 'iOS & Cross-Platform Mobile Engineer',
+    company: 'Pulse Mobility',
+    companyLogo: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=120&auto=format&fit=crop&q=80',
+    location: 'Remote (Worldwide)',
+    type: 'Contract',
+    category: 'Mobile',
+    experienceLevel: 'Mid Level',
+    salaryRange: '$70 - $95 / hr',
+    description: 'Looking for a skilled mobile developer to build sleek React Native and Swift mobile applications for real-time community chat and technical media streaming.',
+    requirements: [
+      '3+ years experience with React Native or native Swift/Kotlin development.',
+      'Experience shipping top-rated apps on App Store & Google Play.',
+      'Understanding of offline storage, push notifications, and WebSockets.'
+    ],
+    skills: ['React Native', 'Swift', 'TypeScript', 'iOS', 'WebSockets', 'GraphQL'],
+    postedDate: '1 week ago',
+    applyUrl: 'https://example.com/apply',
+    featured: false
   }
 ];

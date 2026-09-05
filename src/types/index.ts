@@ -1,4 +1,4 @@
-export type SectionTab = 'home' | 'podcast' | 'tutorials' | 'services' | 'portfolio' | 'news' | 'forum';
+export type SectionTab = 'home' | 'podcast' | 'tutorials' | 'services' | 'portfolio' | 'news' | 'forum' | 'jobs' | 'about';
 
 export interface PodcastEpisode {
   id: string;
@@ -66,6 +66,24 @@ export interface NewsItem {
   summary: string;
   source: string;
   link: string;
+}
+
+export interface JobListing {
+  id: string;
+  title: string;
+  company: string;
+  companyLogo?: string;
+  location: string;
+  type: 'Full-time' | 'Part-time' | 'Contract' | 'Remote';
+  category: 'Frontend' | 'Backend' | 'Fullstack' | 'AI & ML' | 'DevOps & Cloud' | 'Mobile';
+  experienceLevel: 'Entry Level' | 'Mid Level' | 'Senior' | 'Lead' | 'Executive';
+  salaryRange: string;
+  description: string;
+  requirements: string[];
+  skills: string[];
+  postedDate: string;
+  applyUrl?: string;
+  featured?: boolean;
 }
 
 export type ChannelId = 'tech-talk' | 'tech-explained' | 'build-with-tech' | 'whats-happening';

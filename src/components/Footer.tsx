@@ -1,5 +1,6 @@
 import React from 'react';
 import { Rocket, Heart, Globe, Github, Twitter, Rss } from 'lucide-react';
+import { TechExchangeLogo } from './TechExchangeLogo';
 import { ChannelId } from '../types';
 
 interface FooterProps {
@@ -11,8 +12,6 @@ export const Footer: React.FC<FooterProps> = ({ onSelectChannel, onOpenLounge })
   return (
     <footer className="relative overflow-hidden bg-white dark:bg-slate-900 border-t border-slate-200/80 dark:border-slate-800 transition-colors pt-12 pb-16">
       
-      {/* Decorative Dot Grid in Corner */}
-      <div className="absolute top-4 left-6 w-24 h-24 bg-dot-pattern-light opacity-50 pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
@@ -20,21 +19,14 @@ export const Footer: React.FC<FooterProps> = ({ onSelectChannel, onOpenLounge })
           
           {/* Col 1: Brand & Tagline */}
           <div className="md:col-span-2 space-y-4">
-            <div className="flex items-center gap-2.5">
-              <div className="w-9 h-9 rounded-xl bg-blue-600 flex items-center justify-center text-white shadow-md shadow-blue-500/20">
-                <Rocket className="w-5 h-5" />
-              </div>
-              <div className="font-heading text-2xl font-black text-slate-900 dark:text-white">
-                <span className="text-blue-600">Tech </span>Exchange
-              </div>
-            </div>
+            <TechExchangeLogo size="md" showTagline={true} />
 
             <p className="text-sm text-slate-600 dark:text-slate-400 max-w-md leading-relaxed">
               Tech chats were scattered everywhere — different servers, different groups. So here's one place for it.
             </p>
 
             <p className="text-xs font-semibold text-slate-500 dark:text-slate-400">
-              Nothing fancy. Just people who love tech, talking about tech.
+              Talk • Learn • Build. Simple as that.
             </p>
           </div>
 
@@ -88,12 +80,14 @@ export const Footer: React.FC<FooterProps> = ({ onSelectChannel, onOpenLounge })
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-6 border-t border-slate-100 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-4">
+        <div className="pt-6 border-t border-slate-100 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 dark:text-slate-400 gap-4">
           <div>
             © {new Date().getFullYear()} TechExchange.com — All rights reserved.
           </div>
-          <div className="flex items-center gap-1">
-            <span>Built with passion for developers & tech enthusiasts worldwide</span>
+          <div className="flex items-center gap-1.5 font-medium">
+            <span>Made with</span>
+            <Heart className="w-3.5 h-3.5 text-red-500 fill-red-500 inline-block animate-pulse" />
+            <span>for Tech Lovers & Developers Worldwide</span>
           </div>
         </div>
 

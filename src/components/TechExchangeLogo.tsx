@@ -4,17 +4,25 @@ interface TechExchangeLogoProps {
   size?: 'sm' | 'md' | 'lg';
   showTagline?: boolean;
   className?: string;
+  variant?: 'image' | 'inline' | 'full';
 }
 
 export const TechExchangeLogo: React.FC<TechExchangeLogoProps> = ({
   size = 'md',
   showTagline = true,
   className = '',
+  variant = 'inline',
 }) => {
-  const iconSizes = {
-    sm: 'w-8 h-8',
-    md: 'w-11 h-11',
-    lg: 'w-16 h-16',
+  const iconHeight = {
+    sm: 'h-8',
+    md: 'h-10',
+    lg: 'h-14',
+  };
+
+  const imageWidth = {
+    sm: 'h-9',
+    md: 'h-12',
+    lg: 'h-20',
   };
 
   const titleSizes = {
@@ -23,118 +31,61 @@ export const TechExchangeLogo: React.FC<TechExchangeLogoProps> = ({
     lg: 'text-4xl',
   };
 
+  if (variant === 'image') {
+    return (
+      <img
+        src="/logo.png"
+        alt="Tech Exchange"
+        className={`object-contain rounded-xl shadow-lg border border-slate-800 ${imageWidth[size]} ${className}`}
+      />
+    );
+  }
+
+  if (variant === 'full') {
+    return (
+      <div className={`relative inline-flex items-center justify-center p-1.5 rounded-2xl bg-slate-950 border border-cyan-500/30 shadow-xl shadow-cyan-500/10 ${className}`}>
+        <img
+          src="/logo.png"
+          alt="Tech Exchange — Talk • Learn • Build"
+          className={`object-contain ${imageWidth[size]}`}
+        />
+      </div>
+    );
+  }
+
   return (
     <div className={`flex items-center gap-3 font-heading ${className}`}>
-      
-      {/* Brand Icon SVG: Speech Bubble + Circular Exchange Arrows + Code Brackets + Microphone */}
-      <div className={`relative flex items-center justify-center shrink-0 ${iconSizes[size]}`}>
-        <svg
-          viewBox="0 0 100 100"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          className="w-full h-full drop-shadow-md"
-        >
-          <defs>
-            {/* Linear Gradient matching reference image: Blue to Cyan/Teal/Green */}
-            <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#0052FF" />
-              <stop offset="50%" stopColor="#00D2FF" />
-              <stop offset="100%" stopColor="#00E676" />
-            </linearGradient>
-
-            <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stopColor="#00D2FF" />
-              <stop offset="100%" stopColor="#00E676" />
-            </linearGradient>
-          </defs>
-
-          {/* Outer Speech Bubble Circular Exchange Loop */}
-          <path
-            d="M 50 10 A 38 38 0 1 1 20 78 L 12 90 L 26 84 A 38 38 0 0 1 50 10 Z"
-            stroke="url(#logoGradient)"
-            strokeWidth="8"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            fill="none"
+      {/* Brand Icon Badge - Clean speech bubble with microphone & code brackets */}
+      <div className="relative group shrink-0">
+        <div className="absolute -inset-0.5 rounded-2xl bg-gradient-to-r from-blue-600 via-cyan-400 to-emerald-400 opacity-75 blur-xs group-hover:opacity-100 transition duration-300"></div>
+        <div className="relative flex items-center justify-center p-1 rounded-2xl bg-slate-950 border border-slate-800">
+          <img
+            src="/logo.png"
+            alt="Tech Exchange Logo Icon"
+            className={`object-contain ${iconHeight[size]}`}
           />
-
-          {/* Arrowhead on top right loop */}
-          <path
-            d="M 45 6 L 54 10 L 48 18"
-            stroke="url(#logoGradient)"
-            strokeWidth="7"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            fill="none"
-          />
-
-          {/* Left Code Bracket '<' */}
-          <path
-            d="M 31 43 L 23 50 L 31 57"
-            stroke="url(#logoGradient)"
-            strokeWidth="6"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-
-          {/* Right Code Bracket '>' */}
-          <path
-            d="M 69 43 L 77 50 L 69 57"
-            stroke="url(#logoGradient)"
-            strokeWidth="6"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-
-          {/* Microphone Body */}
-          <rect
-            x="44"
-            y="32"
-            width="12"
-            height="22"
-            rx="6"
-            fill="currentColor"
-          />
-
-          {/* Microphone Grille Lines */}
-          <line x1="44" y1="38" x2="56" y2="38" stroke="white" strokeWidth="1.5" strokeOpacity="0.4" />
-          <line x1="44" y1="44" x2="56" y2="44" stroke="white" strokeWidth="1.5" strokeOpacity="0.4" />
-
-          {/* Microphone Stand U-Cup */}
-          <path
-            d="M 38 46 C 38 58, 62 58, 62 46"
-            stroke="currentColor"
-            strokeWidth="5"
-            strokeLinecap="round"
-            fill="none"
-          />
-
-          {/* Microphone Stem & Base */}
-          <line x1="50" y1="58" x2="50" y2="67" stroke="currentColor" strokeWidth="5" strokeLinecap="round" />
-          <line x1="42" y1="67" x2="58" y2="67" stroke="currentColor" strokeWidth="5" strokeLinecap="round" />
-        </svg>
+        </div>
       </div>
 
-      {/* Brand Text: Tech Exchange + Talk • Learn • Build */}
+      {/* Brand Text & Tagline */}
       <div className="flex flex-col justify-center">
         <div className={`font-black tracking-tight leading-none ${titleSizes[size]}`}>
           <span className="text-slate-900 dark:text-white">Tech </span>
-          <span className="bg-gradient-to-r from-cyan-400 via-teal-400 to-emerald-400 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-cyan-400 via-teal-400 to-emerald-400 bg-clip-text text-transparent drop-shadow-xs">
             Exchange
           </span>
         </div>
 
         {showTagline && (
-          <div className="text-[11px] font-bold tracking-widest uppercase text-slate-500 dark:text-slate-400 mt-1 flex items-center gap-1.5">
+          <div className="text-[10px] sm:text-[11px] font-extrabold tracking-widest uppercase text-slate-500 dark:text-slate-400 mt-1 flex items-center gap-1.5">
             <span>Talk</span>
-            <span className="text-cyan-500">•</span>
+            <span className="text-cyan-500 font-black">•</span>
             <span>Learn</span>
-            <span className="text-cyan-500">•</span>
+            <span className="text-cyan-500 font-black">•</span>
             <span>Build</span>
           </div>
         )}
       </div>
-
     </div>
   );
 };

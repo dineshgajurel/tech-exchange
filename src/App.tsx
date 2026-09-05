@@ -6,6 +6,8 @@ import { TutorialsSection } from './components/TutorialsSection';
 import { ServicesSection } from './components/ServicesSection';
 import { PortfolioSection } from './components/PortfolioSection';
 import { NewsSection } from './components/NewsSection';
+import { JobsSection } from './components/JobsSection';
+import { AboutSection } from './components/AboutSection';
 import { ConsultationModal } from './components/ConsultationModal';
 
 // Forum Submodule Components
@@ -14,9 +16,10 @@ import { PostCard } from './components/PostCard';
 import { CommunityLoungeModal } from './components/CommunityLoungeModal';
 import { CreatePostModal } from './components/CreatePostModal';
 
-import { SectionTab, ChannelId, Post, LoungeMessage } from './types';
-import { INITIAL_POSTS, INITIAL_LOUNGE_MESSAGES, CHANNELS } from './data/initialData';
-import { Flame, Clock, TrendingUp, Search, Plus, MessageSquareHeart, Sparkles, ArrowRight, MessageSquare } from 'lucide-react';
+import { TechExchangeLogo } from './components/TechExchangeLogo';
+import { SectionTab, ChannelId, Post, LoungeMessage, JobListing } from './types';
+import { INITIAL_POSTS, INITIAL_LOUNGE_MESSAGES, CHANNELS, INITIAL_JOBS } from './data/initialData';
+import { Flame, Clock, TrendingUp, Search, Plus, MessageSquareHeart, Sparkles, ArrowRight, MessageSquare, Heart } from 'lucide-react';
 
 export function App() {
   const [activeTab, setActiveTab] = useState<SectionTab>('home');
@@ -27,6 +30,7 @@ export function App() {
   
   const [posts, setPosts] = useState<Post[]>(INITIAL_POSTS);
   const [loungeMessages, setLoungeMessages] = useState<LoungeMessage[]>(INITIAL_LOUNGE_MESSAGES);
+  const [jobs, setJobs] = useState<JobListing[]>(INITIAL_JOBS);
 
   const [isConsultationOpen, setIsConsultationOpen] = useState(false);
   const [isLoungeOpen, setIsLoungeOpen] = useState(false);
@@ -120,6 +124,16 @@ export function App() {
       likes: 1,
     };
     setLoungeMessages([newMsg, ...loungeMessages]);
+  };
+
+  // Add job posting handler
+  const handleAddJob = (newJobData: Omit<JobListing, 'id' | 'postedDate'>) => {
+    const created: JobListing = {
+      ...newJobData,
+      id: `job-${Date.now()}`,
+      postedDate: 'Just now',
+    };
+    setJobs([created, ...jobs]);
   };
 
   // Filter posts logic for Forum
@@ -230,6 +244,10 @@ export function App() {
       )}
 
       {activeTab === 'news' && <NewsSection />}
+
+      {activeTab === 'jobs' && <JobsSection jobs={jobs} onAddJob={handleAddJob} />}
+
+      {activeTab === 'about' && <AboutSection />}
 
       {/* COMMUNITY FORUM TAB */}
       {activeTab === 'forum' && (
@@ -349,18 +367,23 @@ export function App() {
       {/* Footer */}
       <footer className="bg-white dark:bg-slate-900 border-t border-slate-200/80 dark:border-slate-800 py-12 mt-16 transition-colors">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6 text-xs text-slate-500">
-          <div>
-            <div className="font-heading text-lg font-black text-slate-900 dark:text-white mb-1">
-              <span className="text-blue-600">Tech </span>Exchange
-            </div>
-            <p>Tech chats were scattered everywhere — different servers, different groups. So here's one place for it.</p>
+          <div className="space-y-2">
+            <TechExchangeLogo size="sm" showTagline={true} />
+            <p className="text-slate-500 dark:text-slate-400">
+              © {new Date().getFullYear()} TechExchange.com — All rights reserved.
+            </p>
+            <p className="text-[11px] text-slate-400 flex items-center gap-1 font-medium">
+              Made with <Heart className="w-3 h-3 text-red-500 fill-red-500 inline-block animate-pulse" /> for Tech Lovers & Developers Worldwide
+            </p>
           </div>
 
-          <div className="flex items-center gap-4 font-bold text-slate-700 dark:text-slate-300">
+          <div className="flex flex-wrap items-center gap-4 font-bold text-slate-700 dark:text-slate-300">
             <button onClick={() => setActiveTab('podcast')} className="hover:text-blue-600 cursor-pointer">Podcast</button>
             <button onClick={() => setActiveTab('tutorials')} className="hover:text-blue-600 cursor-pointer">Tutorials</button>
             <button onClick={() => setActiveTab('services')} className="hover:text-blue-600 cursor-pointer">Services</button>
             <button onClick={() => setActiveTab('portfolio')} className="hover:text-blue-600 cursor-pointer">Portfolio</button>
+            <button onClick={() => setActiveTab('jobs')} className="hover:text-blue-600 cursor-pointer">Tech Jobs</button>
+            <button onClick={() => setActiveTab('about')} className="hover:text-blue-600 cursor-pointer">About Us & Careers</button>
             <button onClick={() => setActiveTab('forum')} className="hover:text-blue-600 cursor-pointer">Community Forum</button>
           </div>
         </div>

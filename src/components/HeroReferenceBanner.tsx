@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mic, BookOpen, Wrench, Newspaper, ArrowRight, Briefcase, Sparkles } from 'lucide-react';
+import { Mic, BookOpen, Wrench, Newspaper, ArrowRight, Briefcase, Sparkles, Building2 } from 'lucide-react';
 import { TechExchangeLogo } from './TechExchangeLogo';
 import { SectionTab } from '../types';
 
@@ -15,14 +15,7 @@ export const HeroReferenceBanner: React.FC<HeroReferenceBannerProps> = ({
   return (
     <section className="relative overflow-hidden bg-white dark:bg-slate-900 border-b border-slate-200/80 dark:border-slate-800 transition-colors">
       
-      {/* Decorative Accents matching Reference Graphic */}
-      <div className="absolute top-0 right-0 w-32 h-32 md:w-48 md:h-48 pointer-events-none overflow-hidden">
-        <div className="absolute -top-12 -right-12 w-32 h-32 md:w-40 md:h-40 rounded-full bg-blue-600"></div>
-        <div className="absolute top-6 right-8 w-24 h-24 bg-dot-pattern-light opacity-60"></div>
-      </div>
-
-      <div className="absolute -bottom-16 -left-16 w-36 h-36 md:w-48 md:h-48 rounded-full bg-blue-600 pointer-events-none"></div>
-      <div className="absolute bottom-4 right-6 w-28 h-28 bg-dot-pattern-light opacity-60 pointer-events-none hidden sm:block"></div>
+      {/* Clean Background Layout */}
 
       <div className="max-w-5xl mx-auto px-6 py-12 md:py-16 relative z-10">
         
@@ -41,11 +34,11 @@ export const HeroReferenceBanner: React.FC<HeroReferenceBannerProps> = ({
         {/* Subtitle */}
         <p className="text-lg md:text-xl font-medium text-slate-700 dark:text-slate-300 max-w-3xl leading-relaxed mb-10 pl-1">
           Tech chats were scattered everywhere — different servers, different groups.<br />
-          <span className="font-semibold text-slate-900 dark:text-white">So here's one place for it.</span> We host Tech Talk podcasts, publish step-by-step guides, curate tech news, and engineer custom fullstack software solutions.
+          <span className="font-semibold text-slate-900 dark:text-white">So here's one place for it.</span> We host Tech Talk podcasts, publish step-by-step guides, curate tech news, engineer software solutions, and connect talent with top engineering teams.
         </p>
 
-        {/* 4 Brand Pillars - Recreating Reference Card Items */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
+        {/* Brand Pillars Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-12">
           
           {/* Pillar 1: Tech Talk (Podcast) */}
           <div 
@@ -57,10 +50,10 @@ export const HeroReferenceBanner: React.FC<HeroReferenceBannerProps> = ({
             </div>
             <div>
               <div className="text-base font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-                Tech Talk <span className="font-normal text-slate-600 dark:text-slate-400">— Podcast & Discussions</span>
+                Tech Talk <span className="font-normal text-slate-600 dark:text-slate-400">— Podcast</span>
               </div>
               <div className="text-xs text-slate-500 dark:text-slate-400 mt-1">
-                Deep tech conversations, engineering takes, and expert interviews.
+                Deep tech conversations, engineering takes, & expert interviews.
               </div>
             </div>
           </div>
@@ -75,10 +68,10 @@ export const HeroReferenceBanner: React.FC<HeroReferenceBannerProps> = ({
             </div>
             <div>
               <div className="text-base font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-                Tech Explained <span className="font-normal text-slate-600 dark:text-slate-400">— Tutorials & Guides</span>
+                Tech Explained <span className="font-normal text-slate-600 dark:text-slate-400">— Guides</span>
               </div>
               <div className="text-xs text-slate-500 dark:text-slate-400 mt-1">
-                Big ideas, explained simply. Code snippets & step-by-step guides.
+                Big ideas, explained simply. Code snippets & architecture guides.
               </div>
             </div>
           </div>
@@ -93,7 +86,7 @@ export const HeroReferenceBanner: React.FC<HeroReferenceBannerProps> = ({
             </div>
             <div>
               <div className="text-base font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-                Build With Tech <span className="font-normal text-slate-600 dark:text-slate-400">— Software Dev & Services</span>
+                Build With Tech <span className="font-normal text-slate-600 dark:text-slate-400">— Services</span>
               </div>
               <div className="text-xs text-slate-500 dark:text-slate-400 mt-1">
                 Custom fullstack apps, AI systems, and technical consultation.
@@ -111,10 +104,28 @@ export const HeroReferenceBanner: React.FC<HeroReferenceBannerProps> = ({
             </div>
             <div>
               <div className="text-base font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-                What's Happening in Tech <span className="font-normal text-slate-600 dark:text-slate-400">— News & Updates</span>
+                Tech News <span className="font-normal text-slate-600 dark:text-slate-400">— Frontier Updates</span>
               </div>
               <div className="text-xs text-slate-500 dark:text-slate-400 mt-1">
-                New tools, new trends, all in one spot.
+                New tools, AI releases, and developer tech trends.
+              </div>
+            </div>
+          </div>
+
+          {/* Pillar 5: Tech Jobs (Careers) */}
+          <div 
+            onClick={() => onSelectTab('jobs')}
+            className="group flex items-start gap-4 p-4 rounded-2xl bg-slate-50/70 dark:bg-slate-800/50 hover:bg-blue-50 dark:hover:bg-slate-800 border border-slate-200/70 dark:border-slate-700 transition-all cursor-pointer shadow-xs hover:border-blue-300 sm:col-span-2 lg:col-span-1"
+          >
+            <div className="w-12 h-12 rounded-xl border-2 border-blue-600 bg-white dark:bg-slate-900 flex items-center justify-center text-blue-600 shrink-0 group-hover:scale-110 transition-transform shadow-xs">
+              <Building2 className="w-6 h-6" />
+            </div>
+            <div>
+              <div className="text-base font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                Tech Jobs <span className="font-normal text-slate-600 dark:text-slate-400">— Engineering Careers</span>
+              </div>
+              <div className="text-xs text-slate-500 dark:text-slate-400 mt-1">
+                Curated remote & full-time developer positions from top labs.
               </div>
             </div>
           </div>
