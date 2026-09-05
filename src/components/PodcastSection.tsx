@@ -116,7 +116,7 @@ export const PodcastSection: React.FC = () => {
           Tech Talk
         </h2>
         <p className="text-sm text-slate-600 dark:text-slate-400 mt-1">
-          Watch video shows, attend tech seminars in Kathmandu, watch video demos, and listen to podcasts.
+          Watch video shows, attend tech seminars & live meetups, watch video demos, and listen to podcasts.
         </p>
       </div>
 

@@ -65,7 +65,7 @@ export const CoursesSection: React.FC = () => {
           </h2>
 
           <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
-            Practical, project-based courses built for production development in Nepal & global markets. Hands-on code, real-world architecture, and industry-recognized certificates.
+            Practical, project-based courses built for modern production engineering & global teams. Hands-on code, real-world architecture, and industry-recognized certificates.
           </p>
 
           {/* Quick Metrics */}
@@ -86,8 +86,8 @@ export const CoursesSection: React.FC = () => {
               <div className="text-[11px] text-slate-400 font-medium">Hands-on Code Projects</div>
             </div>
             <div>
-              <div className="text-xl sm:text-2xl font-black text-blue-400 font-mono">NPR & Free</div>
-              <div className="text-[11px] text-slate-400 font-medium">Localized Options</div>
+              <div className="text-xl sm:text-2xl font-black text-blue-400 font-mono">Paid & Free</div>
+              <div className="text-[11px] text-slate-400 font-medium">Pricing Options</div>
             </div>
           </div>
 

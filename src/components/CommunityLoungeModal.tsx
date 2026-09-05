@@ -26,7 +26,7 @@ export const CommunityLoungeModal: React.FC<CommunityLoungeModalProps> = ({
 }) => {
   const [author, setAuthor] = useState('Dinesh Gajurel');
   const [role, setRole] = useState('Software Architect');
-  const [location, setLocation] = useState('Kathmandu, NP');
+  const [location, setLocation] = useState('Remote / Global');
   const [message, setMessage] = useState('');
   const [selectedAvatar, setSelectedAvatar] = useState('https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150&auto=format&fit=crop&q=80');
 
@@ -40,7 +40,7 @@ export const CommunityLoungeModal: React.FC<CommunityLoungeModalProps> = ({
       author: author.trim(),
       role: role.trim(),
       avatar: selectedAvatar,
-      location: location.trim() || 'Kathmandu, NP',
+      location: location.trim() || 'Remote / Global',
       message: message.trim()
     });
 

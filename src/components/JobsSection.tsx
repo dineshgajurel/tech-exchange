@@ -49,7 +49,7 @@ export const JobsSection: React.FC<JobsSectionProps> = ({ jobs, onAddJob }) => {
   const [newJobType, setNewJobType] = useState<'Full-time' | 'Part-time' | 'Contract' | 'Remote'>('Remote');
   const [newJobCategory, setNewJobCategory] = useState<'Frontend' | 'Backend' | 'Fullstack' | 'AI & ML' | 'DevOps & Cloud' | 'Mobile' | 'Media & Growth'>('Fullstack');
   const [newJobLevel, setNewJobLevel] = useState<'Entry Level' | 'Mid Level' | 'Senior' | 'Lead' | 'Executive'>('Senior');
-  const [newJobSalary, setNewJobSalary] = useState('NPR 1,50,000 - 2,20,000 / mo');
+  const [newJobSalary, setNewJobSalary] = useState('$80,000 - $140,000 / yr');
   const [newJobDescription, setNewJobDescription] = useState('');
   const [newJobRequirements, setNewJobRequirements] = useState('');
   const [newJobSkills, setNewJobSkills] = useState('');
@@ -113,7 +113,7 @@ export const JobsSection: React.FC<JobsSectionProps> = ({ jobs, onAddJob }) => {
     onAddJob({
       title: newJobTitle,
       company: newJobCompany,
-      location: newJobLocation || 'Kathmandu / Remote',
+      location: newJobLocation || 'Remote / Worldwide',
       type: newJobType,
       category: newJobCategory,
       experienceLevel: newJobLevel,
@@ -180,7 +180,7 @@ export const JobsSection: React.FC<JobsSectionProps> = ({ jobs, onAddJob }) => {
             </h1>
 
             <p className="text-sm sm:text-base text-blue-100/90 mt-2 leading-relaxed">
-              Discover top technical positions from AI labs, cloud platforms, and innovative software teams across Kathmandu, Lalitpur, and Remote Nepal.
+              Discover top technical positions from AI labs, cloud platforms, and innovative software teams worldwide.
             </p>
 
             {/* Quick Metrics */}
@@ -190,12 +190,12 @@ export const JobsSection: React.FC<JobsSectionProps> = ({ jobs, onAddJob }) => {
                 <div className="text-xs text-blue-200">Active Roles</div>
               </div>
               <div>
-                <div className="text-xl sm:text-2xl font-black text-emerald-300">85%</div>
-                <div className="text-xs text-blue-200">Remote / Hybrid</div>
+                <div className="text-xl sm:text-2xl font-black text-emerald-300">100%</div>
+                <div className="text-xs text-blue-200">Verified Teams</div>
               </div>
               <div>
-                <div className="text-xl sm:text-2xl font-black text-amber-300">NPR 1.8L</div>
-                <div className="text-xs text-blue-200">Avg Monthly Tech Pay</div>
+                <div className="text-xl sm:text-2xl font-black text-amber-300">$95K+</div>
+                <div className="text-xs text-blue-200">Avg Tech Compensation</div>
               </div>
               <div>
                 <div className="text-xl sm:text-2xl font-black text-blue-200">Verified</div>

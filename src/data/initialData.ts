@@ -127,7 +127,7 @@ export const INITIAL_LOUNGE_MESSAGES: LoungeMessage[] = [
     author: 'Dinesh Gajurel',
     role: 'Software Architect',
     avatar: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150&auto=format&fit=crop&q=80',
-    location: 'Kathmandu, NP',
+    location: 'Remote Tech Hub',
     message: 'Hey everyone! Excited to be part of Tech Exchange. Working on an AI agent workflow framework 👋',
     timestamp: '10 mins ago',
     likes: 5
@@ -137,7 +137,7 @@ export const INITIAL_LOUNGE_MESSAGES: LoungeMessage[] = [
     author: 'Dinesh Gajurel',
     role: 'Frontend Developer',
     avatar: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150&auto=format&fit=crop&q=80',
-    location: 'Kathmandu, NP',
+    location: 'Remote Tech Hub',
     message: 'Loving the ultra clean blue design here! Finally a comfortable tech forum without noise.',
     timestamp: '25 mins ago',
     likes: 8
@@ -155,7 +155,7 @@ export const PODCAST_EPISODES: PodcastEpisode[] = [
     timeAgo: 'Featured Episode',
     location: 'YouTube & Tech Exchange Studio',
     organizer: 'Tech Exchange Media',
-    description: 'Join our interactive tech show discussing autonomous AI agent orchestration, local LLM serving with Ollama & vLLM, and real-world developer workflows in Nepal.',
+    description: 'Join our interactive tech show discussing autonomous AI agent orchestration, local LLM serving with Ollama & vLLM, and real-world developer workflows.',
     youtubeUrl: 'https://youtube.com',
     guest: {
       name: 'Dinesh Gajurel',
@@ -172,17 +172,17 @@ export const PODCAST_EPISODES: PodcastEpisode[] = [
   },
   {
     id: 'talk-02',
-    title: 'Kathmandu Tech & AI Summit 2026',
+    title: 'Global Tech & AI Summit 2026',
     mediaType: 'event',
     status: 'upcoming',
     duration: 'Full Day Event',
-    eventDate: 'Sep 25, 2026 @ 9:00 AM NPT',
+    eventDate: 'Sep 25, 2026 @ 9:00 AM UTC',
     publishedDate: 'Sep 2026',
     timeAgo: 'Upcoming Event',
-    location: 'Kathmandu Tech Hub (Hattisar) & Online',
-    organizer: 'Tech Exchange x Fusemachines Community',
+    location: 'Global Tech Hub & Online Live Stream',
+    organizer: 'Tech Exchange Community',
     registrationUrl: 'https://example.com/register',
-    description: 'The premier annual gathering of 500+ software engineers, AI researchers, and tech founders in Kathmandu. Featuring keynotes, hands-on workshops, and community networking.',
+    description: 'The premier annual gathering of 500+ software engineers, AI researchers, and tech founders worldwide. Featuring keynotes, hands-on workshops, and community networking.',
     speakers: [
       {
         name: 'Dinesh Gajurel',
@@ -190,7 +190,7 @@ export const PODCAST_EPISODES: PodcastEpisode[] = [
         avatar: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150&auto=format&fit=crop&q=80'
       }
     ],
-    topics: ['#Event', '#KathmanduTech', '#AIFellowship', '#Networking'],
+    topics: ['#Event', '#GlobalTech', '#AIFellowship', '#Networking'],
     notes: [
       '09:00 AM - Opening Keynote: AI Transformation in South Asia',
       '11:00 AM - High-Concurrency Web Systems Masterclass',
@@ -250,14 +250,14 @@ export const PODCAST_EPISODES: PodcastEpisode[] = [
   },
   {
     id: 'talk-05',
-    title: 'Podcast Ep 24: Tech Salaries in Nepal, Remote US Companies & Career Growth',
+    title: 'Podcast Ep 24: Global Software Salaries, Remote Engineering & Career Acceleration',
     mediaType: 'podcast',
     status: 'recorded',
     episodeNumber: 24,
     duration: '48 mins',
     publishedDate: 'Sep 2026',
     timeAgo: '3 days ago',
-    description: 'A deep dive discussion on compensation benchmarks in Nepal, navigating local NPR contracts vs overseas USD roles, and high-demand skillsets needed in 2026.',
+    description: 'A deep dive discussion on global compensation benchmarks, navigating remote engineering contracts, and high-demand skillsets needed in 2026.',
     audioUrl: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3',
     spotifyUrl: 'https://spotify.com',
     youtubeUrl: 'https://youtube.com',
@@ -266,11 +266,11 @@ export const PODCAST_EPISODES: PodcastEpisode[] = [
       role: 'Engineering Lead @ Tech Exchange',
       avatar: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150&auto=format&fit=crop&q=80'
     },
-    topics: ['#Podcast', '#TechSalariesNepal', '#RemoteWork', '#Careers'],
+    topics: ['#Podcast', '#TechSalaries', '#RemoteWork', '#Careers'],
     notes: [
-      '00:00 - Current State of the Nepali Tech Market in 2026',
-      '14:20 - Negotiating NPR Salaries vs USD Remote Contracts',
-      '28:45 - High-Demand Skills: AI, DevOps & Fullstack TypeScript',
+      '00:00 - Current State of the Global Tech Market in 2026',
+      '14:20 - Negotiating Remote Contracts & Equity Grants',
+      '28:45 - High-Demand Skills: AI Agents, DevOps & Fullstack TypeScript',
       '42:10 - Advice for Junior & Mid-level Engineers'
     ]
   }
@@ -455,22 +455,22 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
 export const NEWS_ITEMS: NewsItem[] = [
   {
     id: 'news-1',
-    title: 'Kathmandu Tech Hub Unveils NPR 50M Seed Fund for Early-Stage Software Startups',
-    category: 'Nepal Tech Scene',
-    date: 'Today, 7:15 PM NPT',
+    title: 'Tech Exchange Innovation Fund Unveils $5M Seed Support for Early-Stage Software Startups',
+    category: 'Venture & Startups',
+    date: 'Today, 7:15 PM UTC',
     timeAgo: '12 mins ago',
-    summary: 'A new venture fund backed by Nepal tech leaders and international investors launches in Kathmandu to fund early-stage AI, SaaS, and fullstack web applications.',
+    summary: 'A new venture fund backed by tech leaders and global investors launches to fund early-stage AI agents, developer tooling, and fullstack web applications.',
     source: 'Tech Exchange Newsdesk',
     link: '#',
     isBreaking: true,
     readTime: '3 min read',
-    tags: ['#NepalTech', '#Startups', '#Kathmandu', '#Funding']
+    tags: ['#Venture', '#Startups', '#TechExchange', '#Funding']
   },
   {
     id: 'news-2',
     title: 'DeepSeek-R1 & Claude 3.7 Sonnet Push Autonomous Code Generation to New Highs',
     category: 'AI & Frontier Models',
-    date: 'Today, 6:40 PM NPT',
+    date: 'Today, 6:40 PM UTC',
     timeAgo: '45 mins ago',
     summary: 'Frontier AI models introduce novel chain-of-thought architectures that dramatically improve multi-file software engineering, bug diagnosis, and automated refactoring.',
     source: 'AI Engineering Dispatch',
@@ -483,7 +483,7 @@ export const NEWS_ITEMS: NewsItem[] = [
     id: 'news-3',
     title: 'React 19 Official Production Release Brings Native Server Actions & Zero-Bundle Async Hooks',
     category: 'Web & Mobile',
-    date: 'Today, 5:15 PM NPT',
+    date: 'Today, 5:15 PM UTC',
     timeAgo: '2 hours ago',
     summary: 'The React team announces general availability of React 19, featuring built-in form state actions, useActionState, and native asset preloading.',
     source: 'React Official Blog',
@@ -494,16 +494,16 @@ export const NEWS_ITEMS: NewsItem[] = [
   },
   {
     id: 'news-4',
-    title: 'Fusemachines & Tribhuvan University Partner to Launch Advanced AI Engineering Fellowship',
-    category: 'Nepal Tech Scene',
-    date: 'Today, 3:30 PM NPT',
+    title: 'Global Tech Fellowship Partners with Industry Leaders to Launch AI Engineering Grant',
+    category: 'Education & Grants',
+    date: 'Today, 3:30 PM UTC',
     timeAgo: '4 hours ago',
-    summary: 'Selected computer science graduates in Kathmandu will receive full tuition coverage, high-performance hardware stipends, and direct mentorship from global AI researchers.',
-    source: 'Kathmandu Tech Dispatch',
+    summary: 'Selected computer science graduates and developers will receive full tuition coverage, high-performance hardware stipends, and direct mentorship from AI researchers.',
+    source: 'Global Tech Dispatch',
     link: '#',
     isBreaking: false,
     readTime: '3 min read',
-    tags: ['#NepalTech', '#Fusemachines', '#Education', '#AI']
+    tags: ['#GlobalTech', '#Education', '#AI', '#Fellowship']
   },
   {
     id: 'news-5',
@@ -591,8 +591,8 @@ export const COURSES: Course[] = [
     studentsEnrolled: 1840,
     rating: 4.9,
     reviewsCount: 182,
-    price: 'NPR 4,999',
-    originalPrice: 'NPR 9,999',
+    price: '$49',
+    originalPrice: '$99',
     badge: 'Bestseller',
     description: 'Master enterprise modern web development. Build production-grade SaaS applications using Next.js 15 App Router, React 19 Server Actions, TypeScript, Tailwind CSS, Prisma, and PostgreSQL.',
     instructor: {
@@ -627,7 +627,7 @@ export const COURSES: Course[] = [
       },
       {
         week: 5,
-        title: 'Payment Gateway Integration (eSewa, Khalti & Stripe)',
+        title: 'Payment Gateway Integration (Stripe & Merchant APIs)',
         topics: ['Webhook Handlers & Idempotency', 'Transaction Logging', 'Subscription Billing'],
         duration: '6 Lessons • 4 hrs'
       },
@@ -639,7 +639,7 @@ export const COURSES: Course[] = [
       }
     ],
     prerequisites: ['Basic JavaScript (ES6+)', 'HTML & CSS Fundamentals', 'Familiarity with Git'],
-    skillsLearned: ['Next.js 15', 'React 19', 'TypeScript', 'Prisma ORM', 'PostgreSQL', 'Tailwind CSS', 'eSewa Integration'],
+    skillsLearned: ['Next.js 15', 'React 19', 'TypeScript', 'Prisma ORM', 'PostgreSQL', 'Tailwind CSS', 'Stripe Integration'],
     certificateIncluded: true
   },
   {
@@ -653,8 +653,8 @@ export const COURSES: Course[] = [
     studentsEnrolled: 2350,
     rating: 4.95,
     reviewsCount: 240,
-    price: 'NPR 6,999',
-    originalPrice: 'NPR 12,999',
+    price: '$69',
+    originalPrice: '$129',
     badge: 'Popular',
     description: 'Build production multi-agent workflows, long-term memory stores, RAG document search engines, and function-calling bots using Python, LangChain, LlamaIndex, Qdrant, and OpenAI / Anthropic APIs.',
     instructor: {
@@ -758,8 +758,8 @@ export const COURSES: Course[] = [
     studentsEnrolled: 1150,
     rating: 4.88,
     reviewsCount: 95,
-    price: 'NPR 5,499',
-    originalPrice: 'NPR 10,000',
+    price: '$54',
+    originalPrice: '$99',
     badge: 'Certificate Included',
     description: 'Architect, automate, and secure production cloud infrastructure. Containerize apps with Docker, manage Kubernetes clusters, provision AWS resources with Terraform, and build GitHub Actions pipelines.',
     instructor: {
@@ -820,8 +820,8 @@ export const COURSES: Course[] = [
     studentsEnrolled: 1290,
     rating: 4.82,
     reviewsCount: 112,
-    price: 'NPR 3,999',
-    originalPrice: 'NPR 7,500',
+    price: '$39',
+    originalPrice: '$75',
     badge: 'New',
     description: 'Build native iOS and Android mobile apps from a single codebase. Learn Expo Router, React Native Reanimated gestures, offline SQLite storage, push notifications, and App Store publishing.',
     instructor: {

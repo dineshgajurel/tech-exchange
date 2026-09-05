@@ -11,7 +11,7 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({ isOpen, on
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [serviceType, setServiceType] = useState('Full-Stack Software Development');
-  const [budget, setBudget] = useState('NPR 1,50,000 – 5,00,000');
+  const [budget, setBudget] = useState('$1,000 – $5,00,000');
   const [timeline, setTimeline] = useState('Within 1 Month');
   const [description, setDescription] = useState('');
   const [submitted, setSubmitted] = useState(false);
@@ -114,16 +114,16 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({ isOpen, on
             {/* Budget & Timeline */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <div>
-                <label className="text-xs font-semibold text-slate-700 dark:text-slate-300 block mb-1">Estimated Budget (NPR)</label>
+                <label className="text-xs font-semibold text-slate-700 dark:text-slate-300 block mb-1">Estimated Budget (USD)</label>
                 <select
                   value={budget}
                   onChange={(e) => setBudget(e.target.value)}
                   className="w-full px-3.5 py-2 text-xs rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white"
                 >
-                  <option value="<NPR 50k">Under NPR 50,000</option>
-                  <option value="NPR 50k - 1.5L">NPR 50,000 – 1,50,000</option>
-                  <option value="NPR 1.5L - 5L">NPR 1,50,000 – 5,00,000</option>
-                  <option value="NPR 5L+">NPR 5,00,000+</option>
+                  <option value="< $1,000">Under $1,000</option>
+                  <option value="$1,000 – $5,000">$1,000 – $5,000</option>
+                  <option value="$5,000 – $15,000">$5,000 – $15,000</option>
+                  <option value="$15,000+">$15,000+ / Custom</option>
                 </select>
               </div>
 
