@@ -34,16 +34,9 @@ export const HeroReferenceBanner: React.FC<HeroReferenceBannerProps> = ({
         
         {/* Main Title & Brand Badges */}
         <div className="flex flex-col items-start gap-4 mb-6">
-          <div className="flex flex-wrap items-center gap-2">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-extrabold bg-blue-100/80 dark:bg-blue-950/80 text-blue-700 dark:text-blue-300 border border-blue-200/80 dark:border-blue-800/80 shadow-xs">
-              <Sparkles className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400" />
-              <span>Developer Media & Software Engineering Platform</span>
-            </div>
-
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-extrabold bg-emerald-50 dark:bg-emerald-950/70 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800/80">
-              <Globe className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
-              <span>100% Fully Remote Culture</span>
-            </div>
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-extrabold bg-blue-100/80 dark:bg-blue-950/80 text-blue-700 dark:text-blue-300 border border-blue-200/80 dark:border-blue-800/80 shadow-xs">
+            <Sparkles className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400" />
+            <span>Developer Media & Software Engineering Platform</span>
           </div>
 
           <div className="pt-1">
@@ -190,7 +183,7 @@ export const HeroReferenceBanner: React.FC<HeroReferenceBannerProps> = ({
               className="flex-1 md:flex-none inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700 text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 font-extrabold text-xs transition-all text-center"
             >
               <Globe className="w-4 h-4 text-blue-600" />
-              <span>Explore 100% Remote Careers</span>
+              <span>Explore Careers & Team</span>
             </Link>
 
             <button
