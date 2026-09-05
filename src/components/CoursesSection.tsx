@@ -65,13 +65,13 @@ export const CoursesSection: React.FC = () => {
           </h2>
 
           <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
-            Practical, project-based courses built for modern production engineering & global teams. Hands-on code, real-world architecture, and industry-recognized certificates.
+            Practical, project-based courses built for developers in Nepal & remote software teams. Hands-on code, real-world architecture, and verified certificates.
           </p>
 
           {/* Quick Metrics */}
           <div className="pt-4 grid grid-cols-2 sm:grid-cols-4 gap-4 border-t border-slate-800">
             <div>
-              <div className="text-xl sm:text-2xl font-black text-white font-mono">12,500+</div>
+              <div className="text-xl sm:text-2xl font-black text-white font-mono">1,250+</div>
               <div className="text-[11px] text-slate-400 font-medium">Students Enrolled</div>
             </div>
             <div>
@@ -87,7 +87,7 @@ export const CoursesSection: React.FC = () => {
             </div>
             <div>
               <div className="text-xl sm:text-2xl font-black text-blue-400 font-mono">Paid & Free</div>
-              <div className="text-[11px] text-slate-400 font-medium">Pricing Options</div>
+              <div className="text-[11px] text-slate-400 font-medium">Flexible Options</div>
             </div>
           </div>
 

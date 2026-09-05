@@ -45,11 +45,11 @@ export const JobsSection: React.FC<JobsSectionProps> = ({ jobs, onAddJob }) => {
   // New Job Form State
   const [newJobTitle, setNewJobTitle] = useState('');
   const [newJobCompany, setNewJobCompany] = useState('');
-  const [newJobLocation, setNewJobLocation] = useState('');
-  const [newJobType, setNewJobType] = useState<'Full-time' | 'Part-time' | 'Contract' | 'Remote'>('Remote');
+  const [newJobLocation, setNewJobLocation] = useState('Kathmandu, Nepal (Hybrid / Remote)');
+  const [newJobType, setNewJobType] = useState<'Full-time' | 'Part-time' | 'Contract' | 'Remote'>('Full-time');
   const [newJobCategory, setNewJobCategory] = useState<'Frontend' | 'Backend' | 'Fullstack' | 'AI & ML' | 'DevOps & Cloud' | 'Mobile' | 'Media & Growth'>('Fullstack');
   const [newJobLevel, setNewJobLevel] = useState<'Entry Level' | 'Mid Level' | 'Senior' | 'Lead' | 'Executive'>('Senior');
-  const [newJobSalary, setNewJobSalary] = useState('$80,000 - $140,000 / yr');
+  const [newJobSalary, setNewJobSalary] = useState('NPR 150,000 - 250,000 / mo');
   const [newJobDescription, setNewJobDescription] = useState('');
   const [newJobRequirements, setNewJobRequirements] = useState('');
   const [newJobSkills, setNewJobSkills] = useState('');
@@ -180,26 +180,26 @@ export const JobsSection: React.FC<JobsSectionProps> = ({ jobs, onAddJob }) => {
             </h1>
 
             <p className="text-sm sm:text-base text-blue-100/90 mt-2 leading-relaxed">
-              Discover top technical positions from AI labs, cloud platforms, and innovative software teams worldwide.
+              Discover top technical positions from software engineering teams, AI labs, and remote companies in Nepal and worldwide.
             </p>
 
             {/* Quick Metrics */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-6 pt-6 border-t border-blue-500/30">
               <div>
-                <div className="text-xl sm:text-2xl font-black text-white">{jobs.length}+</div>
-                <div className="text-xs text-blue-200">Active Roles</div>
+                <div className="text-xl sm:text-2xl font-black text-white">{jobs.length} Active</div>
+                <div className="text-xs text-blue-200">Verified Roles</div>
               </div>
               <div>
                 <div className="text-xl sm:text-2xl font-black text-emerald-300">100%</div>
-                <div className="text-xs text-blue-200">Verified Teams</div>
+                <div className="text-xs text-blue-200">Verified Companies</div>
               </div>
               <div>
-                <div className="text-xl sm:text-2xl font-black text-amber-300">$95K+</div>
-                <div className="text-xs text-blue-200">Avg Tech Compensation</div>
+                <div className="text-xl sm:text-2xl font-black text-amber-300">NPR 60K–350K+</div>
+                <div className="text-xs text-blue-200">Monthly Compensation</div>
               </div>
               <div>
-                <div className="text-xl sm:text-2xl font-black text-blue-200">Verified</div>
-                <div className="text-xs text-blue-200">Direct Employers</div>
+                <div className="text-xl sm:text-2xl font-black text-blue-200">Remote / Nepal</div>
+                <div className="text-xs text-blue-200">Flexible Locations</div>
               </div>
             </div>
           </div>
