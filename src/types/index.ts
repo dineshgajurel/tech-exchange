@@ -1,4 +1,4 @@
-export type SectionTab = 'home' | 'podcast' | 'tutorials' | 'courses' | 'services' | 'portfolio' | 'news' | 'forum' | 'jobs' | 'about';
+export type SectionTab = 'home' | 'podcast' | 'tutorials' | 'courses' | 'services' | 'portfolio' | 'news' | 'forum' | 'jobs' | 'about' | 'privacy' | 'terms';
 
 export interface Course {
   id: string;

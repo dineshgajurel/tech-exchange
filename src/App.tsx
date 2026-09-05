@@ -11,6 +11,8 @@ import { NewsSection } from './components/NewsSection';
 import { JobsSection } from './components/JobsSection';
 import { AboutSection } from './components/AboutSection';
 import { ForumSection } from './components/ForumSection';
+import { PrivacyPolicySection } from './components/PrivacyPolicySection';
+import { TermsOfServiceSection } from './components/TermsOfServiceSection';
 import { Footer } from './components/Footer';
 
 import { ConsultationModal } from './components/ConsultationModal';
@@ -104,6 +106,8 @@ export function App() {
           <Route path="/news" element={<NewsSection />} />
           <Route path="/jobs" element={<JobsSection jobs={jobs} onAddJob={handleAddJob} />} />
           <Route path="/about" element={<AboutSection />} />
+          <Route path="/privacy" element={<PrivacyPolicySection />} />
+          <Route path="/terms" element={<TermsOfServiceSection />} />
           <Route
             path="/forum"
             element={

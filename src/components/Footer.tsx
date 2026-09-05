@@ -83,6 +83,12 @@ export const Footer: React.FC<FooterProps> = ({
               <li>
                 <Link to="/about" onClick={() => onSelectTab && onSelectTab('about')} className="hover:text-blue-600 cursor-pointer">🏢 About Us</Link>
               </li>
+              <li>
+                <Link to="/privacy" onClick={() => onSelectTab && onSelectTab('privacy')} className="hover:text-blue-600 cursor-pointer">🔒 Privacy Policy</Link>
+              </li>
+              <li>
+                <Link to="/terms" onClick={() => onSelectTab && onSelectTab('terms')} className="hover:text-blue-600 cursor-pointer">⚖️ Terms of Service</Link>
+              </li>
             </ul>
           </div>
 
@@ -118,7 +124,7 @@ export const Footer: React.FC<FooterProps> = ({
               <a href="https://twitter.com" target="_blank" rel="noreferrer" className="hover:text-blue-500 transition-colors" aria-label="Twitter">
                 <Twitter className="w-4 h-4" />
               </a>
-              <a href="https://techexchange.com" className="hover:text-blue-600 transition-colors" aria-label="Website">
+              <a href="https://techexchange.gajureldns.com.np" className="hover:text-blue-600 transition-colors" aria-label="Website">
                 <Globe className="w-4 h-4" />
               </a>
               <a href="#rss" className="hover:text-blue-600 transition-colors flex items-center gap-1" aria-label="RSS">
@@ -131,8 +137,11 @@ export const Footer: React.FC<FooterProps> = ({
 
         {/* Bottom Bar */}
         <div className="pt-6 border-t border-slate-100 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 dark:text-slate-400 gap-4">
-          <div>
-            © {new Date().getFullYear()} TechExchange.com — All rights reserved.
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
+            <span>© {new Date().getFullYear()} TechExchange.com — All rights reserved.</span>
+            <Link to="/privacy" onClick={() => onSelectTab && onSelectTab('privacy')} className="hover:text-blue-600 transition-colors">Privacy Policy</Link>
+            <span>•</span>
+            <Link to="/terms" onClick={() => onSelectTab && onSelectTab('terms')} className="hover:text-blue-600 transition-colors">Terms of Service</Link>
           </div>
           <div className="flex items-center gap-1.5 font-medium">
             <span>Made with</span>
