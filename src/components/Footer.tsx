@@ -1,20 +1,31 @@
 import React from 'react';
-import { Rocket, Heart, Globe, Github, Twitter, Rss } from 'lucide-react';
+import { Link, useNavigate } from 'react-router-dom';
+import { Heart, Globe, Github, Twitter, Rss } from 'lucide-react';
 import { TechExchangeLogo } from './TechExchangeLogo';
-import { ChannelId } from '../types';
+import { SectionTab, ChannelId } from '../types';
 
 interface FooterProps {
-  onSelectChannel: (channel: ChannelId | 'all') => void;
-  onOpenLounge: () => void;
+  onSelectTab?: (tab: SectionTab) => void;
+  onSelectChannel?: (channel: ChannelId | 'all') => void;
+  onOpenLounge?: () => void;
 }
 
-export const Footer: React.FC<FooterProps> = ({ onSelectChannel, onOpenLounge }) => {
-  return (
-    <footer className="relative overflow-hidden bg-white dark:bg-slate-900 border-t border-slate-200/80 dark:border-slate-800 transition-colors pt-12 pb-16">
-      
+export const Footer: React.FC<FooterProps> = ({
+  onSelectTab,
+  onSelectChannel,
+  onOpenLounge,
+}) => {
+  const navigate = useNavigate();
 
+  const handleChannelClick = (channel: ChannelId) => {
+    if (onSelectChannel) onSelectChannel(channel);
+    if (onSelectTab) onSelectTab('forum');
+    navigate('/forum');
+  };
+
+  return (
+    <footer className="relative overflow-hidden bg-white dark:bg-slate-900 border-t border-slate-200/80 dark:border-slate-800 transition-colors pt-12 pb-16 mt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           
           {/* Col 1: Brand & Tagline */}
@@ -30,23 +41,35 @@ export const Footer: React.FC<FooterProps> = ({ onSelectChannel, onOpenLounge })
             </p>
           </div>
 
-          {/* Col 2: Navigation Channels */}
+          {/* Col 2: Quick Links & Sections */}
           <div>
             <h4 className="font-heading text-xs font-extrabold uppercase tracking-wider text-slate-900 dark:text-white mb-3">
-              Explore Channels
+              Explore Sections
             </h4>
             <ul className="space-y-2 text-xs font-medium text-slate-600 dark:text-slate-400">
               <li>
-                <button onClick={() => onSelectChannel('tech-talk')} className="hover:text-blue-600 cursor-pointer">💬 Tech Talk</button>
+                <Link to="/podcast" onClick={() => onSelectTab && onSelectTab('podcast')} className="hover:text-blue-600 cursor-pointer">🎙️ Tech Talk</Link>
               </li>
               <li>
-                <button onClick={() => onSelectChannel('tech-explained')} className="hover:text-blue-600 cursor-pointer">🧠 Tech Explained</button>
+                <Link to="/tutorials" onClick={() => onSelectTab && onSelectTab('tutorials')} className="hover:text-blue-600 cursor-pointer">📚 Tutorials</Link>
               </li>
               <li>
-                <button onClick={() => onSelectChannel('build-with-tech')} className="hover:text-blue-600 cursor-pointer">🛠️ Build With Tech</button>
+                <Link to="/courses" onClick={() => onSelectTab && onSelectTab('courses')} className="hover:text-blue-600 cursor-pointer">🎓 Courses</Link>
               </li>
               <li>
-                <button onClick={() => onSelectChannel('whats-happening')} className="hover:text-blue-600 cursor-pointer">📰 What's Happening</button>
+                <Link to="/services" onClick={() => onSelectTab && onSelectTab('services')} className="hover:text-blue-600 cursor-pointer">⚡ Services</Link>
+              </li>
+              <li>
+                <Link to="/portfolio" onClick={() => onSelectTab && onSelectTab('portfolio')} className="hover:text-blue-600 cursor-pointer">🚀 Portfolio</Link>
+              </li>
+              <li>
+                <Link to="/jobs" onClick={() => onSelectTab && onSelectTab('jobs')} className="hover:text-blue-600 cursor-pointer">💼 Tech Jobs</Link>
+              </li>
+              <li>
+                <Link to="/about" onClick={() => onSelectTab && onSelectTab('about')} className="hover:text-blue-600 cursor-pointer">🏢 About Us & Careers</Link>
+              </li>
+              <li>
+                <Link to="/forum" onClick={() => onSelectTab && onSelectTab('forum')} className="hover:text-blue-600 cursor-pointer">💬 Community Forum</Link>
               </li>
             </ul>
           </div>
@@ -54,25 +77,40 @@ export const Footer: React.FC<FooterProps> = ({ onSelectChannel, onOpenLounge })
           {/* Col 3: Community & Social */}
           <div>
             <h4 className="font-heading text-xs font-extrabold uppercase tracking-wider text-slate-900 dark:text-white mb-3">
-              Community
+              Community Channels
             </h4>
             <ul className="space-y-2 text-xs font-medium text-slate-600 dark:text-slate-400 mb-4">
               <li>
-                <button onClick={onOpenLounge} className="hover:text-blue-600 cursor-pointer">Say Hi in Lounge 👋</button>
+                <button onClick={() => handleChannelClick('tech-talk')} className="hover:text-blue-600 cursor-pointer">💬 Tech Talk</button>
               </li>
-              <li><a href="#rules" className="hover:text-blue-600">Community Guidelines</a></li>
-              <li><a href="#rss" className="hover:text-blue-600 flex items-center gap-1"><Rss className="w-3 h-3" /> RSS Feed</a></li>
+              <li>
+                <button onClick={() => handleChannelClick('tech-explained')} className="hover:text-blue-600 cursor-pointer">🧠 Tech Explained</button>
+              </li>
+              <li>
+                <button onClick={() => handleChannelClick('build-with-tech')} className="hover:text-blue-600 cursor-pointer">🛠️ Build With Tech</button>
+              </li>
+              <li>
+                <button onClick={() => handleChannelClick('whats-happening')} className="hover:text-blue-600 cursor-pointer">📰 What's Happening</button>
+              </li>
+              {onOpenLounge && (
+                <li>
+                  <button onClick={onOpenLounge} className="hover:text-blue-600 cursor-pointer text-amber-600 dark:text-amber-400 font-bold">Say Hi in Lounge 👋</button>
+                </li>
+              )}
             </ul>
 
-            <div className="flex items-center gap-3 text-slate-400">
-              <a href="https://github.com" target="_blank" rel="noreferrer" className="hover:text-slate-900 dark:hover:text-white">
+            <div className="flex items-center gap-3 text-slate-400 mt-4">
+              <a href="https://github.com" target="_blank" rel="noreferrer" className="hover:text-slate-900 dark:hover:text-white transition-colors" aria-label="GitHub">
                 <Github className="w-4 h-4" />
               </a>
-              <a href="https://twitter.com" target="_blank" rel="noreferrer" className="hover:text-blue-500">
+              <a href="https://twitter.com" target="_blank" rel="noreferrer" className="hover:text-blue-500 transition-colors" aria-label="Twitter">
                 <Twitter className="w-4 h-4" />
               </a>
-              <a href="https://techexchange.com" className="hover:text-blue-600">
+              <a href="https://techexchange.com" className="hover:text-blue-600 transition-colors" aria-label="Website">
                 <Globe className="w-4 h-4" />
+              </a>
+              <a href="#rss" className="hover:text-blue-600 transition-colors flex items-center gap-1" aria-label="RSS">
+                <Rss className="w-4 h-4" />
               </a>
             </div>
           </div>

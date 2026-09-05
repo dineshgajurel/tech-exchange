@@ -18,7 +18,7 @@ export const PodcastSection: React.FC = () => {
 
   const filterOptions: { id: MediaFilter; label: string; icon: React.ReactNode }[] = [
     { id: 'all', label: 'All Content', icon: <Sparkles className="w-3.5 h-3.5" /> },
-    { id: 'show', label: 'Live Shows', icon: <Tv className="w-3.5 h-3.5" /> },
+    { id: 'show', label: 'Tech Shows', icon: <Tv className="w-3.5 h-3.5" /> },
     { id: 'event', label: 'Events & Meetups', icon: <Calendar className="w-3.5 h-3.5" /> },
     { id: 'seminar', label: 'Seminars & Workshops', icon: <Users className="w-3.5 h-3.5" /> },
     { id: 'video', label: 'Video Demos', icon: <Video className="w-3.5 h-3.5" /> },
@@ -66,9 +66,9 @@ export const PodcastSection: React.FC = () => {
     switch (item.mediaType) {
       case 'show':
         return (
-          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-black bg-red-600 text-white animate-pulse">
-            <span className="w-2 h-2 rounded-full bg-white animate-ping"></span>
-            LIVE SHOW
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-black bg-blue-600 text-white">
+            <Tv className="w-3.5 h-3.5 text-white" />
+            FEATURED SHOW
           </span>
         );
       case 'event':
@@ -107,25 +107,17 @@ export const PodcastSection: React.FC = () => {
     <section className="py-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       {/* Section Header */}
-      <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 mb-8">
-        <div>
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-extrabold bg-blue-50 dark:bg-blue-950 text-blue-700 dark:text-blue-300 mb-2 border border-blue-200 dark:border-blue-800">
-            <Tv className="w-4 h-4 text-blue-600 animate-pulse" />
-            <span>Tech Talk Hub — Shows, Videos, Seminars & Events</span>
-          </div>
-          <h2 className="font-heading text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
-            Tech Talk & Live Events
-          </h2>
-          <p className="text-sm text-slate-600 dark:text-slate-400 mt-1">
-            Watch live streams, attend tech seminars in Kathmandu, watch video demos, and listen to podcasts.
-          </p>
+      <div className="mb-8">
+        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-extrabold bg-blue-50 dark:bg-blue-950 text-blue-700 dark:text-blue-300 mb-2 border border-blue-200 dark:border-blue-800">
+          <Tv className="w-4 h-4 text-blue-600" />
+          <span>Tech Talk Hub — Shows, Seminars & Podcasts</span>
         </div>
-
-        {/* Real-time Status Badge */}
-        <div className="flex items-center gap-2 px-4 py-2 rounded-2xl bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-200 dark:border-emerald-800 text-emerald-700 dark:text-emerald-300 text-xs font-bold shrink-0">
-          <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping"></span>
-          <span>Next Kathmandu Tech Event in 3 Days</span>
-        </div>
+        <h2 className="font-heading text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+          Tech Talk
+        </h2>
+        <p className="text-sm text-slate-600 dark:text-slate-400 mt-1">
+          Watch video shows, attend tech seminars in Kathmandu, watch video demos, and listen to podcasts.
+        </p>
       </div>
 
       {/* Media Filter Tabs */}
@@ -341,9 +333,8 @@ export const PodcastSection: React.FC = () => {
       {/* Filtered Grid List */}
       <div className="flex items-center justify-between mb-4">
         <h3 className="font-heading text-xl font-bold text-slate-900 dark:text-white">
-          All Tech Talk Shows, Seminars & Media ({filteredItems.length})
+          All Shows, Events & Media ({filteredItems.length})
         </h3>
-        <span className="text-xs text-slate-500 dark:text-slate-400">Updated in real-time</span>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

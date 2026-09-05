@@ -75,7 +75,7 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({ isOpen, on
                 <label className="text-xs font-semibold text-slate-700 dark:text-slate-300 block mb-1">Your Name *</label>
                 <input
                   type="text"
-                  placeholder="e.g. Sarah Connor"
+                  placeholder="e.g. Dinesh Gajurel"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   required
@@ -87,7 +87,7 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({ isOpen, on
                 <label className="text-xs font-semibold text-slate-700 dark:text-slate-300 block mb-1">Email Address *</label>
                 <input
                   type="email"
-                  placeholder="sarah@company.com"
+                  placeholder="dinesh@techexchange.com"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required

@@ -24,11 +24,11 @@ export const CommunityLoungeModal: React.FC<CommunityLoungeModalProps> = ({
   messages,
   onAddMessage,
 }) => {
-  const [author, setAuthor] = useState('');
-  const [role, setRole] = useState('Tech Lover');
-  const [location, setLocation] = useState('');
+  const [author, setAuthor] = useState('Dinesh Gajurel');
+  const [role, setRole] = useState('Software Architect');
+  const [location, setLocation] = useState('Kathmandu, NP');
   const [message, setMessage] = useState('');
-  const [selectedAvatar, setSelectedAvatar] = useState(AVATAR_PRESETS[0]);
+  const [selectedAvatar, setSelectedAvatar] = useState('https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150&auto=format&fit=crop&q=80');
 
   if (!isOpen) return null;
 
@@ -40,7 +40,7 @@ export const CommunityLoungeModal: React.FC<CommunityLoungeModalProps> = ({
       author: author.trim(),
       role: role.trim(),
       avatar: selectedAvatar,
-      location: location.trim() || 'Global Citizen',
+      location: location.trim() || 'Kathmandu, NP',
       message: message.trim()
     });
 
@@ -93,7 +93,7 @@ export const CommunityLoungeModal: React.FC<CommunityLoungeModalProps> = ({
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
               <input
                 type="text"
-                placeholder="Your Name *"
+                placeholder="Your Name (e.g. Dinesh Gajurel) *"
                 value={author}
                 onChange={(e) => setAuthor(e.target.value)}
                 required

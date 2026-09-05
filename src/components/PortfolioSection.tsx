@@ -103,7 +103,7 @@ export const PortfolioSection: React.FC<PortfolioSectionProps> = ({ onOpenConsul
                     className="flex items-center gap-1.5 px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold shadow-xs transition-colors"
                   >
                     <ExternalLink className="w-3.5 h-3.5" />
-                    <span>Live Product Demo</span>
+                    <span>View Product Demo</span>
                   </a>
                 )}
                 {proj.githubUrl && (

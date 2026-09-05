@@ -10,22 +10,11 @@ export const NewsSection: React.FC = () => {
   const [subscribed, setSubscribed] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState<CategoryFilter>('All');
   const [searchQuery, setSearchQuery] = useState('');
-  const [isRefreshing, setIsRefreshing] = useState(false);
-  const [lastUpdatedTime, setLastUpdatedTime] = useState('Just now');
-
   const handleSubscribe = (e: React.FormEvent) => {
     e.preventDefault();
     if (!email.trim()) return;
     setSubscribed(true);
     setEmail('');
-  };
-
-  const handleRefresh = () => {
-    setIsRefreshing(true);
-    setTimeout(() => {
-      setIsRefreshing(false);
-      setLastUpdatedTime('Just now');
-    }, 600);
   };
 
   const categories: CategoryFilter[] = [
@@ -50,36 +39,17 @@ export const NewsSection: React.FC = () => {
     <section className="py-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       {/* Section Header */}
-      <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4 mb-8">
-        <div>
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-extrabold bg-blue-50 dark:bg-blue-950 text-blue-700 dark:text-blue-300 mb-2 border border-blue-200 dark:border-blue-800">
-            <Zap className="w-3.5 h-3.5 text-blue-600 animate-pulse" />
-            <span>Real-Time Tech News & Trend Tracker</span>
-          </div>
-          <h2 className="font-heading text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
-            Latest Real-Time Tech News
-          </h2>
-          <p className="text-sm text-slate-600 dark:text-slate-400 mt-1">
-            Instant updates on AI breakthroughs, framework releases, and Nepal tech ecosystem stories.
-          </p>
+      <div className="mb-8">
+        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-extrabold bg-blue-50 dark:bg-blue-950 text-blue-700 dark:text-blue-300 mb-2 border border-blue-200 dark:border-blue-800">
+          <Zap className="w-3.5 h-3.5 text-blue-600" />
+          <span>Tech News Hub</span>
         </div>
-
-        {/* Live Status & Refresh Button */}
-        <div className="flex items-center gap-3">
-          <div className="flex items-center gap-2 px-3.5 py-2 rounded-2xl bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-200 dark:border-emerald-800 text-emerald-700 dark:text-emerald-300 text-xs font-bold">
-            <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping"></span>
-            <span>LIVE FEED • Updated {lastUpdatedTime}</span>
-          </div>
-
-          <button
-            onClick={handleRefresh}
-            className="flex items-center gap-1.5 px-3.5 py-2 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 text-xs font-bold text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 cursor-pointer shadow-sm active:scale-95 transition-all"
-            title="Refresh Live Feed"
-          >
-            <RefreshCw className={`w-3.5 h-3.5 ${isRefreshing ? 'animate-spin text-blue-600' : ''}`} />
-            <span>Refresh</span>
-          </button>
-        </div>
+        <h2 className="font-heading text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+          Latest Tech News
+        </h2>
+        <p className="text-sm text-slate-600 dark:text-slate-400 mt-1">
+          Coverage on AI breakthroughs, framework releases, and Nepal tech ecosystem stories.
+        </p>
       </div>
 
       {/* Filter & Search Bar */}
@@ -107,7 +77,7 @@ export const NewsSection: React.FC = () => {
           <Search className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
           <input
             type="text"
-            placeholder="Search real-time news..."
+            placeholder="Search tech news..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             className="w-full pl-9 pr-4 py-2 text-xs rounded-xl bg-white dark:bg-slate-850 border border-slate-200 dark:border-slate-750 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500/50"
@@ -195,11 +165,11 @@ export const NewsSection: React.FC = () => {
           </div>
 
           <h3 className="font-heading text-xl font-bold text-slate-900 dark:text-white">
-            Tech Exchange Real-Time Digest
+            Tech Exchange Newsletter
           </h3>
 
           <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-            Get 2-minute instant alerts on live shows, developer seminars in Kathmandu, and major tech releases delivered straight to your inbox.
+            Get concise summaries of tech news, podcasts, and developer articles delivered to your inbox.
           </p>
 
           {!subscribed ? (

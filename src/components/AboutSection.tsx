@@ -438,7 +438,7 @@ export const AboutSection: React.FC = () => {
                         required
                         value={applicantName}
                         onChange={(e) => setApplicantName(e.target.value)}
-                        placeholder="Alex Rivera"
+                        placeholder="Dinesh Gajurel"
                         className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-xs text-slate-900 dark:text-white focus:outline-none focus:border-blue-500"
                       />
                     </div>
@@ -452,7 +452,7 @@ export const AboutSection: React.FC = () => {
                         required
                         value={applicantEmail}
                         onChange={(e) => setApplicantEmail(e.target.value)}
-                        placeholder="alex@example.com"
+                        placeholder="dinesh@techexchange.com"
                         className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-xs text-slate-900 dark:text-white focus:outline-none focus:border-blue-500"
                       />
                     </div>
@@ -467,7 +467,7 @@ export const AboutSection: React.FC = () => {
                       required
                       value={applicantGithub}
                       onChange={(e) => setApplicantGithub(e.target.value)}
-                      placeholder="https://github.com/alexrivera"
+                      placeholder="https://github.com/dineshgajurel"
                       className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-xs text-slate-900 dark:text-white focus:outline-none focus:border-blue-500"
                     />
                   </div>

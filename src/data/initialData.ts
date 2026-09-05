@@ -56,9 +56,9 @@ export const INITIAL_POSTS: Post[] = [
     title: 'Built an open-source lightweight SQLite visualizer in WebAssembly & React',
     content: 'Spent the weekend building SQL-Lens! It runs entire SQLite database engines directly inside your browser tab using WASM. Zero backend servers, instant SQL queries, and interactive schema relationship graphs.',
     author: {
-      name: 'Elena Rostova',
-      handle: '@elena_dev',
-      avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80',
+      name: 'Dinesh Gajurel',
+      handle: '@dinesh',
+      avatar: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150&auto=format&fit=crop&q=80',
       role: 'Fullstack Architect'
     },
     timeAgo: '2 hours ago',
@@ -85,8 +85,8 @@ console.log(results);`
     commentsList: [
       {
         id: 'c1',
-        author: 'Marcus Vance',
-        avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80',
+        author: 'Dinesh Gajurel',
+        avatar: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150&auto=format&fit=crop&q=80',
         timeAgo: '1 hour ago',
         content: 'This is super clean! How are you persisting the sqlite database files across browser sessions?',
         upvotes: 12
@@ -99,8 +99,8 @@ console.log(results);`
     title: 'Weekly Tech Chat: Are you using AI agents in your daily coding workflow?',
     content: 'A huge shift is happening from simple inline copilot auto-complete to autonomous multi-file agent workflows. What tools are actually saving you time vs causing hallucinated refactoring bugs?',
     author: {
-      name: 'Dinesh',
-      handle: '@dinesh_tech',
+      name: 'Dinesh Gajurel',
+      handle: '@dinesh',
       avatar: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150&auto=format&fit=crop&q=80',
       role: 'Tech Exchange Host'
     },
@@ -111,8 +111,8 @@ console.log(results);`
     commentsList: [
       {
         id: 'c3',
-        author: 'Aria Chen',
-        avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&auto=format&fit=crop&q=80',
+        author: 'Dinesh Gajurel',
+        avatar: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150&auto=format&fit=crop&q=80',
         timeAgo: '3 hours ago',
         content: 'Cursor and Claude 3.5 Sonnet have completely changed how I prototype MVP features.',
         upvotes: 24
@@ -124,9 +124,9 @@ console.log(results);`
 export const INITIAL_LOUNGE_MESSAGES: LoungeMessage[] = [
   {
     id: 'm1',
-    author: 'Siddharth Patel',
-    role: 'Full Stack Dev',
-    avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&auto=format&fit=crop&q=80',
+    author: 'Dinesh Gajurel',
+    role: 'Software Architect',
+    avatar: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150&auto=format&fit=crop&q=80',
     location: 'Kathmandu, NP',
     message: 'Hey everyone! Excited to be part of Tech Exchange. Working on an AI agent workflow framework 👋',
     timestamp: '10 mins ago',
@@ -134,10 +134,10 @@ export const INITIAL_LOUNGE_MESSAGES: LoungeMessage[] = [
   },
   {
     id: 'm2',
-    author: 'Maya Lin',
-    role: 'Frontend Enthusiast',
-    avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&auto=format&fit=crop&q=80',
-    location: 'Toronto, CA',
+    author: 'Dinesh Gajurel',
+    role: 'Frontend Developer',
+    avatar: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150&auto=format&fit=crop&q=80',
+    location: 'Kathmandu, NP',
     message: 'Loving the ultra clean blue design here! Finally a comfortable tech forum without noise.',
     timestamp: '25 mins ago',
     likes: 8
@@ -147,24 +147,24 @@ export const INITIAL_LOUNGE_MESSAGES: LoungeMessage[] = [
 export const PODCAST_EPISODES: PodcastEpisode[] = [
   {
     id: 'talk-01',
-    title: 'Tech Talk Live Show #42: Building Autonomous AI Agents & Local LLM Serving',
+    title: 'Tech Talk Show #42: Building Autonomous AI Agents & Local LLM Serving',
     mediaType: 'show',
-    status: 'live',
-    duration: 'Live Stream',
+    status: 'featured',
+    duration: '45 mins',
     publishedDate: 'Sep 2026',
-    timeAgo: 'Live Now',
-    location: 'YouTube Live & Tech Exchange Studio',
+    timeAgo: 'Featured Episode',
+    location: 'YouTube & Tech Exchange Studio',
     organizer: 'Tech Exchange Media',
-    description: 'Join our interactive live show discussing autonomous AI agent orchestration, local LLM serving with Ollama & vLLM, and real-world developer workflows in Nepal.',
+    description: 'Join our interactive tech show discussing autonomous AI agent orchestration, local LLM serving with Ollama & vLLM, and real-world developer workflows in Nepal.',
     youtubeUrl: 'https://youtube.com',
     guest: {
       name: 'Dinesh Gajurel',
       role: 'Host & Software Architect @ Tech Exchange',
       avatar: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150&auto=format&fit=crop&q=80'
     },
-    topics: ['#LiveShow', '#AI', '#AgenticAI', '#Ollama', '#TechExchange'],
+    topics: ['#TechShow', '#AI', '#AgenticAI', '#Ollama', '#TechExchange'],
     notes: [
-      '🔴 00:00 - Live Stream Kickoff & Q&A Setup',
+      '00:00 - Episode Kickoff & Q&A Setup',
       '12:30 - Autonomous Multi-Agent Workflows vs Simple Copilots',
       '25:40 - Running Local Llama-3 & DeepSeek Models on Apple Silicon & GPUs',
       '40:15 - Audience Code Reviews & Q&A'
@@ -185,14 +185,9 @@ export const PODCAST_EPISODES: PodcastEpisode[] = [
     description: 'The premier annual gathering of 500+ software engineers, AI researchers, and tech founders in Kathmandu. Featuring keynotes, hands-on workshops, and community networking.',
     speakers: [
       {
-        name: 'Sameer Maskey',
-        role: 'Founder & CEO @ Fusemachines',
-        avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80'
-      },
-      {
-        name: 'Pratistha Amatya',
-        role: 'VP of Engineering @ Cotiviti Nepal',
-        avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80'
+        name: 'Dinesh Gajurel',
+        role: 'Host & Software Architect @ Tech Exchange',
+        avatar: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150&auto=format&fit=crop&q=80'
       }
     ],
     topics: ['#Event', '#KathmanduTech', '#AIFellowship', '#Networking'],
@@ -211,22 +206,22 @@ export const PODCAST_EPISODES: PodcastEpisode[] = [
     duration: '2 Hours Masterclass',
     eventDate: 'Oct 02, 2026 @ 6:00 PM NPT',
     publishedDate: 'Oct 2026',
-    timeAgo: 'Live Online Seminar',
+    timeAgo: 'Online Seminar',
     location: 'Virtual Masterclass Room (Zoom & YouTube)',
-    organizer: 'Cotiviti Engineering Lead',
+    organizer: 'Tech Exchange Lead',
     registrationUrl: 'https://example.com/seminar',
     description: 'An intensive 2-hour interactive technical seminar covering distributed locking, idempotency keys, rate-limiting algorithms, and sub-millisecond Redis cache invalidation.',
     guest: {
-      name: 'Aarav Shrestha',
-      role: 'Principal Systems Engineer',
-      avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&auto=format&fit=crop&q=80'
+      name: 'Dinesh Gajurel',
+      role: 'Principal Systems Engineer @ Tech Exchange',
+      avatar: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150&auto=format&fit=crop&q=80'
     },
     topics: ['#Seminar', '#Microservices', '#Redis', '#SystemDesign'],
     notes: [
       '00:00 - Distributed Cache Invalidation Strategies',
       '30:00 - Redis Sentinel & Cluster Failover Deep Dive',
       '60:00 - Rate Limiting & Token Bucket Algorithms in Go',
-      '90:00 - Live Code Refactoring & Q&A'
+      '90:00 - Interactive Code Refactoring & Q&A'
     ]
   },
   {
@@ -241,9 +236,9 @@ export const PODCAST_EPISODES: PodcastEpisode[] = [
     youtubeUrl: 'https://youtube.com',
     description: 'Step-by-step video code walkthrough demonstrating React 19 Server Actions, useActionState hook, and zero-bundle optimistic state updates.',
     guest: {
-      name: 'Elena Rostova',
-      role: 'Senior UI Architect',
-      avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&auto=format&fit=crop&q=80'
+      name: 'Dinesh Gajurel',
+      role: 'Senior UI Architect @ Tech Exchange',
+      avatar: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150&auto=format&fit=crop&q=80'
     },
     topics: ['#VideoDemo', '#React19', '#Vite', '#TailwindCSS'],
     notes: [
@@ -267,9 +262,9 @@ export const PODCAST_EPISODES: PodcastEpisode[] = [
     spotifyUrl: 'https://spotify.com',
     youtubeUrl: 'https://youtube.com',
     guest: {
-      name: 'Bikram Thapa',
-      role: 'Engineering Director @ TechFlow Nepal',
-      avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&auto=format&fit=crop&q=80'
+      name: 'Dinesh Gajurel',
+      role: 'Engineering Lead @ Tech Exchange',
+      avatar: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150&auto=format&fit=crop&q=80'
     },
     topics: ['#Podcast', '#TechSalariesNepal', '#RemoteWork', '#Careers'],
     notes: [
@@ -405,7 +400,7 @@ export const SERVICES: TechService[] = [
     subtitle: 'Embed cutting-edge AI capability into your business workflows.',
     description: 'We build custom LLM pipelines, RAG search systems, AI copilots, and autonomous workflow automation tailored to your proprietary data.',
     icon: 'Cpu',
-    badge: 'Trending',
+    badge: 'Featured',
     features: [
       'Custom RAG (Retrieval-Augmented Generation)',
       'Autonomous Multi-Agent Orchestration',
@@ -745,12 +740,12 @@ export const COURSES: Course[] = [
     reviewsCount: 240,
     price: 'NPR 6,999',
     originalPrice: 'NPR 12,999',
-    badge: 'Hot & Trending',
+    badge: 'Popular',
     description: 'Build production multi-agent workflows, long-term memory stores, RAG document search engines, and function-calling bots using Python, LangChain, LlamaIndex, Qdrant, and OpenAI / Anthropic APIs.',
     instructor: {
-      name: 'Dr. Sameer Maskey',
-      role: 'Founder & CEO @ Fusemachines',
-      avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80'
+      name: 'Dinesh Gajurel',
+      role: 'Software Architect & Tech Lead',
+      avatar: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150&auto=format&fit=crop&q=80'
     },
     syllabus: [
       {
@@ -803,9 +798,9 @@ export const COURSES: Course[] = [
     badge: 'Free Course',
     description: 'The ultimate beginner programming course. Learn core Python syntax, algorithms, object-oriented programming (OOP), file I/O, and data processing with practical exercises.',
     instructor: {
-      name: 'Dr. Sophia Vance',
-      role: 'Head of AI Research @ AI Labs',
-      avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80'
+      name: 'Dinesh Gajurel',
+      role: 'Software Architect & Tech Lead',
+      avatar: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150&auto=format&fit=crop&q=80'
     },
     syllabus: [
       {
@@ -853,9 +848,9 @@ export const COURSES: Course[] = [
     badge: 'Certificate Included',
     description: 'Architect, automate, and secure production cloud infrastructure. Containerize apps with Docker, manage Kubernetes clusters, provision AWS resources with Terraform, and build GitHub Actions pipelines.',
     instructor: {
-      name: 'Bikram Thapa',
-      role: 'Engineering Director @ TechFlow Nepal',
-      avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&auto=format&fit=crop&q=80'
+      name: 'Dinesh Gajurel',
+      role: 'Software Architect & Tech Lead',
+      avatar: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150&auto=format&fit=crop&q=80'
     },
     syllabus: [
       {
@@ -915,9 +910,9 @@ export const COURSES: Course[] = [
     badge: 'New',
     description: 'Build native iOS and Android mobile apps from a single codebase. Learn Expo Router, React Native Reanimated gestures, offline SQLite storage, push notifications, and App Store publishing.',
     instructor: {
-      name: 'Elena Rostova',
-      role: 'Fullstack Architect @ Tech Exchange',
-      avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&auto=format&fit=crop&q=80'
+      name: 'Dinesh Gajurel',
+      role: 'Software Architect & Tech Lead',
+      avatar: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150&auto=format&fit=crop&q=80'
     },
     syllabus: [
       {

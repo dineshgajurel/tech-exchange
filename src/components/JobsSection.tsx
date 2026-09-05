@@ -774,7 +774,7 @@ export const JobsSection: React.FC<JobsSectionProps> = ({ jobs, onAddJob }) => {
                   <input
                     type="text"
                     required
-                    placeholder="e.g. Alex Morgan"
+                    placeholder="e.g. Dinesh Gajurel"
                     value={applicantName}
                     onChange={(e) => setApplicantName(e.target.value)}
                     className="w-full px-3 py-2 text-xs rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white"
@@ -788,7 +788,7 @@ export const JobsSection: React.FC<JobsSectionProps> = ({ jobs, onAddJob }) => {
                   <input
                     type="email"
                     required
-                    placeholder="alex@example.com"
+                    placeholder="dinesh@techexchange.com"
                     value={applicantEmail}
                     onChange={(e) => setApplicantEmail(e.target.value)}
                     className="w-full px-3 py-2 text-xs rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white"

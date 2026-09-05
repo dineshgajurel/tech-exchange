@@ -40,8 +40,8 @@ export interface PodcastEpisode {
   publishedDate: string;
   timeAgo?: string;
   description: string;
-  location?: string; // e.g. "Kathmandu Tech Hub, Hattisar" or "YouTube Live"
-  status?: 'upcoming' | 'live' | 'recorded';
+  location?: string; // e.g. "Kathmandu Tech Hub, Hattisar" or "YouTube"
+  status?: 'upcoming' | 'featured' | 'recorded';
   eventDate?: string;
   organizer?: string;
   registrationUrl?: string;

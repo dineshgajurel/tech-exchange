@@ -115,7 +115,7 @@ export const PostCard: React.FC<PostCardProps> = ({
                   className="flex items-center gap-1 px-3 py-1 rounded-lg text-xs font-semibold bg-blue-600 hover:bg-blue-700 text-white transition-colors"
                 >
                   <ExternalLink className="w-3 h-3" />
-                  <span>Live Demo</span>
+                  <span>View Demo</span>
                 </a>
               )}
               {post.buildDetails.repoUrl && (
