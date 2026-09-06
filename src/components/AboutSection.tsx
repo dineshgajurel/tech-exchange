@@ -437,10 +437,6 @@ export const AboutSection: React.FC = () => {
                   </ul>
                 </div>
 
-                <div className="rounded-2xl border border-amber-200 bg-amber-50 dark:border-amber-800 dark:bg-amber-950/40 p-3 text-xs text-amber-900 dark:text-amber-200">
-                  Your application details will be submitted directly to the Tech Exchange Google Form.
-                </div>
-
                 {/* Form */}
                 <form onSubmit={handleApplySubmit} className="space-y-4">
                   <h4 className="text-xs font-extrabold uppercase tracking-wider text-slate-900 dark:text-white">
