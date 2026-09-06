@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Mic, BookOpen, Briefcase, Code, Newspaper, MessageSquare, Sparkles, Sun, Moon, Menu, X, ArrowRight, Building2, Users, Tv, Calendar, Video, GraduationCap } from 'lucide-react';
 import { TechExchangeLogo } from './TechExchangeLogo';
 import { SectionTab } from '../types';
+import { IS_PRODUCTION_READY, GATED_SECTIONS } from '../config';
 
 interface HeaderProps {
   activeTab?: SectionTab;
@@ -36,6 +37,10 @@ export const Header: React.FC<HeaderProps> = ({
     { id: 'about', path: '/about', label: 'About Us', icon: <Users className="w-4 h-4" /> },
   ];
 
+  const visibleNavItems = IS_PRODUCTION_READY
+    ? navItems
+    : navItems.filter((item) => !(GATED_SECTIONS as readonly string[]).includes(item.id));
+
   const getItemPath = (item: { id: SectionTab; path: string }) => item.path;
 
   const isItemActive = (item: { id: SectionTab; path: string }) => {
@@ -65,7 +70,7 @@ export const Header: React.FC<HeaderProps> = ({
 
         {/* Desktop Navigation Links */}
         <nav className="hidden xl:flex items-center gap-1 bg-slate-100/80 dark:bg-slate-800/80 p-1.5 rounded-full border border-slate-200/60 dark:border-slate-700/60">
-          {navItems.map((item) => {
+          {visibleNavItems.map((item) => {
             const active = isItemActive(item);
             return (
               <Link
@@ -129,7 +134,7 @@ export const Header: React.FC<HeaderProps> = ({
       {/* Mobile Menu Drawer */}
       {mobileMenuOpen && (
         <div className="xl:hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-4 py-4 space-y-2">
-          {navItems.map((item) => {
+          {visibleNavItems.map((item) => {
             const active = isItemActive(item);
             return (
               <Link

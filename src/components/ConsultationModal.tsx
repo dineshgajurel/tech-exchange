@@ -11,6 +11,7 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({ isOpen, on
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [serviceType, setServiceType] = useState('Full-Stack Software Development');
+  const [phone, setPhone] = useState('');
   const [budget, setBudget] = useState('NPR 50,000 – 150,000 ($400 – $1,100 USD)');
   const [timeline, setTimeline] = useState('Within 1 Month');
   const [description, setDescription] = useState('');
@@ -35,6 +36,7 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({ isOpen, on
     setSubmitted(false);
     setName('');
     setEmail('');
+    setPhone('');
     setDescription('');
     onClose();
   };
@@ -51,10 +53,10 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({ isOpen, on
             </div>
             <div>
               <h2 className="font-heading text-xl font-bold text-slate-900 dark:text-white">
-                Book Consultation / Collaborate
+                Start a Project with Tech Exchange
               </h2>
               <p className="text-xs text-slate-500 dark:text-slate-400">
-                Let's discuss software engineering, AI systems, or advisory.
+                Web apps, AI systems, technical advisory, or media collaboration — tell us what you need.
               </p>
             </div>
           </div>
@@ -70,7 +72,7 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({ isOpen, on
         {!submitted ? (
           <form onSubmit={handleSubmit} className="p-6 overflow-y-auto space-y-4 flex-1">
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
               <div>
                 <label className="text-xs font-semibold text-slate-700 dark:text-slate-300 block mb-1">Your Name *</label>
                 <input
@@ -87,10 +89,21 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({ isOpen, on
                 <label className="text-xs font-semibold text-slate-700 dark:text-slate-300 block mb-1">Email Address *</label>
                 <input
                   type="email"
-                  placeholder="dinesh@techexchange.com"
+                  placeholder="dinesh@techexchange.dev"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
+                  className="w-full px-3.5 py-2.5 text-xs rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white"
+                />
+              </div>
+
+              <div>
+                <label className="text-xs font-semibold text-slate-700 dark:text-slate-300 block mb-1">Phone Number</label>
+                <input
+                  type="tel"
+                  placeholder="+977 98XXXXXXXX"
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)}
                   className="w-full px-3.5 py-2.5 text-xs rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white"
                 />
               </div>
@@ -98,7 +111,7 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({ isOpen, on
 
             {/* Service Type Selection */}
             <div>
-              <label className="text-xs font-semibold text-slate-700 dark:text-slate-300 block mb-1">Service or Collaboration Type</label>
+              <label className="text-xs font-semibold text-slate-700 dark:text-slate-300 block mb-1">What can we help you with?</label>
               <select
                 value={serviceType}
                 onChange={(e) => setServiceType(e.target.value)}
@@ -108,6 +121,7 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({ isOpen, on
                 <option value="AI Systems & Autonomous Agents">AI Systems & Autonomous Agents</option>
                 <option value="1-on-1 Technical Consultation & Audit">1-on-1 Technical Consultation & Audit</option>
                 <option value="Podcast Guest / Sponsorship">Podcast Guest / Sponsorship</option>
+                <option value="Other / General Inquiry">Other / General Inquiry</option>
               </select>
             </div>
 
@@ -124,6 +138,7 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({ isOpen, on
                   <option value="NPR 50,000 – 150,000 ($400 – $1,100 USD)">NPR 50,000 – 150,000 ($400 – $1,100 USD)</option>
                   <option value="NPR 150,000 – 400,000 ($1,100 – $3,000 USD)">NPR 150,000 – 400,000 ($1,100 – $3,000 USD)</option>
                   <option value="NPR 400,000+ ($3,000+ USD)">NPR 400,000+ ($3,000+ USD / Custom)</option>
+                  <option value="Not sure yet">Not sure yet</option>
                 </select>
               </div>
 
@@ -144,9 +159,9 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({ isOpen, on
 
             {/* Description */}
             <div>
-              <label className="text-xs font-semibold text-slate-700 dark:text-slate-300 block mb-1">Project Overview & Goals *</label>
+              <label className="text-xs font-semibold text-slate-700 dark:text-slate-300 block mb-1">How can we help? *</label>
               <textarea
-                placeholder="Tell us about what you want to build, challenges you are facing, or goals..."
+                placeholder="Tell us what you have in mind — a project idea, a challenge you're facing, or anything else we can help with..."
                 value={description}
                 onChange={(e) => setDescription(e.target.value)}
                 rows={4}
@@ -181,11 +196,11 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({ isOpen, on
             </div>
 
             <h3 className="font-heading text-2xl font-extrabold text-slate-900 dark:text-white">
-              Inquiry Received!
+              We're on it!
             </h3>
 
             <p className="text-xs text-slate-600 dark:text-slate-300 max-w-sm mx-auto leading-relaxed">
-              Thank you, <span className="font-bold text-slate-900 dark:text-white">{name}</span>. We have received your consultation request for <span className="font-semibold text-blue-600">{serviceType}</span> and will reply to <span className="font-bold">{email}</span> within 24 hours!
+              Thanks, <span className="font-bold text-slate-900 dark:text-white">{name}</span>! Your <span className="font-semibold text-blue-600">{serviceType}</span> inquiry has been received. Expect a detailed reply at <span className="font-bold">{email}</span> within 24 hours.
             </p>
 
             <div className="pt-4">

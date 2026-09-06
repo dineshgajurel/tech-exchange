@@ -37,7 +37,7 @@ interface OpenRole {
 const INTERNAL_ROLES: OpenRole[] = [
   {
     id: 'te-role-1',
-    title: 'Full-Stack Developer (React / Node.js / TS)',
+    title: 'Full-Stack Developer (React / Next.js / Node.js / TS)',
     department: 'Engineering',
     location: '100% Remote',
     type: 'Full-time',
@@ -125,11 +125,11 @@ export const AboutSection: React.FC = () => {
           <div className="pt-2 flex flex-wrap items-center gap-4 text-xs sm:text-sm font-semibold text-slate-300">
             <div className="flex items-center gap-2 bg-slate-800/80 px-4 py-2 rounded-xl border border-slate-700">
               <Users className="w-4 h-4 text-cyan-400" />
-              <span>50,000+ Developer Readers</span>
+              <span>Growing Developer Community</span>
             </div>
             <div className="flex items-center gap-2 bg-slate-800/80 px-4 py-2 rounded-xl border border-slate-700">
               <Code2 className="w-4 h-4 text-emerald-400" />
-              <span>120+ Shipped Apps & Services</span>
+              <span>Early Client Projects Shipped</span>
             </div>
             <div className="flex items-center gap-2 bg-slate-800/80 px-4 py-2 rounded-xl border border-slate-700">
               <Globe className="w-4 h-4 text-blue-400" />
@@ -422,7 +422,7 @@ export const AboutSection: React.FC = () => {
                         required
                         value={applicantEmail}
                         onChange={(e) => setApplicantEmail(e.target.value)}
-                        placeholder="dinesh@techexchange.com"
+                        placeholder="dinesh@techexchange.dev"
                         className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-xs text-slate-900 dark:text-white focus:outline-none focus:border-blue-500"
                       />
                     </div>

@@ -23,13 +23,13 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenConsulta
       <div className="text-center max-w-3xl mx-auto mb-12">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-extrabold bg-blue-50 dark:bg-blue-950 text-blue-700 dark:text-blue-300 mb-3 border border-blue-200 dark:border-blue-800">
           <Sparkles className="w-3.5 h-3.5 text-blue-600" />
-          <span>Services & Collaboration</span>
+           <span>Engineering & Advisory — Nepal to Global</span>
         </div>
         <h2 className="font-heading text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white">
-          Software Development & Consultation
+          We Build Software. We Solve Hard Problems.
         </h2>
         <p className="text-base text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">
-          From custom fullstack web products to production autonomous AI pipelines and senior technical advisory.
+          High-performance web apps, AI automation, and expert technical guidance — delivered by Nepal's top senior engineering talent to founders worldwide.
         </p>
       </div>
 
@@ -64,7 +64,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenConsulta
 
               <div className="space-y-2 mb-6">
                 <div className="text-[11px] font-bold text-slate-900 dark:text-white uppercase tracking-wider mb-2">
-                  What we build & deliver:
+                  What you get:
                 </div>
                 {srv.features.map((feat, idx) => (
                   <div key={idx} className="flex items-start gap-2 text-xs text-slate-700 dark:text-slate-300">
@@ -79,7 +79,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenConsulta
               onClick={onOpenConsultation}
               className="w-full py-3 rounded-xl bg-slate-900 hover:bg-blue-600 dark:bg-slate-800 dark:hover:bg-blue-600 text-white font-bold text-xs flex items-center justify-center gap-2 transition-all cursor-pointer shadow-xs"
             >
-              <span>Book Consultation</span>
+              <span>Get Started</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </button>
 
@@ -91,10 +91,10 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenConsulta
       <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-3xl p-8 sm:p-10 shadow-xl relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-6">
         <div className="space-y-2 text-center md:text-left">
           <h3 className="font-heading text-2xl sm:text-3xl font-extrabold">
-            Have a project in mind or want to collaborate?
+            Ready to turn your idea into production software?
           </h3>
           <p className="text-sm text-blue-100 max-w-xl">
-            Whether you need end-to-end software development, architectural code audits, or podcast sponsorship, let's talk.
+            Whether it's a web app MVP, an AI automation pipeline, a codebase audit, or a podcast collaboration — we'd love to hear what you're building.
           </p>
         </div>
 
@@ -102,7 +102,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenConsulta
           onClick={onOpenConsultation}
           className="px-8 py-4 rounded-2xl bg-white text-blue-600 hover:bg-slate-100 font-black text-sm shadow-lg cursor-pointer transform hover:scale-105 transition-all shrink-0"
         >
-          Start a Collaboration 👋
+          Let's Talk 👋
         </button>
       </div>
 

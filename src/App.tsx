@@ -23,6 +23,8 @@ import { SectionTab, LoungeMessage, JobListing } from './types';
 import { INITIAL_LOUNGE_MESSAGES, INITIAL_JOBS } from './data/initialData';
 import { useDarkMode } from './hooks/useDarkMode';
 import { useForumPosts } from './hooks/useForumPosts';
+import { IS_PRODUCTION_READY } from './config';
+import { ComingSoon } from './components/ComingSoon';
 
 export function App() {
   const { darkMode, toggleDarkMode } = useDarkMode();
@@ -98,35 +100,39 @@ export function App() {
               />
             }
           />
-          <Route path="/podcast" element={<PodcastSection />} />
-          <Route path="/tutorials" element={<TutorialsSection />} />
-          <Route path="/courses" element={<CoursesSection />} />
+          <Route path="/podcast" element={IS_PRODUCTION_READY ? <PodcastSection /> : <ComingSoon sectionName="Tech Talk" />} />
+          <Route path="/tutorials" element={IS_PRODUCTION_READY ? <TutorialsSection /> : <ComingSoon sectionName="Tech Explained" />} />
+          <Route path="/courses" element={IS_PRODUCTION_READY ? <CoursesSection /> : <ComingSoon sectionName="Courses" />} />
           <Route path="/services" element={<ServicesSection onOpenConsultation={() => setIsConsultationOpen(true)} />} />
-          <Route path="/portfolio" element={<PortfolioSection onOpenConsultation={() => setIsConsultationOpen(true)} />} />
-          <Route path="/news" element={<NewsSection />} />
-          <Route path="/jobs" element={<JobsSection jobs={jobs} onAddJob={handleAddJob} />} />
+          <Route path="/portfolio" element={IS_PRODUCTION_READY ? <PortfolioSection onOpenConsultation={() => setIsConsultationOpen(true)} /> : <ComingSoon sectionName="Build Showcase" />} />
+          <Route path="/news" element={IS_PRODUCTION_READY ? <NewsSection /> : <ComingSoon sectionName="Tech News" />} />
+          <Route path="/jobs" element={IS_PRODUCTION_READY ? <JobsSection jobs={jobs} onAddJob={handleAddJob} /> : <ComingSoon sectionName="Tech Jobs" />} />
           <Route path="/about" element={<AboutSection />} />
           <Route path="/privacy" element={<PrivacyPolicySection />} />
           <Route path="/terms" element={<TermsOfServiceSection />} />
           <Route
             path="/forum"
             element={
-              <ForumSection
-                filteredPosts={filteredPosts}
-                activeChannel={activeChannel}
-                onSelectChannel={setActiveChannel}
-                postCounts={postCounts}
-                searchQuery={searchQuery}
-                onSearchQueryChange={setSearchQuery}
-                sortBy={sortBy}
-                onSortByChange={setSortBy}
-                selectedTag={selectedTag}
-                onSelectTag={setSelectedTag}
-                onUpvote={handleUpvote}
-                onAddComment={handleAddComment}
-                onOpenLounge={() => setIsLoungeOpen(true)}
-                onOpenCreatePost={() => setIsCreatePostOpen(true)}
-              />
+              IS_PRODUCTION_READY ? (
+                <ForumSection
+                  filteredPosts={filteredPosts}
+                  activeChannel={activeChannel}
+                  onSelectChannel={setActiveChannel}
+                  postCounts={postCounts}
+                  searchQuery={searchQuery}
+                  onSearchQueryChange={setSearchQuery}
+                  sortBy={sortBy}
+                  onSortByChange={setSortBy}
+                  selectedTag={selectedTag}
+                  onSelectTag={setSelectedTag}
+                  onUpvote={handleUpvote}
+                  onAddComment={handleAddComment}
+                  onOpenLounge={() => setIsLoungeOpen(true)}
+                  onOpenCreatePost={() => setIsCreatePostOpen(true)}
+                />
+              ) : (
+                <ComingSoon sectionName="Community Forum" />
+              )
             }
           />
           <Route path="*" element={<Navigate to="/" replace />} />

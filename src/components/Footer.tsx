@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Heart, Globe, Github, Twitter, Rss } from 'lucide-react';
+import { Heart, Globe, Github, Linkedin, Youtube } from 'lucide-react';
 import { TechExchangeLogo } from './TechExchangeLogo';
 import { SectionTab, ChannelId } from '../types';
 
@@ -118,17 +118,17 @@ export const Footer: React.FC<FooterProps> = ({
             </ul>
 
             <div className="flex items-center gap-3 text-slate-400 mt-4">
-              <a href="https://github.com" target="_blank" rel="noreferrer" className="hover:text-slate-900 dark:hover:text-white transition-colors" aria-label="GitHub">
+              <a href="https://github.com/dineshgajurel" target="_blank" rel="noreferrer" className="hover:text-slate-900 dark:hover:text-white transition-colors" aria-label="GitHub">
                 <Github className="w-4 h-4" />
               </a>
-              <a href="https://twitter.com" target="_blank" rel="noreferrer" className="hover:text-blue-500 transition-colors" aria-label="Twitter">
-                <Twitter className="w-4 h-4" />
+              <a href="https://www.linkedin.com/in/dinesh-gajurel/" target="_blank" rel="noreferrer" className="hover:text-blue-600 transition-colors" aria-label="LinkedIn">
+                <Linkedin className="w-4 h-4" />
               </a>
-              <a href="https://techexchange.gajureldns.com.np" className="hover:text-blue-600 transition-colors" aria-label="Website">
+              <a href="https://www.youtube.com/@techexchange" target="_blank" rel="noreferrer" className="hover:text-red-500 transition-colors" aria-label="YouTube">
+                <Youtube className="w-4 h-4" />
+              </a>
+              <a href="https://www.techexchange.dev" target="_blank" rel="noreferrer" className="hover:text-blue-600 transition-colors" aria-label="Website">
                 <Globe className="w-4 h-4" />
-              </a>
-              <a href="#rss" className="hover:text-blue-600 transition-colors flex items-center gap-1" aria-label="RSS">
-                <Rss className="w-4 h-4" />
               </a>
             </div>
           </div>
@@ -138,7 +138,7 @@ export const Footer: React.FC<FooterProps> = ({
         {/* Bottom Bar */}
         <div className="pt-6 border-t border-slate-100 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 dark:text-slate-400 gap-4">
           <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
-            <span>© {new Date().getFullYear()} TechExchange.com — All rights reserved.</span>
+            <span>© {new Date().getFullYear()} techexchange.dev — All rights reserved.</span>
             <Link to="/privacy" onClick={() => onSelectTab && onSelectTab('privacy')} className="hover:text-blue-600 transition-colors">Privacy Policy</Link>
             <span>•</span>
             <Link to="/terms" onClick={() => onSelectTab && onSelectTab('terms')} className="hover:text-blue-600 transition-colors">Terms of Service</Link>

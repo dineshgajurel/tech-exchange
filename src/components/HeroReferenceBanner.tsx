@@ -36,7 +36,7 @@ export const HeroReferenceBanner: React.FC<HeroReferenceBannerProps> = ({
         <div className="flex flex-col items-start gap-4 mb-6">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-extrabold bg-blue-100/80 dark:bg-blue-950/80 text-blue-700 dark:text-blue-300 border border-blue-200/80 dark:border-blue-800/80 shadow-xs">
             <Sparkles className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400" />
-            <span>Developer Media & Software Engineering Platform</span>
+            <span>Nepal's Tech Enthusiasts Ecosystem — Talk • Learn • Build</span>
           </div>
 
           <div className="pt-1">
@@ -46,8 +46,8 @@ export const HeroReferenceBanner: React.FC<HeroReferenceBannerProps> = ({
 
         {/* Subtitle */}
         <p className="text-lg md:text-xl font-medium text-slate-700 dark:text-slate-300 max-w-3xl leading-relaxed mb-10 pl-0.5">
-          Tech discussions were fragmented across isolated channels.<br />
-          <span className="font-bold text-slate-900 dark:text-white">Here is the unified hub.</span> We record tech podcasts, author developer guides, offer programming courses, build software solutions, and list remote engineering roles.
+          Where Nepali engineers talk tech, sharpen skills, and ship real products.<br />
+          <span className="font-bold text-slate-900 dark:text-white">One platform — podcasts, courses, tutorials, jobs, and software services</span> built to accelerate your career and connect you to the global dev community.
         </p>
 
         {/* Brand Pillars Grid */}
@@ -183,7 +183,7 @@ export const HeroReferenceBanner: React.FC<HeroReferenceBannerProps> = ({
               className="flex-1 md:flex-none inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700 text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 font-extrabold text-xs transition-all text-center"
             >
               <Globe className="w-4 h-4 text-blue-600" />
-              <span>Explore Careers & Team</span>
+              <span>About Us & Careers</span>
             </Link>
 
             <button

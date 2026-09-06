@@ -5,7 +5,9 @@ import { PodcastSection } from './PodcastSection';
 import { CommunityTeaser } from './CommunityTeaser';
 import { CoursesSection } from './CoursesSection';
 import { TutorialsSection } from './TutorialsSection';
+import { ComingSoon } from './ComingSoon';
 import { SectionTab } from '../types';
+import { IS_PRODUCTION_READY } from '../config';
 
 interface HomeSectionProps {
   onSelectTab: (tab: SectionTab) => void;
@@ -25,17 +27,33 @@ export const HomeSection: React.FC<HomeSectionProps> = ({
         onOpenConsultation={onOpenConsultation}
       />
 
+      {/* Services & Consultation — always live */}
       <ServicesSection onOpenConsultation={onOpenConsultation} />
 
-      <PodcastSection />
+      {IS_PRODUCTION_READY ? (
+        <>
+          <PodcastSection />
 
-      <CommunityTeaser
-        onOpenLounge={onOpenLounge}
-        onOpenForum={() => onSelectTab('forum')}
-      />
+          <CommunityTeaser
+            onOpenLounge={onOpenLounge}
+            onOpenForum={() => onSelectTab('forum')}
+          />
 
-      <CoursesSection />
-      <TutorialsSection />
+          <CoursesSection />
+          <TutorialsSection />
+        </>
+      ) : (
+        <>
+          {/* Community branding block — visible for initial brand presence */}
+          <CommunityTeaser
+            onOpenLounge={onOpenLounge}
+            onOpenForum={() => onSelectTab('forum')}
+            comingSoon
+          />
+
+          <ComingSoon />
+        </>
+      )}
     </>
   );
 };

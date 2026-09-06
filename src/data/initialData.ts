@@ -338,7 +338,7 @@ def self_attention(query, key, value):
 
 server {
     listen 80;
-    server_name api.techexchange.com;
+    server_name api.techexchange.dev;
 
     location / {
         proxy_pass http://app_servers;
@@ -382,8 +382,8 @@ export const SERVICES: TechService[] = [
   {
     id: 'srv-1',
     title: 'Full-Stack Software Development',
-    subtitle: 'From zero to production-grade web & mobile applications.',
-    description: 'We design, architect, and engineer high-performance web products, SaaS platforms, and mobile apps built to scale effortlessly.',
+    subtitle: 'Your idea, production-ready — from pixel to deployment.',
+    description: 'We design, architect, and ship high-performance web products, SaaS platforms, and mobile apps that scale with your business — built by engineers who care about craft.',
     icon: 'Code',
     badge: 'Popular',
     features: [
@@ -397,8 +397,8 @@ export const SERVICES: TechService[] = [
   {
     id: 'srv-2',
     title: 'AI Systems & Autonomous Agents',
-    subtitle: 'Embed cutting-edge AI capability into your business workflows.',
-    description: 'We build custom LLM pipelines, RAG search systems, AI copilots, and autonomous workflow automation tailored to your proprietary data.',
+    subtitle: 'Make AI work for your business — not the other way around.',
+    description: 'We build custom LLM pipelines, RAG-powered search, AI copilots, and autonomous agent workflows tailored to your data and operations.',
     icon: 'Cpu',
     badge: 'Featured',
     features: [
@@ -412,8 +412,8 @@ export const SERVICES: TechService[] = [
   {
     id: 'srv-3',
     title: 'Technical Consultation & Audits',
-    subtitle: 'Expert 1-on-1 strategy, code reviews, and architecture optimization.',
-    description: 'Stuck on scaling bottlenecks, security vulnerabilities, or tech stack selection? Book dedicated consultation sessions with senior engineers.',
+    subtitle: 'Senior engineering insight, on demand.',
+    description: 'Hitting scaling walls, security gaps, or tough architecture decisions? Book focused sessions with senior engineers who\'ve shipped production systems at scale.',
     icon: 'Users',
     badge: 'Strategic',
     features: [
@@ -536,7 +536,7 @@ export const NEWS_ITEMS: NewsItem[] = [
 export const INITIAL_JOBS: JobListing[] = [
   {
     id: 'job-1',
-    title: 'Full-Stack Developer (React / Node.js / TS)',
+    title: 'Full-Stack Developer (React / Next.js / Node.js / TS)',
     company: 'Tech Exchange',
     companyLogo: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=120&auto=format&fit=crop&q=80',
     location: '100% Remote',
@@ -546,14 +546,14 @@ export const INITIAL_JOBS: JobListing[] = [
     salaryRange: 'Competitive Salary',
     description: 'We are looking for a Full-Stack Developer to build platform features, interactive web applications, developer utilities, and high-performance backend services.',
     requirements: [
-      'Strong proficiency in React, TypeScript, and Node.js backend development.',
+      'Strong proficiency in React, Next.js, TypeScript, and Node.js backend development.',
       'Experience with relational or NoSQL database design (PostgreSQL, MongoDB, Redis).',
       'Knowledge of responsive UI layouts, CSS, and modern API architecture (REST/GraphQL).',
       'Self-driven and comfortable collaborating in a 100% remote, async-first team.'
     ],
-    skills: ['React', 'TypeScript', 'Node.js', 'Tailwind CSS', 'PostgreSQL', 'REST API'],
+    skills: ['React', 'Next.js', 'TypeScript', 'Node.js', 'Tailwind CSS', 'PostgreSQL', 'REST API'],
     postedDate: 'Just now',
-    applyUrl: 'https://techexchange.com/apply',
+    applyUrl: 'https://techexchange.dev/apply',
     featured: true
   },
   {
@@ -574,7 +574,7 @@ export const INITIAL_JOBS: JobListing[] = [
     ],
     skills: ['Technical Writing', 'Podcast Editing', 'Community Management', 'Content Strategy', 'Social Media'],
     postedDate: 'Just now',
-    applyUrl: 'https://techexchange.com/apply',
+    applyUrl: 'https://techexchange.dev/apply',
     featured: true
   }
 ];
