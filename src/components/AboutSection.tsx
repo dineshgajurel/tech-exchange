@@ -44,10 +44,11 @@ const INTERNAL_ROLES: OpenRole[] = [
     salary: 'Competitive Salary',
     description: 'Help build and scale Tech Exchange platform modules, developer tools, interactive web applications, and backend APIs.',
     requirements: [
-      'Strong hands-on experience with React, TypeScript, and Node.js',
-      'Experience building responsive web applications and REST / GraphQL APIs',
-      'Solid understanding of database systems (PostgreSQL / MongoDB / Redis)',
-      'Self-motivated, proactive, and comfortable working in a fully remote setup'
+      'Strong hands-on experience building production web applications with React, Next.js, and TypeScript',
+      'Understand Next.js routing, server-side rendering, data fetching, and performance fundamentals',
+      'Build and integrate reliable Node.js REST or GraphQL APIs with clear validation and error handling',
+      'Work confidently with PostgreSQL, MongoDB, or Redis and understand practical data-modeling tradeoffs',
+      'Own features from planning through deployment and communicate effectively in a fully remote team'
     ]
   },
   {
@@ -59,10 +60,10 @@ const INTERNAL_ROLES: OpenRole[] = [
     salary: 'Competitive Salary',
     description: 'Manage Tech Talk podcasts, write step-by-step developer tutorials, publish tech news, and foster developer community growth.',
     requirements: [
-      'Experience in technical content creation, developer guides, or tech media',
-      'Comfortable hosting podcasts, interviewing tech experts, or writing code blogs',
-      'Basic video/audio production and editing skills for web media',
-      'Passionate about software technology, learning, and developer community building'
+      'Explain software concepts accurately through tutorials, articles, interviews, or short-form media',
+      'Plan and produce developer-focused content from research through publication',
+      'Use basic audio, video, and editing workflows to create polished episodes and clips',
+      'Engage respectfully with technical communities and turn audience feedback into better content'
     ]
   }
 ];
@@ -399,9 +400,9 @@ export const AboutSection: React.FC = () => {
                 <div className="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 mx-auto flex items-center justify-center">
                   <CheckCircle2 className="w-10 h-10" />
                 </div>
-                <h3 className="text-2xl font-black text-slate-900 dark:text-white">Application Received!</h3>
+                <h3 className="text-2xl font-black text-slate-900 dark:text-white">Application Submitted!</h3>
                 <p className="text-sm text-slate-600 dark:text-slate-400 max-w-md mx-auto">
-                  Thank you for applying for <strong>{selectedRole.title}</strong> at Tech Exchange. Our engineering team will review your application and contact you soon.
+                  Thank you for applying for <strong>{selectedRole.title}</strong> at Tech Exchange. Our team will review your links and experience, then contact shortlisted candidates about the next step.
                 </p>
               </div>
             ) : (

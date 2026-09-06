@@ -216,11 +216,11 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({ isOpen, on
             </div>
 
             <h3 className="font-heading text-2xl font-extrabold text-slate-900 dark:text-white">
-              We're on it!
+              Inquiry Submitted
             </h3>
 
             <p className="text-xs text-slate-600 dark:text-slate-300 max-w-sm mx-auto leading-relaxed">
-              Thanks, <span className="font-bold text-slate-900 dark:text-white">{name}</span>! Your <span className="font-semibold text-blue-600">{serviceType}</span> inquiry has been received. Expect a detailed reply at <span className="font-bold">{email}</span> within 24 hours.
+              Thanks, <span className="font-bold text-slate-900 dark:text-white">{name}</span>! Your <span className="font-semibold text-blue-600">{serviceType}</span> inquiry is now with our team. We will review your requirements and contact you at <span className="font-bold">{email}</span> within 24 hours to discuss the next step.
             </p>
 
             <div className="pt-4">
