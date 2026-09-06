@@ -71,26 +71,71 @@ export const AboutSection: React.FC = () => {
   const [selectedRole, setSelectedRole] = useState<OpenRole | null>(null);
   const [applicantName, setApplicantName] = useState('');
   const [applicantEmail, setApplicantEmail] = useState('');
-  const [applicantGithub, setApplicantGithub] = useState('');
+  const [applicantPhone, setApplicantPhone] = useState('');
+  const [applicantPortfolioUrl, setApplicantPortfolioUrl] = useState('');
+  const [applicantCvUrl, setApplicantCvUrl] = useState('');
   const [applicantNote, setApplicantNote] = useState('');
   const [appliedSuccess, setAppliedSuccess] = useState(false);
 
+  const GOOGLE_FORM_RESPONSE_URL =
+    'https://docs.google.com/forms/d/e/1FAIpQLSdtPkKUhJilve_47oo8waKYvU3-YDoR6viTj00gRkzEME8SzQ/formResponse';
+
   const handleApplySubmit = (e: React.FormEvent) => {
     e.preventDefault();
+
+    if (!selectedRole) return;
+    if (!applicantName.trim() || !applicantEmail.trim() || !applicantPortfolioUrl.trim() || !applicantCvUrl.trim()) return;
+
+    const applicationData = {
+      role: selectedRole.title,
+      name: applicantName.trim(),
+      email: applicantEmail.trim(),
+      phone: applicantPhone.trim(),
+      portfolioUrl: applicantPortfolioUrl.trim(),
+      cvUrl: applicantCvUrl.trim(),
+      note: applicantNote.trim(),
+      submittedAt: new Date().toISOString(),
+    };
+
+    const formData = new URLSearchParams();
+    formData.append('entry.1147109598', applicationData.name);
+    formData.append('entry.1773994816', applicationData.role);
+    formData.append('entry.1085854943', applicationData.email);
+    formData.append('entry.544206416', applicationData.phone);
+    formData.append('entry.1309099193', applicationData.portfolioUrl);
+    formData.append('entry.1078146055', applicationData.cvUrl);
+    formData.append('entry.993930794', applicationData.note);
+
+    fetch(GOOGLE_FORM_RESPONSE_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: formData.toString(),
+    });
+
+    try {
+      localStorage.setItem('tech-exchange-career-application', JSON.stringify(applicationData));
+    } catch {
+      // Ignore storage errors and continue with the Google Form flow.
+    }
+
     setAppliedSuccess(true);
     confetti({
       particleCount: 100,
       spread: 70,
       origin: { y: 0.6 }
     });
+
     setTimeout(() => {
       setAppliedSuccess(false);
       setSelectedRole(null);
       setApplicantName('');
       setApplicantEmail('');
-      setApplicantGithub('');
+      setApplicantPhone('');
+      setApplicantPortfolioUrl('');
+      setApplicantCvUrl('');
       setApplicantNote('');
-    }, 2800);
+    }, 4000);
   };
 
   return (
@@ -392,6 +437,10 @@ export const AboutSection: React.FC = () => {
                   </ul>
                 </div>
 
+                <div className="rounded-2xl border border-amber-200 bg-amber-50 dark:border-amber-800 dark:bg-amber-950/40 p-3 text-xs text-amber-900 dark:text-amber-200">
+                  Your application details will be submitted directly to the Tech Exchange Google Form.
+                </div>
+
                 {/* Form */}
                 <form onSubmit={handleApplySubmit} className="space-y-4">
                   <h4 className="text-xs font-extrabold uppercase tracking-wider text-slate-900 dark:text-white">
@@ -428,6 +477,33 @@ export const AboutSection: React.FC = () => {
                     </div>
                   </div>
 
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1">
+                        Phone Number
+                      </label>
+                      <input
+                        type="tel"
+                        value={applicantPhone}
+                        onChange={(e) => setApplicantPhone(e.target.value)}
+                        placeholder="+977 98XXXXXXXX"
+                        className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-xs text-slate-900 dark:text-white focus:outline-none focus:border-blue-500"
+                      />
+                    </div>
+
+                    <div>
+                      <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1">
+                        Position Applying For
+                      </label>
+                      <input
+                        type="text"
+                        value={selectedRole.title}
+                        readOnly
+                        className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-100 dark:bg-slate-800 text-xs text-slate-900 dark:text-white focus:outline-none"
+                      />
+                    </div>
+                  </div>
+
                   <div>
                     <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1">
                       GitHub Profile or Portfolio URL *
@@ -435,9 +511,23 @@ export const AboutSection: React.FC = () => {
                     <input
                       type="url"
                       required
-                      value={applicantGithub}
-                      onChange={(e) => setApplicantGithub(e.target.value)}
+                      value={applicantPortfolioUrl}
+                      onChange={(e) => setApplicantPortfolioUrl(e.target.value)}
                       placeholder="https://github.com/dineshgajurel"
+                      className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-xs text-slate-900 dark:text-white focus:outline-none focus:border-blue-500"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1">
+                      CV / Resume URL *
+                    </label>
+                    <input
+                      type="url"
+                      required
+                      value={applicantCvUrl}
+                      onChange={(e) => setApplicantCvUrl(e.target.value)}
+                      placeholder="https://drive.google.com/... or Dropbox link"
                       className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-xs text-slate-900 dark:text-white focus:outline-none focus:border-blue-500"
                     />
                   </div>
