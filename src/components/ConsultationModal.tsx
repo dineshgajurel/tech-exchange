@@ -19,9 +19,29 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({ isOpen, on
 
   if (!isOpen) return null;
 
+  const GOOGLE_FORM_URL =
+    'https://docs.google.com/forms/d/e/1FAIpQLSdqVFJOnUEzHNWpwuONu0bHGhLQNUFdrnMZg9_16l8W7_RFcQ/formResponse';
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!name.trim() || !email.trim() || !description.trim()) return;
+
+    // Submit to Google Forms silently via hidden iframe
+    const formData = new URLSearchParams();
+    formData.append('entry.449967724', name);          // Name
+    formData.append('entry.1586629147', email);        // Email
+    formData.append('entry.830633122', phone);          // Phone
+    formData.append('entry.1395365573', serviceType);   // Category
+    formData.append('entry.1443688033', budget);        // Budget
+    formData.append('entry.919343196', timeline);       // Timeline
+    formData.append('entry.594534575', description);    // Message
+
+    fetch(GOOGLE_FORM_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: formData.toString(),
+    });
 
     confetti({
       particleCount: 100,
