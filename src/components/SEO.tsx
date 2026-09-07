@@ -134,7 +134,12 @@ export function SEO() {
       name: metadata.title,
       description: metadata.description,
       url: canonicalUrl,
-      isPartOf: { '@type': 'WebSite', name: 'Tech Exchange', url: SITE_URL },
+      isPartOf: {
+        '@type': 'WebSite',
+        name: 'Tech Exchange',
+        alternateName: ['techexchange', 'techexchange.dev'],
+        url: SITE_URL,
+      },
       inLanguage: 'en',
     };
     let script = document.head.querySelector<HTMLScriptElement>('script[data-seo-page]');

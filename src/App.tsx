@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useLayoutEffect, useState } from 'react';
 import { Routes, Route, useLocation, useNavigate, Navigate } from 'react-router-dom';
 import { Header } from './components/Header';
 import { HomeSection } from './components/HomeSection';
@@ -33,6 +33,14 @@ export function App() {
   const navigate = useNavigate();
 
   useEffect(() => {
+    window.history.scrollRestoration = 'manual';
+
+    return () => {
+      window.history.scrollRestoration = 'auto';
+    };
+  }, []);
+
+  useLayoutEffect(() => {
     if (hash) {
       const targetId = decodeURIComponent(hash.slice(1));
       requestAnimationFrame(() => {
@@ -121,13 +129,13 @@ export function App() {
               />
             }
           />
-          <Route path="/podcast" element={IS_PRODUCTION_READY ? <PodcastSection pageHeading /> : <ComingSoon sectionName="Tech Talk" />} />
-          <Route path="/tutorials" element={IS_PRODUCTION_READY ? <TutorialsSection pageHeading /> : <ComingSoon sectionName="Tech Explained" />} />
-          <Route path="/courses" element={IS_PRODUCTION_READY ? <CoursesSection pageHeading /> : <ComingSoon sectionName="Courses" />} />
+          <Route path="/podcast" element={IS_PRODUCTION_READY ? <PodcastSection pageHeading /> : <ComingSoon sectionName="Tech Talk" pageHeading />} />
+          <Route path="/tutorials" element={IS_PRODUCTION_READY ? <TutorialsSection pageHeading /> : <ComingSoon sectionName="Tech Explained" pageHeading />} />
+          <Route path="/courses" element={IS_PRODUCTION_READY ? <CoursesSection pageHeading /> : <ComingSoon sectionName="Courses" pageHeading />} />
           <Route path="/services" element={<ServicesSection onOpenConsultation={handleOpenConsultation} pageHeading />} />
-          <Route path="/portfolio" element={IS_PRODUCTION_READY ? <PortfolioSection onOpenConsultation={() => setIsConsultationOpen(true)} /> : <ComingSoon sectionName="Build Showcase" />} />
-          <Route path="/news" element={IS_PRODUCTION_READY ? <NewsSection /> : <ComingSoon sectionName="Tech News" />} />
-          <Route path="/jobs" element={IS_PRODUCTION_READY ? <JobsSection jobs={jobs} onAddJob={handleAddJob} /> : <ComingSoon sectionName="Tech Jobs" />} />
+          <Route path="/portfolio" element={IS_PRODUCTION_READY ? <PortfolioSection onOpenConsultation={() => setIsConsultationOpen(true)} /> : <ComingSoon sectionName="Build Showcase" pageHeading />} />
+          <Route path="/news" element={IS_PRODUCTION_READY ? <NewsSection /> : <ComingSoon sectionName="Tech News" pageHeading />} />
+          <Route path="/jobs" element={IS_PRODUCTION_READY ? <JobsSection jobs={jobs} onAddJob={handleAddJob} /> : <ComingSoon sectionName="Tech Jobs" pageHeading />} />
           <Route path="/about" element={<AboutSection />} />
           <Route path="/privacy" element={<PrivacyPolicySection />} />
           <Route path="/terms" element={<TermsOfServiceSection />} />
@@ -152,7 +160,7 @@ export function App() {
                   onOpenCreatePost={() => setIsCreatePostOpen(true)}
                 />
               ) : (
-                <ComingSoon sectionName="Community Forum" />
+                <ComingSoon sectionName="Community Forum" pageHeading />
               )
             }
           />

@@ -38,16 +38,16 @@ export const ForumSection: React.FC<ForumSectionProps> = ({
   onOpenCreatePost,
 }) => {
   return (
-    <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
       {/* Forum Title Banner */}
       <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-3xl p-6 sm:p-8 mb-8 shadow-lg flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
         <div>
           <span className="px-3 py-1 rounded-full text-xs font-bold bg-white/20 text-white">
             Tech Exchange Community Hub
           </span>
-          <h2 className="font-heading text-2xl sm:text-3xl font-black mt-2">
+          <h1 className="font-heading text-2xl sm:text-3xl font-black mt-2">
             Community Forum & Channel Discussions
-          </h2>
+          </h1>
           <p className="text-xs sm:text-sm text-blue-100 mt-1">
             Open channels for Tech Talk, Tech Explained, Build With Tech, & What's Happening.
           </p>
@@ -124,6 +124,6 @@ export const ForumSection: React.FC<ForumSectionProps> = ({
           />
         ))}
       </div>
-    </main>
+    </div>
   );
 };

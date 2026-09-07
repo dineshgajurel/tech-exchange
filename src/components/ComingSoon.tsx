@@ -17,6 +17,7 @@ import { Link } from 'react-router-dom';
 interface ComingSoonProps {
   /** Section name shown in the heading, e.g. "Tech Talk" */
   sectionName?: string;
+  pageHeading?: boolean;
 }
 
 const UPCOMING_FEATURES = [
@@ -86,7 +87,9 @@ const UPCOMING_FEATURES = [
   },
 ];
 
-export const ComingSoon: React.FC<ComingSoonProps> = ({ sectionName }) => {
+export const ComingSoon: React.FC<ComingSoonProps> = ({ sectionName, pageHeading = false }) => {
+  const HeadingTag: 'h1' | 'h2' = pageHeading ? 'h1' : 'h2';
+
   return (
     <section className="py-16 sm:py-20 px-4 sm:px-6">
       <div className="max-w-5xl mx-auto">
@@ -108,7 +111,7 @@ export const ComingSoon: React.FC<ComingSoonProps> = ({ sectionName }) => {
           </div>
 
           {/* Main heading */}
-          <h2 className="font-heading text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white leading-tight">
+          <HeadingTag className="font-heading text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white leading-tight">
             {sectionName ? (
               <>
                 We're crafting{' '}
@@ -125,7 +128,7 @@ export const ComingSoon: React.FC<ComingSoonProps> = ({ sectionName }) => {
                 </span>
               </>
             )}
-          </h2>
+          </HeadingTag>
 
           <p className="text-sm sm:text-base text-slate-600 dark:text-slate-400 leading-relaxed max-w-2xl mx-auto">
             We're building a complete ecosystem for Nepal's tech community — from podcasts and courses to jobs and software services. Here's what's coming:

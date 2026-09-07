@@ -31,7 +31,7 @@ export const PrivacyPolicySection: React.FC = () => {
           </h1>
 
           <p className="text-sm text-slate-300 max-w-2xl leading-relaxed">
-            Your privacy is fundamental to us at Tech Exchange. This policy outlines how we collect, handle, and safeguard your information when you engage with our media, community forum, courses, and engineering services.
+            This interim policy explains, in plain language, what information Tech Exchange may receive when you browse the site, contact us, apply for a role, or use an available community feature.
           </p>
 
           <div className="pt-2 flex items-center gap-4 text-xs text-slate-400 font-mono">
@@ -56,13 +56,12 @@ export const PrivacyPolicySection: React.FC = () => {
             </h2>
           </div>
           <p>
-            When you visit or interact with Tech Exchange, we collect information to provide a smooth, secure developer experience:
+            We collect only the information needed for the feature you choose to use:
           </p>
           <ul className="list-disc pl-5 space-y-2 text-slate-600 dark:text-slate-400">
-            <li><strong className="text-slate-900 dark:text-white">Account & Profile Information:</strong> When you post in our Community Forum or register for programming courses, we collect basic details such as your name, handle, avatar URL, and professional role.</li>
-            <li><strong className="text-slate-900 dark:text-white">Community Contributions:</strong> Discussions, code snippets, comments, lounge messages, and project submissions shared publicly on the platform.</li>
-            <li><strong className="text-slate-900 dark:text-white">Consultation Requests:</strong> Name, work email, project scope, and estimated budget details submitted via our engineering consultation forms.</li>
-            <li><strong className="text-slate-900 dark:text-white">Technical Analytics:</strong> Device specifications, browser type, referrer URLs, and interactive page metrics to improve platform speed and user interface responsiveness.</li>
+            <li><strong className="text-slate-900 dark:text-white">Information you submit:</strong> Name, email, phone number, project details, budget or timeline, portfolio links, CV links, and application messages submitted through our forms.</li>
+            <li><strong className="text-slate-900 dark:text-white">Public contributions:</strong> Posts, comments, messages, or other content you choose to publish in a community feature may be visible to other visitors.</li>
+            <li><strong className="text-slate-900 dark:text-white">Basic technical data:</strong> Your browser may provide ordinary request information to our hosting provider. We do not use this page to intentionally collect sensitive personal data.</li>
           </ul>
         </section>
 
@@ -77,13 +76,13 @@ export const PrivacyPolicySection: React.FC = () => {
             </h2>
           </div>
           <p>
-            We strictly limit data usage to fulfilling platform services and community features:
+            We use submitted information to:
           </p>
           <ul className="list-disc pl-5 space-y-2 text-slate-600 dark:text-slate-400">
-            <li>To display user-submitted forum posts, comments, upvotes, and developer lounge messages.</li>
-            <li>To manage course enrollments, track learning progress, and issue verified completion certificates.</li>
-            <li>To process consultation requests and connect engineering clients with Dinesh Gajurel and the Tech Exchange team.</li>
-            <li>To prevent spam, abuse, unauthorized scraping, and illegal activity on the platform.</li>
+            <li>Respond to consultation requests, questions, and other messages.</li>
+            <li>Review career applications and contact applicants about a role.</li>
+            <li>Display and moderate content that you voluntarily publish in available community features.</li>
+            <li>Operate, secure, and improve the website.</li>
           </ul>
         </section>
 
@@ -94,11 +93,11 @@ export const PrivacyPolicySection: React.FC = () => {
               <Lock className="w-5 h-5" />
             </div>
             <h2 className="font-heading text-xl font-bold text-slate-900 dark:text-white">
-              3. Cookies & Local Storage
+              3. Browser Storage
             </h2>
           </div>
           <p>
-            Tech Exchange uses browser local storage and essential cookies to remember your preferences (such as light/dark mode preference and active forum filters) across browser sessions without requiring intrusive third-party tracking scripts.
+            The site uses browser local storage to remember your light/dark mode preference. Career application details may also be stored locally in your browser after you submit an application. You can clear this data through your browser settings. We do not currently require an account or use non-essential advertising cookies.
           </p>
         </section>
 
@@ -109,14 +108,14 @@ export const PrivacyPolicySection: React.FC = () => {
               <FileText className="w-5 h-5" />
             </div>
             <h2 className="font-heading text-xl font-bold text-slate-900 dark:text-white">
-              4. Data Sharing & Third-Party Services
+              4. Third-Party Services
             </h2>
           </div>
           <p>
-            <strong className="text-slate-900 dark:text-white">We do not sell, rent, or trade your personal information to third parties.</strong>
+            <strong className="text-slate-900 dark:text-white">We do not intentionally sell your personal information.</strong>
           </p>
           <p>
-            Media embeds (such as embedded YouTube video demos or Spotify podcast episodes) may interact directly with their respective third-party provider services according to their privacy policies.
+            Consultation and career forms are submitted through Google Forms. Links or media from services such as Google Drive, YouTube, Spotify, or other providers are governed by those providers' own policies when you use them. We may share submitted information with a service provider only when needed to operate the relevant feature or respond to you.
           </p>
         </section>
 
@@ -131,12 +130,12 @@ export const PrivacyPolicySection: React.FC = () => {
             </h2>
           </div>
           <p>
-            If you have questions regarding this Privacy Policy, wish to request account data removal, or have security concerns, please reach out to us:
+            If you have questions regarding this Privacy Policy, wish to request deletion of information you submitted, or have security concerns, please reach out to us:
           </p>
           <div className="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/80 font-mono text-xs space-y-1">
             <p className="font-bold text-slate-900 dark:text-white">Tech Exchange Legal & Data Protection</p>
             <p className="text-slate-600 dark:text-slate-400">Founder & Lead Architect: Dinesh Gajurel</p>
-            <p className="text-slate-600 dark:text-slate-400">Email: dinesh@techexchange.gajureldns.com.np</p>
+            <p className="text-slate-600 dark:text-slate-400">Email: techexchangewithdinesh@gmail.com</p>
             <p className="text-slate-600 dark:text-slate-400">Location: Kathmandu, Nepal</p>
           </div>
         </section>

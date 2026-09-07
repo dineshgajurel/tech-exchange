@@ -17,9 +17,9 @@ export const PortfolioSection: React.FC<PortfolioSectionProps> = ({ onOpenConsul
             <Code className="w-3.5 h-3.5 text-blue-600" />
             <span>Build With Tech</span>
           </div>
-          <h2 className="font-heading text-3xl font-extrabold text-slate-900 dark:text-white">
+          <h1 className="font-heading text-3xl font-extrabold text-slate-900 dark:text-white">
             Software Portfolio & Featured Builds
-          </h2>
+          </h1>
           <p className="text-sm text-slate-600 dark:text-slate-400 mt-1">
             Software products, AI integrations, and technical builds developed by Tech Exchange.
           </p>

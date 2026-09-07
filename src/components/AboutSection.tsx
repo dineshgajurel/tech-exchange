@@ -176,7 +176,7 @@ export const AboutSection: React.FC = () => {
   };
 
   return (
-    <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-16">
+    <div className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-16">
       
       {/* Hero Banner */}
       <section className="relative overflow-hidden rounded-3xl bg-slate-900 text-white p-8 sm:p-12 shadow-2xl border border-slate-800">
@@ -600,6 +600,6 @@ export const AboutSection: React.FC = () => {
         </div>
       )}
 
-    </main>
+    </div>
   );
 };

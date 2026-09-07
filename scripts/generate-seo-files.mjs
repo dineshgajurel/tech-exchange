@@ -55,9 +55,9 @@ const llmsSections = [
   ['Community and learning', ['/podcast', '/courses', '/tutorials', '/forum']],
   ['Other pages', ['/news', '/jobs', '/portfolio', '/privacy', '/terms']],
 ];
-const llms = `# Tech Exchange
+const llms = `# Tech Exchange (techexchange)
 
-> Tech Exchange is Nepal's developer community and engineering studio for practical learning, thoughtful collaboration, and software services.
+> Tech Exchange, also known as techexchange, is Nepal's developer community and engineering studio for practical learning, thoughtful collaboration, and software services.
 
 ${llmsSections.map(([heading, paths]) => {
   const availablePaths = paths.filter((path) => pages.some(([page]) => page === path.split('#')[0]));

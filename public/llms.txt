@@ -1,6 +1,6 @@
-# Tech Exchange
+# Tech Exchange (techexchange)
 
-> Tech Exchange is Nepal's developer community and engineering studio for practical learning, thoughtful collaboration, and software services.
+> Tech Exchange, also known as techexchange, is Nepal's developer community and engineering studio for practical learning, thoughtful collaboration, and software services.
 
 ## Primary pages
 

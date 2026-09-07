@@ -161,7 +161,7 @@ export const JobsSection: React.FC<JobsSectionProps> = ({ jobs, onAddJob }) => {
   };
 
   return (
-    <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 transition-colors">
+    <div className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 transition-colors">
       
       {/* Header Banner */}
       <div className="relative overflow-hidden bg-gradient-to-r from-blue-700 via-blue-800 to-slate-900 text-white rounded-3xl p-6 sm:p-10 mb-8 shadow-xl">
@@ -858,6 +858,6 @@ export const JobsSection: React.FC<JobsSectionProps> = ({ jobs, onAddJob }) => {
         </div>
       )}
 
-    </main>
+    </div>
   );
 };

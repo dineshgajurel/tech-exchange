@@ -31,7 +31,7 @@ export const TermsOfServiceSection: React.FC = () => {
           </h1>
 
           <p className="text-sm text-slate-300 max-w-2xl leading-relaxed">
-            Welcome to Tech Exchange. These Terms of Service govern your access to and use of our platform, forum, media broadcasts, programming courses, and software development services.
+            These interim terms describe the basic rules for using the Tech Exchange website, contacting us, submitting applications, and participating in features that are currently available.
           </p>
 
           <div className="pt-2 flex items-center gap-4 text-xs text-slate-400 font-mono">
@@ -56,7 +56,7 @@ export const TermsOfServiceSection: React.FC = () => {
             </h2>
           </div>
           <p>
-            By accessing or using the Tech Exchange platform (including our web application, community lounge, media broadcasts, courses, and job directory), you agree to be bound by these Terms of Service. If you do not agree, please refrain from using the platform.
+            By using the website, you agree to these terms. If you do not agree, please stop using the site. Some sections may be marked as coming soon and may not yet provide a complete service.
           </p>
         </section>
 
@@ -71,12 +71,12 @@ export const TermsOfServiceSection: React.FC = () => {
             </h2>
           </div>
           <p>
-            Tech Exchange is dedicated to fostering a professional, respectful, and constructive software engineering community. All members must adhere to the following rules:
+            When community features are available, please use them responsibly:
           </p>
           <ul className="list-disc pl-5 space-y-2 text-slate-600 dark:text-slate-400">
-            <li><strong className="text-slate-900 dark:text-white">Respect & Professionalism:</strong> Zero tolerance for harassment, discrimination, hate speech, personal attacks, or abusive behavior in forum posts or lounge chats.</li>
-            <li><strong className="text-slate-900 dark:text-white">Authentic Content:</strong> Do not post deceptive links, automated promotional spam, malware, or unauthorized commercial advertisements.</li>
-            <li><strong className="text-slate-900 dark:text-white">Code Integrity:</strong> Ensure code snippets and open-source contributions shared on the forum do not violate third-party licenses or contain secret keys/credentials.</li>
+            <li><strong className="text-slate-900 dark:text-white">Be respectful:</strong> Do not harass, threaten, discriminate against, or impersonate other people.</li>
+            <li><strong className="text-slate-900 dark:text-white">Share responsibly:</strong> Do not post spam, malware, deceptive links, private information, or unlawful content.</li>
+            <li><strong className="text-slate-900 dark:text-white">Protect your work:</strong> Do not publish passwords, API keys, confidential code, or content you do not have permission to share.</li>
           </ul>
         </section>
 
@@ -91,10 +91,10 @@ export const TermsOfServiceSection: React.FC = () => {
             </h2>
           </div>
           <p>
-            You retain ownership of the original content, tutorials, and code snippets you publish on Tech Exchange. By posting on the platform, you grant Tech Exchange a non-exclusive, worldwide, royalty-free license to display, index, and distribute your content across our community channels.
+            You retain ownership of content you submit. By submitting public content, you give Tech Exchange permission to host, display, and share it as part of the website and its community features. Do not submit content that infringes someone else's rights.
           </p>
           <p>
-            All original Tech Exchange logos, brand assets, course curriculums, and platform source code are the intellectual property of Dinesh Gajurel / Tech Exchange.
+            Tech Exchange branding, original site content, and platform code belong to Tech Exchange or their respective owners and may not be reused without permission.
           </p>
         </section>
 
@@ -105,12 +105,13 @@ export const TermsOfServiceSection: React.FC = () => {
               <AlertCircle className="w-5 h-5" />
             </div>
             <h2 className="font-heading text-xl font-bold text-slate-900 dark:text-white">
-              4. Programming Courses & Service Consultations
+              4. Applications, Services & Third-Party Links
             </h2>
           </div>
           <ul className="list-disc pl-5 space-y-2 text-slate-600 dark:text-slate-400">
-            <li><strong className="text-slate-900 dark:text-white">Course Materials:</strong> Enrollment grants individual, non-transferable access to course lectures and repositories for personal educational purposes.</li>
-            <li><strong className="text-slate-900 dark:text-white">Engineering Consultations:</strong> Software development proposals and service quotes submitted via the platform are non-binding until a formal Master Services Agreement (MSA) or Statement of Work (SOW) is executed.</li>
+            <li><strong className="text-slate-900 dark:text-white">Applications and inquiries:</strong> Sending a form does not guarantee employment, a contract, a response, or acceptance of a proposal.</li>
+            <li><strong className="text-slate-900 dark:text-white">Services:</strong> Any paid work, scope, price, timeline, or deliverable will be agreed separately in writing.</li>
+            <li><strong className="text-slate-900 dark:text-white">Third-party services:</strong> Google Forms, Google Drive, YouTube, Spotify, and other linked services are operated under their own terms and policies.</li>
           </ul>
         </section>
 
@@ -121,17 +122,17 @@ export const TermsOfServiceSection: React.FC = () => {
               <Mail className="w-5 h-5" />
             </div>
             <h2 className="font-heading text-xl font-bold text-slate-900 dark:text-white">
-              5. Governing Law & Contact Details
+              5. Availability & Contact Details
             </h2>
           </div>
           <p>
-            These Terms of Service are governed by and construed in accordance with the laws of Nepal. Any legal disputes arising under these terms shall be subject to the jurisdiction of the competent courts in Kathmandu, Nepal.
+            We may change, pause, or remove a feature at any time while the site is being developed. We will make reasonable efforts to keep the website available, but we do not guarantee uninterrupted operation or that every piece of content is current or error-free. For questions about these terms, contact us below.
           </p>
           <div className="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/80 font-mono text-xs space-y-1">
             <p className="font-bold text-slate-900 dark:text-white">Tech Exchange Legal & Operations</p>
             <p className="text-slate-600 dark:text-slate-400">Contact Person: Dinesh Gajurel</p>
-            <p className="text-slate-600 dark:text-slate-400">Email: dinesh@techexchange.gajureldns.com.np</p>
-            <p className="text-slate-600 dark:text-slate-400">Website: https://techexchange.gajureldns.com.np</p>
+            <p className="text-slate-600 dark:text-slate-400">Email: techexchangewithdinesh@gmail.com</p>
+            <p className="text-slate-600 dark:text-slate-400">Website: https://www.techexchange.dev</p>
           </div>
         </section>
 

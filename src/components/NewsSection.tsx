@@ -44,9 +44,9 @@ export const NewsSection: React.FC = () => {
           <Zap className="w-3.5 h-3.5 text-blue-600" />
           <span>Tech News Hub</span>
         </div>
-        <h2 className="font-heading text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+        <h1 className="font-heading text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
           Latest Tech News
-        </h2>
+        </h1>
         <p className="text-sm text-slate-600 dark:text-slate-400 mt-1">
           Coverage on AI breakthroughs, framework releases, and Nepal tech ecosystem stories.
         </p>
