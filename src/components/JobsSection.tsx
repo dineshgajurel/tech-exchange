@@ -121,7 +121,7 @@ export const JobsSection: React.FC<JobsSectionProps> = ({ jobs, onAddJob }) => {
       description: newJobDescription,
       requirements: reqs.length > 0 ? reqs : ['Strong communication & problem solving skills', 'Experience working in modern software teams'],
       skills: sks.length > 0 ? sks : ['TypeScript', 'React', 'Node.js'],
-      applyUrl: newJobApplyUrl || 'https://example.com/apply',
+      applyUrl: newJobApplyUrl || '#',
       featured: true,
       companyLogo: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=120&auto=format&fit=crop&q=80'
     });

@@ -36,25 +36,29 @@ export const HeroReferenceBanner: React.FC<HeroReferenceBannerProps> = ({
         <div className="flex flex-col items-start gap-4 mb-6">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-extrabold bg-blue-100/80 dark:bg-blue-950/80 text-blue-700 dark:text-blue-300 border border-blue-200/80 dark:border-blue-800/80 shadow-xs">
             <Sparkles className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400" />
-            <span>Nepal's Tech Enthusiasts Ecosystem — Talk • Learn • Build</span>
+            <span>For developers, founders, and product teams</span>
           </div>
 
           <div className="pt-1">
             <TechExchangeLogo size="lg" showTagline={true} />
           </div>
+
+          <h1 className="max-w-4xl text-3xl sm:text-5xl font-heading font-extrabold tracking-tight leading-tight text-slate-900 dark:text-white">
+            Learn, build, and grow with technology.
+          </h1>
         </div>
 
         {/* Subtitle */}
         <p className="text-lg md:text-xl font-medium text-slate-700 dark:text-slate-300 max-w-3xl leading-relaxed mb-10 pl-0.5">
-          Where Nepali engineers talk tech, sharpen skills, and ship real products.<br />
-          <span className="font-bold text-slate-900 dark:text-white">One platform — podcasts, courses, tutorials, jobs, and software services</span> built to accelerate your career and connect you to the global dev community.
+          Tech Exchange brings together conversations, guides, courses, projects, jobs, and community spaces for people building with technology.<br />
+          <span className="font-bold text-slate-900 dark:text-white">Learn from the community, or work with us on custom software, automation, and technical decisions.</span>
         </p>
 
         {/* Brand Pillars Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-12">
           
           {/* Pillar 1: Tech Talk (Podcasts, Shows & Events) */}
-          <Link 
+          <Link
             to="/podcast"
             className="group flex items-start gap-4 p-4.5 rounded-2xl bg-white dark:bg-slate-800/80 hover:bg-blue-50/70 dark:hover:bg-slate-800 border border-slate-200/80 dark:border-slate-700/80 transition-all shadow-xs hover:shadow-md hover:border-blue-300 dark:hover:border-blue-700"
           >
@@ -63,16 +67,16 @@ export const HeroReferenceBanner: React.FC<HeroReferenceBannerProps> = ({
             </div>
             <div>
               <div className="text-base font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-                Tech Talk <span className="font-normal text-slate-500 dark:text-slate-400">— Media & Events</span>
+                Tech Talk <span className="font-normal text-slate-500 dark:text-slate-400">— Conversations & Events</span>
               </div>
               <div className="text-xs text-slate-600 dark:text-slate-400 mt-1 leading-normal">
-                Podcasts, live tech shows, video demos, seminars & expert talks.
+                Conversations with people building software, plus talks, demos, and community events.
               </div>
             </div>
           </Link>
 
           {/* Pillar 2: Programming Courses */}
-          <Link 
+          <Link
             to="/courses"
             className="group flex items-start gap-4 p-4.5 rounded-2xl bg-white dark:bg-slate-800/80 hover:bg-blue-50/70 dark:hover:bg-slate-800 border border-slate-200/80 dark:border-slate-700/80 transition-all shadow-xs hover:shadow-md hover:border-blue-300 dark:hover:border-blue-700"
           >
@@ -81,16 +85,16 @@ export const HeroReferenceBanner: React.FC<HeroReferenceBannerProps> = ({
             </div>
             <div>
               <div className="text-base font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-                Programming Courses <span className="font-normal text-slate-500 dark:text-slate-400">— Masterclasses</span>
+                Programming Courses <span className="font-normal text-slate-500 dark:text-slate-400">— Structured Learning</span>
               </div>
               <div className="text-xs text-slate-600 dark:text-slate-400 mt-1 leading-normal">
-                Hands-on curriculum in Next.js, AI Agents, Python & DevOps.
+                Guided lessons and projects for people learning programming or strengthening their skills.
               </div>
             </div>
           </Link>
 
           {/* Pillar 3: Tech Explained (Tutorials) */}
-          <Link 
+          <Link
             to="/tutorials"
             className="group flex items-start gap-4 p-4.5 rounded-2xl bg-white dark:bg-slate-800/80 hover:bg-blue-50/70 dark:hover:bg-slate-800 border border-slate-200/80 dark:border-slate-700/80 transition-all shadow-xs hover:shadow-md hover:border-blue-300 dark:hover:border-blue-700"
           >
@@ -99,16 +103,16 @@ export const HeroReferenceBanner: React.FC<HeroReferenceBannerProps> = ({
             </div>
             <div>
               <div className="text-base font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-                Tech Explained <span className="font-normal text-slate-500 dark:text-slate-400">— Guides</span>
+                Tech Explained <span className="font-normal text-slate-500 dark:text-slate-400">— Practical Guides</span>
               </div>
               <div className="text-xs text-slate-600 dark:text-slate-400 mt-1 leading-normal">
-                Big ideas, explained simply. Code snippets & architecture breakdowns.
+                Clear explanations, examples, and technical notes for understanding how software works.
               </div>
             </div>
           </Link>
 
           {/* Pillar 4: Tech Jobs */}
-          <Link 
+          <Link
             to="/jobs"
             className="group flex items-start gap-4 p-4.5 rounded-2xl bg-white dark:bg-slate-800/80 hover:bg-blue-50/70 dark:hover:bg-slate-800 border border-slate-200/80 dark:border-slate-700/80 transition-all shadow-xs hover:shadow-md hover:border-blue-300 dark:hover:border-blue-700"
           >
@@ -117,16 +121,16 @@ export const HeroReferenceBanner: React.FC<HeroReferenceBannerProps> = ({
             </div>
             <div>
               <div className="text-base font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-                Tech Jobs <span className="font-normal text-slate-500 dark:text-slate-400">— Careers</span>
+                Tech Jobs <span className="font-normal text-slate-500 dark:text-slate-400">— Career Opportunities</span>
               </div>
               <div className="text-xs text-slate-600 dark:text-slate-400 mt-1 leading-normal">
-                Curated software developer positions, full-time & remote roles.
+                Roles, opportunities, and useful career information for people growing in technology.
               </div>
             </div>
           </Link>
 
           {/* Pillar 5: Build With Tech (Services) */}
-          <Link 
+          <Link
             to="/services"
             className="group flex items-start gap-4 p-4.5 rounded-2xl bg-white dark:bg-slate-800/80 hover:bg-blue-50/70 dark:hover:bg-slate-800 border border-slate-200/80 dark:border-slate-700/80 transition-all shadow-xs hover:shadow-md hover:border-blue-300 dark:hover:border-blue-700"
           >
@@ -135,16 +139,16 @@ export const HeroReferenceBanner: React.FC<HeroReferenceBannerProps> = ({
             </div>
             <div>
               <div className="text-base font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-                Build Services <span className="font-normal text-slate-500 dark:text-slate-400">— Engineering</span>
+                Build Services <span className="font-normal text-slate-500 dark:text-slate-400">— Software for Teams</span>
               </div>
               <div className="text-xs text-slate-600 dark:text-slate-400 mt-1 leading-normal">
-                Custom fullstack web apps, AI systems & expert technical audits.
+                Custom apps, internal tools, automation, and technical guidance for businesses and product teams.
               </div>
             </div>
           </Link>
 
           {/* Pillar 6: Tech News & Frontier Updates */}
-          <Link 
+          <Link
             to="/news"
             className="group flex items-start gap-4 p-4.5 rounded-2xl bg-white dark:bg-slate-800/80 hover:bg-blue-50/70 dark:hover:bg-slate-800 border border-slate-200/80 dark:border-slate-700/80 transition-all shadow-xs hover:shadow-md hover:border-blue-300 dark:hover:border-blue-700"
           >
@@ -153,10 +157,10 @@ export const HeroReferenceBanner: React.FC<HeroReferenceBannerProps> = ({
             </div>
             <div>
               <div className="text-base font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-                Tech News <span className="font-normal text-slate-500 dark:text-slate-400">— Frontier Updates</span>
+                Tech News <span className="font-normal text-slate-500 dark:text-slate-400">— Industry Notes</span>
               </div>
               <div className="text-xs text-slate-600 dark:text-slate-400 mt-1 leading-normal">
-                AI releases, framework announcements, and technology news.
+                Important releases, useful tools, and technology news explained with practical context.
               </div>
             </div>
           </Link>
@@ -169,11 +173,11 @@ export const HeroReferenceBanner: React.FC<HeroReferenceBannerProps> = ({
             <div className="flex items-center gap-2">
               <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />
               <p className="text-sm font-bold text-slate-900 dark:text-white">
-                Building a web app, AI system, or seeking technical advisory?
+                Building a product, exploring AI, or looking for your next learning step?
               </p>
             </div>
             <p className="text-xs text-slate-600 dark:text-slate-400 pl-6">
-              Talk • Learn • Build. Direct engineering collaboration & consultation.
+              Tell us what you are working on and where you need help.
             </p>
           </div>
 

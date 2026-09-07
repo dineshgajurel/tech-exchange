@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Heart, Globe, Github, Linkedin, Youtube } from 'lucide-react';
+import { Globe, Github, Linkedin, Youtube } from 'lucide-react';
 import { TechExchangeLogo } from './TechExchangeLogo';
 import { SectionTab, ChannelId } from '../types';
 
@@ -33,11 +33,11 @@ export const Footer: React.FC<FooterProps> = ({
             <TechExchangeLogo size="md" showTagline={true} />
 
             <p className="text-sm text-slate-600 dark:text-slate-400 max-w-sm leading-relaxed">
-              Tech chats were scattered everywhere — different servers, different groups. So here's one place for it.
+              A practical place for developers to learn, share work, and find thoughtful software help.
             </p>
 
             <p className="text-xs font-semibold text-slate-500 dark:text-slate-400">
-              Talk • Learn • Build. Simple as that.
+              For developers, founders, and curious builders.
             </p>
           </div>
 
@@ -48,19 +48,19 @@ export const Footer: React.FC<FooterProps> = ({
             </h4>
             <ul className="space-y-2 text-xs font-medium text-slate-600 dark:text-slate-400">
               <li>
-                <Link to="/podcast" onClick={() => onSelectTab && onSelectTab('podcast')} className="hover:text-blue-600 cursor-pointer">🎙️ Tech Talk (Podcast)</Link>
+                <Link to="/podcast" onClick={() => onSelectTab && onSelectTab('podcast')} className="hover:text-blue-600 cursor-pointer">Tech Talk — podcasts and events</Link>
               </li>
               <li>
-                <Link to="/forum" onClick={() => onSelectTab && onSelectTab('forum')} className="hover:text-blue-600 cursor-pointer">💬 Community Forum</Link>
+                <Link to="/forum" onClick={() => onSelectTab && onSelectTab('forum')} className="hover:text-blue-600 cursor-pointer">Community Forum</Link>
               </li>
               <li>
-                <Link to="/tutorials" onClick={() => onSelectTab && onSelectTab('tutorials')} className="hover:text-blue-600 cursor-pointer">📚 Tech Explained</Link>
+                <Link to="/tutorials" onClick={() => onSelectTab && onSelectTab('tutorials')} className="hover:text-blue-600 cursor-pointer">Tech Explained — guides</Link>
               </li>
               <li>
-                <Link to="/courses" onClick={() => onSelectTab && onSelectTab('courses')} className="hover:text-blue-600 cursor-pointer">🎓 Courses</Link>
+                <Link to="/courses" onClick={() => onSelectTab && onSelectTab('courses')} className="hover:text-blue-600 cursor-pointer">Courses</Link>
               </li>
               <li>
-                <Link to="/news" onClick={() => onSelectTab && onSelectTab('news')} className="hover:text-blue-600 cursor-pointer">📰 Tech News</Link>
+                <Link to="/news" onClick={() => onSelectTab && onSelectTab('news')} className="hover:text-blue-600 cursor-pointer">Tech News</Link>
               </li>
             </ul>
           </div>
@@ -72,22 +72,22 @@ export const Footer: React.FC<FooterProps> = ({
             </h4>
             <ul className="space-y-2 text-xs font-medium text-slate-600 dark:text-slate-400">
               <li>
-                <Link to="/portfolio" onClick={() => onSelectTab && onSelectTab('portfolio')} className="hover:text-blue-600 cursor-pointer">🚀 Build Showcase</Link>
+                <Link to="/portfolio" onClick={() => onSelectTab && onSelectTab('portfolio')} className="hover:text-blue-600 cursor-pointer">Build Showcase</Link>
               </li>
               <li>
-                <Link to="/services" onClick={() => onSelectTab && onSelectTab('services')} className="hover:text-blue-600 cursor-pointer">⚡ Services & Consult</Link>
+                <Link to="/services" onClick={() => onSelectTab && onSelectTab('services')} className="hover:text-blue-600 cursor-pointer">Services</Link>
               </li>
               <li>
-                <Link to="/jobs" onClick={() => onSelectTab && onSelectTab('jobs')} className="hover:text-blue-600 cursor-pointer">💼 Tech Jobs</Link>
+                <Link to="/jobs" onClick={() => onSelectTab && onSelectTab('jobs')} className="hover:text-blue-600 cursor-pointer">Tech Jobs</Link>
               </li>
               <li>
-                <Link to="/about" onClick={() => onSelectTab && onSelectTab('about')} className="hover:text-blue-600 cursor-pointer">🏢 About Us</Link>
+                <Link to="/about" onClick={() => onSelectTab && onSelectTab('about')} className="hover:text-blue-600 cursor-pointer">About Us</Link>
               </li>
               <li>
-                <Link to="/privacy" onClick={() => onSelectTab && onSelectTab('privacy')} className="hover:text-blue-600 cursor-pointer">🔒 Privacy Policy</Link>
+                <Link to="/privacy" onClick={() => onSelectTab && onSelectTab('privacy')} className="hover:text-blue-600 cursor-pointer">Privacy Policy</Link>
               </li>
               <li>
-                <Link to="/terms" onClick={() => onSelectTab && onSelectTab('terms')} className="hover:text-blue-600 cursor-pointer">⚖️ Terms of Service</Link>
+                <Link to="/terms" onClick={() => onSelectTab && onSelectTab('terms')} className="hover:text-blue-600 cursor-pointer">Terms of Service</Link>
               </li>
             </ul>
           </div>
@@ -99,20 +99,20 @@ export const Footer: React.FC<FooterProps> = ({
             </h4>
             <ul className="space-y-2 text-xs font-medium text-slate-600 dark:text-slate-400 mb-4">
               <li>
-                <button onClick={() => handleChannelClick('tech-talk')} className="hover:text-blue-600 cursor-pointer">💬 Tech Talk</button>
+                <button onClick={() => handleChannelClick('tech-talk')} className="hover:text-blue-600 cursor-pointer">Tech Talk</button>
               </li>
               <li>
-                <button onClick={() => handleChannelClick('tech-explained')} className="hover:text-blue-600 cursor-pointer">🧠 Tech Explained</button>
+                <button onClick={() => handleChannelClick('tech-explained')} className="hover:text-blue-600 cursor-pointer">Tech Explained</button>
               </li>
               <li>
-                <button onClick={() => handleChannelClick('build-with-tech')} className="hover:text-blue-600 cursor-pointer">🛠️ Build With Tech</button>
+                <button onClick={() => handleChannelClick('build-with-tech')} className="hover:text-blue-600 cursor-pointer">Build With Tech</button>
               </li>
               <li>
-                <button onClick={() => handleChannelClick('whats-happening')} className="hover:text-blue-600 cursor-pointer">📰 What's Happening</button>
+                <button onClick={() => handleChannelClick('whats-happening')} className="hover:text-blue-600 cursor-pointer">What's Happening</button>
               </li>
               {onOpenLounge && (
                 <li>
-                  <button onClick={onOpenLounge} className="hover:text-blue-600 cursor-pointer text-amber-600 dark:text-amber-400 font-bold">Say Hi in Lounge 👋</button>
+                  <button onClick={onOpenLounge} className="hover:text-blue-600 cursor-pointer text-amber-600 dark:text-amber-400 font-bold">Say Hi in Lounge</button>
                 </li>
               )}
             </ul>
@@ -143,10 +143,8 @@ export const Footer: React.FC<FooterProps> = ({
             <span>•</span>
             <Link to="/terms" onClick={() => onSelectTab && onSelectTab('terms')} className="hover:text-blue-600 transition-colors">Terms of Service</Link>
           </div>
-          <div className="flex items-center gap-1.5 font-medium">
-            <span>Made with</span>
-            <Heart className="w-3.5 h-3.5 text-red-500 fill-red-500 inline-block animate-pulse" />
-            <span>for Tech Lovers & Developers Worldwide</span>
+          <div className="font-medium text-center sm:text-right">
+            Tech Exchange is a developer community and engineering studio
           </div>
         </div>
 

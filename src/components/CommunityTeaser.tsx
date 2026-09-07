@@ -43,7 +43,7 @@ export const CommunityTeaser: React.FC<CommunityTeaserProps> = ({
                 onClick={onOpenLounge}
                 className="px-4 py-2.5 rounded-xl bg-amber-50 dark:bg-amber-950 text-amber-800 dark:text-amber-200 border border-amber-200 dark:border-amber-800 text-xs font-bold hover:bg-amber-100 cursor-pointer"
               >
-                Come say hi. 👋
+                Come say hello.
               </button>
               <button
                 onClick={onOpenForum}

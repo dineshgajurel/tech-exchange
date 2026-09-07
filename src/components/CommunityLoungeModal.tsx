@@ -61,7 +61,7 @@ export const CommunityLoungeModal: React.FC<CommunityLoungeModalProps> = ({
         <div className="p-6 border-b border-slate-100 dark:border-slate-800 flex items-center justify-between bg-blue-50/50 dark:bg-slate-850">
           <div className="flex items-center gap-3">
             <div className="w-12 h-12 rounded-2xl bg-blue-600 text-white flex items-center justify-center font-heading text-2xl shadow-md shadow-blue-500/20">
-              👋
+              Lounge
             </div>
             <div>
               <h2 className="font-heading text-2xl font-extrabold text-slate-900 dark:text-white">

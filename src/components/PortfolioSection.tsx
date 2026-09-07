@@ -21,7 +21,7 @@ export const PortfolioSection: React.FC<PortfolioSectionProps> = ({ onOpenConsul
             Software Portfolio & Featured Builds
           </h2>
           <p className="text-sm text-slate-600 dark:text-slate-400 mt-1">
-            Real products, AI agent integrations, and scalable web apps engineered by Tech Exchange.
+            Software products, AI integrations, and technical builds developed by Tech Exchange.
           </p>
         </div>
 
@@ -95,7 +95,7 @@ export const PortfolioSection: React.FC<PortfolioSectionProps> = ({ onOpenConsul
 
               {/* Links */}
               <div className="flex items-center gap-3 pt-4 border-t border-slate-100 dark:border-slate-800">
-                {proj.demoUrl && (
+                {proj.demoUrl && proj.demoUrl !== 'https://example.com' && (
                   <a
                     href={proj.demoUrl}
                     target="_blank"
@@ -106,7 +106,7 @@ export const PortfolioSection: React.FC<PortfolioSectionProps> = ({ onOpenConsul
                     <span>View Product Demo</span>
                   </a>
                 )}
-                {proj.githubUrl && (
+                {proj.githubUrl && proj.githubUrl !== 'https://github.com' && (
                   <a
                     href={proj.githubUrl}
                     target="_blank"

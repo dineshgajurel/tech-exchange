@@ -54,7 +54,7 @@ export const INITIAL_POSTS: Post[] = [
     id: 'post-1',
     channelId: 'build-with-tech',
     title: 'Built an open-source lightweight SQLite visualizer in WebAssembly & React',
-    content: 'Spent the weekend building SQL-Lens! It runs entire SQLite database engines directly inside your browser tab using WASM. Zero backend servers, instant SQL queries, and interactive schema relationship graphs.',
+    content: 'Spent the weekend building SQL-Lens, a browser-based SQLite visualizer. It explores local queries, schema relationships, and the tradeoffs of keeping small datasets close to the user.',
     author: {
       name: 'Dinesh Gajurel',
       handle: '@dinesh',
@@ -182,7 +182,7 @@ export const PODCAST_EPISODES: PodcastEpisode[] = [
     location: 'Kathmandu Tech Hub (Hattisar) & Online Live Stream',
     organizer: 'Tech Exchange Community',
     registrationUrl: 'https://example.com/register',
-    description: 'The premier annual gathering of 350+ software engineers, AI researchers, and tech founders in Nepal. Featuring keynotes, hands-on workshops, and community networking.',
+    description: 'A community gathering for software engineers, AI practitioners, and tech founders in Nepal, with talks, workshops, and time to meet other builders.',
     speakers: [
       {
         name: 'Dinesh Gajurel',
@@ -210,7 +210,7 @@ export const PODCAST_EPISODES: PodcastEpisode[] = [
     location: 'Virtual Masterclass Room (Zoom & YouTube)',
     organizer: 'Tech Exchange Lead',
     registrationUrl: 'https://example.com/seminar',
-    description: 'An intensive 2-hour interactive technical seminar covering distributed locking, idempotency keys, rate-limiting algorithms, and sub-millisecond Redis cache invalidation.',
+    description: 'A practical technical seminar covering cache invalidation, rate limiting, service reliability, and the tradeoffs behind real-time systems.',
     guest: {
       name: 'Dinesh Gajurel',
       role: 'Principal Systems Engineer @ Tech Exchange',
@@ -279,12 +279,12 @@ export const PODCAST_EPISODES: PodcastEpisode[] = [
 export const TUTORIALS: Tutorial[] = [
   {
     id: 'tut-1',
-    title: 'Building a High-Performance SQLite WebAssembly Engine in React',
+    title: 'Building a SQLite Database Tool in the Browser',
     category: 'Web Development',
     readTime: '8 min read',
     difficulty: 'Intermediate',
-    summary: 'Learn how to run full SQL engines directly in your user’s browser tab with zero backend server latency using SQLite WASM & IndexedDB persistence.',
-    content: 'Running SQLite inside the browser opens up unprecedented offline-first experiences. By compiling C-based SQLite to WebAssembly, your web application can perform complex relational joins at native speeds directly on client hardware.\n\n### Step 1: Loading the WASM Module\nInitialize the SQLite binary in your React component using dynamic import promises.\n\n### Step 2: Persisting Tables to IndexedDB\nEnsure data isn\'t lost on page reloads by attaching VFS (Virtual File System) to browser storage.',
+    summary: 'Learn how browser-local databases can support offline features and reduce unnecessary server requests using SQLite and IndexedDB.',
+    content: 'Running SQLite in the browser can be useful for local-first features and small datasets. This guide explains the tradeoffs, setup, and persistence model rather than treating browser storage as a replacement for every backend.\n\n### Step 1: Loading the WASM Module\nInitialize the SQLite binary in your application using a dynamic import.\n\n### Step 2: Persisting Tables to IndexedDB\nKeep local data across page reloads by connecting the database to browser storage.',
     codeSnippet: {
       language: 'typescript',
       code: `import { initSqliteWasm } from '@techexchange/wasm-sqlite';
@@ -306,7 +306,7 @@ await db.exec(\`
     category: 'AI & Machine Learning',
     readTime: '12 min read',
     difficulty: 'Beginner',
-    summary: 'No complex math degree needed! A crystal-clear breakdown of Query, Key, and Value vectors and how self-attention processes human language.',
+    summary: 'A beginner-friendly introduction to Query, Key, and Value vectors and how self-attention uses them to weigh relationships in text.',
     content: 'Self-attention acts like a dynamic relevance spotlight. Instead of processing text left-to-right linearly, Transformers evaluate every word pair simultaneously to build contextual embeddings.\n\n### Core Math Concept\nGiven input matrix X, we compute Query (Q), Key (K), and Value (V) projections using learned weights.',
     codeSnippet: {
       language: 'python',
@@ -327,7 +327,7 @@ def self_attention(query, key, value):
     category: 'DevOps & Cloud',
     readTime: '10 min read',
     difficulty: 'Advanced',
-    summary: 'Step-by-step guide to configuring automated container switching and health-checked proxy routing for 99.99% service availability.',
+    summary: 'A practical guide to switching between application versions with health checks and a rollback path during deployment.',
     content: 'Blue/Green deployment is a release management strategy that minimizes downtime and risk by running two identical production environments called Blue and Green.\n\n### Step 1: Upstream Proxy Swap\nNginx upstream directives allow instant reloading without dropping active HTTP connections.\n\n### Step 2: Healthcheck Signals\nAutomate rollbacks if new releases fail health signals within 30 seconds.',
     codeSnippet: {
       language: 'nginx',
@@ -354,7 +354,7 @@ server {
     category: 'Systems Architecture',
     readTime: '15 min read',
     difficulty: 'Advanced',
-    summary: 'How to handle 100k concurrent WebSocket connections with Redis Pub/Sub state sync and Node.js cluster worker pools.',
+    summary: 'An example architecture for scaling WebSocket systems with shared state, connection health checks, and multiple workers.',
     content: 'Scaling WebSockets requires decoupling stateful connection sockets from stateless app business logic. Learn how Redis Pub/Sub channels enable multi-node horizontal scaling.\n\n### Connection Pooling\nDistribute socket handlers across worker CPU threads using cluster workers.\n\n### Heartbeat Ping/Pong\nPrevent dead connections from consuming RAM with automated keep-alive probes.',
     codeSnippet: {
       language: 'typescript',
@@ -381,33 +381,18 @@ sub.subscribe('chat_events', (message) => {
 export const SERVICES: TechService[] = [
   {
     id: 'srv-1',
-    title: 'Product Engineering & SaaS',
-    subtitle: 'Turn a strong product idea into software people can use.',
-    description: 'We design and ship production-ready web products, internal tools, and SaaS platforms with a focus on clear UX, maintainable architecture, and a reliable path from MVP to scale.',
+    title: 'Custom Software, SaaS & AI Solutions',
+    subtitle: 'Turn a business need into software your team and customers can rely on.',
+    description: 'We build software solutions that help businesses launch products, improve daily operations, and serve customers more effectively. This includes web and mobile apps, internal tools, SaaS platforms, and practical AI automation.',
     icon: 'Code',
-    badge: 'Popular',
+    badge: 'Business Software',
     features: [
-      'Modern frontend and backend product engineering',
-      'Responsive product interfaces and practical UX systems',
-      'Reliable APIs, authentication, and data architecture',
-      'Testing, release automation, and cloud deployment'
+      'Discovery, planning, and a clear path from idea to first release',
+      'Customer-facing apps, internal tools, and business workflow systems',
+      'AI-assisted workflows, knowledge search, and useful business automation',
+      'Reliable integrations, authentication, data architecture, and deployment'
     ],
-    deliverables: ['Working Product Increment', 'Architecture Documentation', 'Automated Test Coverage', 'Deployment Setup']
-  },
-  {
-    id: 'srv-2',
-    title: 'AI Automation & Data Systems',
-    subtitle: 'Move from AI experiments to useful, measurable workflows.',
-    description: 'We build grounded AI features that fit real operations: knowledge search, document workflows, internal copilots, and agent-assisted processes with evaluation and human control built in.',
-    icon: 'Cpu',
-    badge: 'Featured',
-    features: [
-      'Grounded search and answers over your trusted content',
-      'Workflow automation and tool-using AI agents',
-      'Structured data, knowledge stores, and API integrations',
-      'Evaluation, observability, and production model deployment'
-    ],
-    deliverables: ['AI Workflow Prototype', 'Integration and Data Plan', 'Evaluation Checks', 'Production Handoff']
+    deliverables: ['Working Product Increment', 'AI Workflow or Prototype', 'Architecture Documentation', 'Deployment Setup']
   },
   {
     id: 'srv-3',
@@ -415,7 +400,7 @@ export const SERVICES: TechService[] = [
     subtitle: 'Make better technical decisions before they become expensive.',
     description: 'Get focused guidance for a codebase, pull request, system design, delivery plan, or production incident, with practical next steps your team can act on.',
     icon: 'Users',
-    badge: 'Strategic',
+    badge: 'Guidance & Review',
     features: [
       'Codebase quality, security, and performance reviews',
       'System architecture and scaling plans',
@@ -430,7 +415,7 @@ export const SERVICES: TechService[] = [
     subtitle: 'Make useful technical ideas easier to learn and share.',
     description: 'We create and host practical developer content, from programming tutorials and documentation to architecture explainers, interviews, and Tech Talk episodes.',
     icon: 'BookOpen',
-    badge: 'Educational',
+    badge: 'Learning & Content',
     features: [
       'Step-by-step programming tutorials and implementation guides',
       'API, product, and architecture documentation',
@@ -445,7 +430,7 @@ export const SERVICES: TechService[] = [
     subtitle: 'Build a stronger technical community around your idea.',
     description: 'We support developer communities through useful discussions, workshops, events, knowledge sharing, and partnerships that help people learn and build together.',
     icon: 'Users',
-    badge: 'Community',
+    badge: 'Events & Partnerships',
     features: [
       'Technical workshops, seminars, and community sessions',
       'Developer-focused event and discussion planning',
@@ -462,34 +447,34 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
     title: 'NexusAI — Intelligent Developer Co-pilot & Code Search Engine',
     type: 'Full-Stack SaaS & AI Integration',
     client: 'FinTech Startup',
-    description: 'Built a real-time semantic code search engine that indexes multi-million line codebases and provides instant AI explanations and refactoring suggestions.',
+    description: 'A concept build for semantic code search that organizes a large codebase and helps developers understand unfamiliar files and dependencies.',
     image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&auto=format&fit=crop&q=80',
     techStack: ['Next.js', 'TypeScript', 'Python', 'FastAPI', 'Pinecone', 'Tailwind'],
     demoUrl: 'https://example.com',
     githubUrl: 'https://github.com',
-    impactMetrics: ['99.9% Search Uptime', '<120ms Latency', '45k Monthly Users']
+    impactMetrics: ['Semantic Code Search', 'AI Explanations', 'Refactoring Suggestions']
   },
   {
     id: 'proj-2',
     title: 'PulseFlow — Real-Time Systems Monitoring Dashboard',
     type: 'High-Throughput Web App',
     client: 'Enterprise Logistics',
-    description: 'Designed and engineered a sub-second telemetry visualization platform processing over 50,000 metrics per second with zero UI lag.',
+    description: 'A monitoring dashboard concept for exploring operational data, tracking system signals, and giving teams a clearer view of changing workloads.',
     image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=80',
     techStack: ['React', 'Go', 'WebSockets', 'TimescaleDB', 'Tailwind'],
     demoUrl: 'https://example.com',
-    impactMetrics: ['50k Events/sec', 'Zero Memory Leaks', 'Custom Charting']
+    impactMetrics: ['Live Monitoring', 'Operational Signals', 'Custom Charts']
   }
 ];
 
 export const NEWS_ITEMS: NewsItem[] = [
   {
     id: 'news-1',
-    title: 'Tech Exchange Innovation Fund Unveils NPR 25M Seed Support for Early-Stage Software Startups',
+    title: 'What early-stage software teams should prepare before seeking funding',
     category: 'Venture & Startups',
     date: 'Today, 7:15 PM NPT',
     timeAgo: '12 mins ago',
-    summary: 'A new venture fund backed by tech leaders in Nepal launches to fund early-stage AI agents, developer tooling, and fullstack web applications.',
+    summary: 'A practical overview of the product, customer, and delivery evidence that helps early-stage software teams explain what they are building.',
     source: 'Tech Exchange Newsdesk',
     link: '#',
     isBreaking: true,
@@ -528,7 +513,7 @@ export const NEWS_ITEMS: NewsItem[] = [
     category: 'Education & Grants',
     date: 'Today, 3:30 PM NPT',
     timeAgo: '4 hours ago',
-    summary: 'Selected computer science graduates and developers in Nepal will receive full tuition coverage, high-performance hardware stipends, and direct mentorship from AI researchers.',
+    summary: 'A look at how scholarships, equipment support, and mentorship can help more people in Nepal enter software and AI careers.',
     source: 'Nepal Tech Dispatch',
     link: '#',
     isBreaking: false,
@@ -574,7 +559,7 @@ export const INITIAL_JOBS: JobListing[] = [
     category: 'Fullstack',
     experienceLevel: 'Mid Level',
     salaryRange: 'Competitive Salary',
-    description: 'We are looking for a Full-Stack Developer to build platform features, interactive web applications, developer utilities, and high-performance backend services.',
+    description: 'We are looking for a Full-Stack Developer to build platform features, interactive web applications, developer utilities, and reliable backend services.',
     requirements: [
       'Strong proficiency in React, Next.js, TypeScript, and Node.js backend development.',
       'Experience with relational or NoSQL database design (PostgreSQL, MongoDB, Redis).',
@@ -741,7 +726,7 @@ export const COURSES: Course[] = [
     reviewsCount: 140,
     price: 'FREE',
     badge: 'Free Course',
-    description: 'The ultimate beginner programming course for students and developers in Nepal. Learn core Python syntax, algorithms, object-oriented programming (OOP), file I/O, and data processing with practical exercises.',
+    description: 'A beginner-friendly Python course covering core syntax, data structures, object-oriented programming, file handling, and practical exercises.',
     instructor: {
       name: 'Dinesh Gajurel',
       role: 'Software Architect & Tech Lead',

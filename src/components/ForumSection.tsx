@@ -58,7 +58,7 @@ export const ForumSection: React.FC<ForumSectionProps> = ({
             onClick={onOpenLounge}
             className="px-4 py-2.5 rounded-xl bg-amber-400 text-slate-900 font-extrabold text-xs shadow-sm hover:bg-amber-300 cursor-pointer"
           >
-            Say Hi 👋
+            Say hello
           </button>
           <button
             onClick={onOpenCreatePost}

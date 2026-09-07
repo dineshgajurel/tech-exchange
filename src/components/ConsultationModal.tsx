@@ -11,7 +11,7 @@ interface ConsultationModalProps {
 export const ConsultationModal: React.FC<ConsultationModalProps> = ({ isOpen, onClose, selectedService }) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
-  const [serviceType, setServiceType] = useState('Product Engineering & SaaS');
+  const [serviceType, setServiceType] = useState('Custom Software, SaaS & AI Solutions');
   const [phone, setPhone] = useState('');
   const [budget, setBudget] = useState('NPR 50,000 – 150,000 ($400 – $1,100 USD)');
   const [timeline, setTimeline] = useState('Within 1 Month');
@@ -83,7 +83,7 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({ isOpen, on
                 Start a Project with Tech Exchange
               </h2>
               <p className="text-xs text-slate-500 dark:text-slate-400">
-                Web apps, AI systems, technical advisory, or media collaboration — tell us what you need.
+                Apps, AI systems, technical advisory, or media collaboration — tell us what you need.
               </p>
             </div>
           </div>
@@ -144,8 +144,7 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({ isOpen, on
                 onChange={(e) => setServiceType(e.target.value)}
                 className="w-full px-3.5 py-2.5 text-xs rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white font-medium"
               >
-                <option value="Product Engineering & SaaS">Product Engineering & SaaS</option>
-                <option value="AI Automation & Data Systems">AI Automation & Data Systems</option>
+                <option value="Custom Software, SaaS & AI Solutions">Custom Software, SaaS & AI Solutions</option>
                 <option value="Technical Advisory & Code Review">Technical Advisory & Code Review</option>
                 <option value="Developer Education & Tech Media">Developer Education & Tech Media</option>
                 <option value="Developer Community & Events">Developer Community & Events</option>
@@ -228,7 +227,7 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({ isOpen, on
             </h3>
 
             <p className="text-xs text-slate-600 dark:text-slate-300 max-w-sm mx-auto leading-relaxed">
-              Thanks, <span className="font-bold text-slate-900 dark:text-white">{name}</span>! Your <span className="font-semibold text-blue-600">{serviceType}</span> inquiry is now with our team. We will review your requirements and contact you at <span className="font-bold">{email}</span> within 24 hours to discuss the next step.
+              Thanks, <span className="font-bold text-slate-900 dark:text-white">{name}</span>! Your <span className="font-semibold text-blue-600">{serviceType}</span> inquiry is now with our team. We will review your requirements and follow up at <span className="font-bold">{email}</span> about the next step.
             </p>
 
             <div className="pt-4">

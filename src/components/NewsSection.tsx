@@ -106,7 +106,7 @@ export const NewsSection: React.FC = () => {
                     <div className="flex items-center gap-2">
                       {item.isBreaking && (
                         <span className="px-2.5 py-0.5 rounded-md text-[10px] font-black bg-gradient-to-r from-red-600 to-rose-600 text-white shadow-sm uppercase tracking-wider animate-pulse">
-                          ⚡ BREAKING
+                          BREAKING
                         </span>
                       )}
                       <span className="px-3 py-0.5 rounded-full text-[11px] font-extrabold bg-blue-50 dark:bg-blue-950 text-blue-700 dark:text-blue-300">

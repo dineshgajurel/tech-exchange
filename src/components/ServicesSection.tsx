@@ -25,34 +25,34 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenConsulta
       <div className="text-center max-w-3xl mx-auto mb-12">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-extrabold bg-blue-50 dark:bg-blue-950 text-blue-700 dark:text-blue-300 mb-3 border border-blue-200 dark:border-blue-800">
           <Sparkles className="w-3.5 h-3.5 text-blue-600" />
-           <span>Engineering & Advisory — Nepal to Global</span>
+           <span>Engineering support for founders and product teams</span>
         </div>
         <h2 className="font-heading text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white">
-          We Build Software. We Untangle Complexity.
+          Software Solutions for Real Business Needs.
         </h2>
         <p className="text-base text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">
-          High-performance web apps, AI automation, and expert technical guidance — delivered by Nepal's top senior engineering talent to founders worldwide.
+          We help founders and small teams plan, build, improve, and explain software. Start with a product idea, a codebase, or a technical question.
         </p>
       </div>
 
       {/* Services Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5 mb-12">
         {SERVICES.map((srv) => (
           <div
             key={srv.id}
-            className="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-slate-200/80 dark:border-slate-800 shadow-sm hover:shadow-xl hover:border-blue-300 dark:hover:border-slate-700 transition-all flex flex-col justify-between group relative overflow-hidden"
+            className="bg-white dark:bg-slate-900 rounded-2xl p-6 border border-slate-200/80 dark:border-slate-800 shadow-sm hover:shadow-lg hover:border-blue-300 dark:hover:border-slate-700 transition-all flex flex-col justify-between group relative overflow-hidden"
           >
             {/* Corner Badge */}
-            <div className="absolute top-4 right-4 px-3 py-1 rounded-full text-[11px] font-extrabold bg-blue-50 dark:bg-blue-950 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-800">
+            <div className="absolute top-4 right-4 px-2.5 py-1 rounded-full text-[10px] font-extrabold bg-blue-50 dark:bg-blue-950 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-800">
               {srv.badge}
             </div>
 
             <div>
-              <div className="w-14 h-14 rounded-2xl bg-blue-50 dark:bg-slate-800 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+              <div className="w-12 h-12 rounded-xl bg-blue-50 dark:bg-slate-800 flex items-center justify-center mb-5 group-hover:scale-105 transition-transform">
                 {getIcon(srv.icon)}
               </div>
 
-              <h3 className="font-heading text-xl font-bold text-slate-900 dark:text-white mb-2">
+              <h3 className="font-heading text-lg font-bold text-slate-900 dark:text-white mb-2 pr-10 leading-snug">
                 {srv.title}
               </h3>
 
@@ -60,7 +60,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenConsulta
                 {srv.subtitle}
               </p>
 
-              <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed mb-6">
+              <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed mb-5">
                 {srv.description}
               </p>
 
@@ -96,7 +96,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenConsulta
             Ready to turn your idea into production software?
           </h3>
           <p className="text-sm text-blue-100 max-w-xl">
-            Whether it's a web app MVP, an AI automation pipeline, a codebase audit, or a podcast collaboration — we'd love to hear what you're building.
+            Whether it's a mobile or web app, an AI automation workflow, a codebase review, or a podcast collaboration, tell us what you're building.
           </p>
         </div>
 
@@ -104,7 +104,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenConsulta
           onClick={() => onOpenConsultation()}
           className="px-8 py-4 rounded-2xl bg-white text-blue-600 hover:bg-slate-100 font-black text-sm shadow-lg cursor-pointer transform hover:scale-105 transition-all shrink-0"
         >
-          Let's Talk 👋
+          Let's Talk
         </button>
       </div>
 

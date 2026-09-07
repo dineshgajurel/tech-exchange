@@ -16,6 +16,14 @@ export const PodcastSection: React.FC = () => {
 
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
+  const isRealLink = (url?: string) => Boolean(
+    url &&
+    !url.includes('example.com') &&
+    url !== 'https://youtube.com' &&
+    url !== 'https://spotify.com' &&
+    !url.includes('soundhelix.com/examples/')
+  );
+
   const filterOptions: { id: MediaFilter; label: string; icon: React.ReactNode }[] = [
     { id: 'all', label: 'All Content', icon: <Sparkles className="w-3.5 h-3.5" /> },
     { id: 'show', label: 'Tech Shows', icon: <Tv className="w-3.5 h-3.5" /> },
@@ -202,7 +210,7 @@ export const PodcastSection: React.FC = () => {
 
             {/* Controls depending on Media Type */}
             <div className="pt-4">
-              {activeItem.mediaType === 'podcast' && activeItem.audioUrl ? (
+              {activeItem.mediaType === 'podcast' && isRealLink(activeItem.audioUrl) ? (
                 <div className="space-y-2">
                   <audio
                     ref={audioRef}
@@ -252,27 +260,29 @@ export const PodcastSection: React.FC = () => {
                     <span>{rsvpConfirmedId === activeItem.id ? '✓ Ticket Reserved & Confirmed!' : 'Reserve Free Ticket / RSVP'}</span>
                   </button>
 
-                  <a
-                    href={activeItem.registrationUrl || '#'}
+                  {isRealLink(activeItem.registrationUrl) && (
+                    <a
+                    href={activeItem.registrationUrl}
                     target="_blank"
                     rel="noreferrer"
                     className="flex items-center gap-2 px-5 py-3 rounded-2xl bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs border border-slate-700 transition-all"
-                  >
-                    <span>View Event Calendar</span>
-                    <ExternalLink className="w-3.5 h-3.5 text-slate-400" />
-                  </a>
+                    >
+                      <span>View Event Calendar</span>
+                      <ExternalLink className="w-3.5 h-3.5 text-slate-400" />
+                    </a>
+                  )}
                 </div>
               ) : (
                 <div className="flex items-center gap-3">
-                  <a
-                    href={activeItem.youtubeUrl || 'https://youtube.com'}
+                  {isRealLink(activeItem.youtubeUrl) && <a
+                    href={activeItem.youtubeUrl}
                     target="_blank"
                     rel="noreferrer"
                     className="flex items-center gap-2.5 px-6 py-3 rounded-2xl bg-red-600 hover:bg-red-500 text-white font-extrabold text-xs shadow-lg shadow-red-600/30 cursor-pointer transition-all transform active:scale-95"
                   >
                     <Play className="w-4 h-4 fill-current" />
                     <span>Watch Stream on YouTube</span>
-                  </a>
+                  </a>}
                 </div>
               )}
             </div>
@@ -303,7 +313,7 @@ export const PodcastSection: React.FC = () => {
             )}
 
             <div className="pt-3 border-t border-slate-800 flex items-center gap-2">
-              {activeItem.spotifyUrl && (
+              {isRealLink(activeItem.spotifyUrl) && (
                 <a
                   href={activeItem.spotifyUrl}
                   target="_blank"
@@ -313,7 +323,7 @@ export const PodcastSection: React.FC = () => {
                   Spotify
                 </a>
               )}
-              {activeItem.youtubeUrl && (
+              {isRealLink(activeItem.youtubeUrl) && (
                 <a
                   href={activeItem.youtubeUrl}
                   target="_blank"

@@ -160,7 +160,7 @@ export const ComingSoon: React.FC<ComingSoonProps> = ({ sectionName }) => {
         {/* Bottom CTA */}
         <div className="text-center space-y-4">
           <p className="text-sm font-semibold text-slate-700 dark:text-slate-300">
-            Stay tuned — it'll be worth the wait. 🚀
+            More content is being prepared.
           </p>
           <Link
             to="/"

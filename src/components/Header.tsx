@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { Mic, BookOpen, Briefcase, Code, Newspaper, MessageSquare, Sparkles, Sun, Moon, Menu, X, ArrowRight, Building2, Users, Tv, Calendar, Video, GraduationCap } from 'lucide-react';
+import { BookOpen, Briefcase, Code, MessageSquare, Newspaper, Sparkles, Sun, Moon, Menu, X, ArrowRight, Building2, Users, Tv, GraduationCap } from 'lucide-react';
 import { TechExchangeLogo } from './TechExchangeLogo';
 import { SectionTab } from '../types';
 import { IS_PRODUCTION_READY, GATED_SECTIONS } from '../config';
@@ -32,7 +32,7 @@ export const Header: React.FC<HeaderProps> = ({
     { id: 'courses', path: '/courses', label: 'Courses', icon: <GraduationCap className="w-4 h-4" /> },
     { id: 'news', path: '/news', label: 'Tech News', icon: <Newspaper className="w-4 h-4" /> },
     { id: 'portfolio', path: '/portfolio', label: 'Build Showcase', icon: <Code className="w-4 h-4" /> },
-    { id: 'services', path: '/services', label: 'Services & Consult', icon: <Briefcase className="w-4 h-4" /> },
+    { id: 'services', path: '/services', label: 'Services', icon: <Briefcase className="w-4 h-4" /> },
     { id: 'jobs', path: '/jobs', label: 'Tech Jobs', icon: <Building2 className="w-4 h-4" /> },
     { id: 'about', path: '/about', label: 'About Us', icon: <Users className="w-4 h-4" /> },
   ];
@@ -57,7 +57,7 @@ export const Header: React.FC<HeaderProps> = ({
 
   return (
     <header className="sticky top-0 z-40 w-full backdrop-blur-md bg-white/90 dark:bg-slate-900/90 border-b border-slate-200/80 dark:border-slate-800 transition-colors">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+      <div className="max-w-7xl mx-auto min-w-0 px-4 sm:px-6 lg:px-8 min-h-20 py-3 flex flex-wrap items-center justify-between gap-4 2xl:flex-nowrap">
         
         {/* Official Tech Exchange Logo */}
         <Link
@@ -69,7 +69,11 @@ export const Header: React.FC<HeaderProps> = ({
         </Link>
 
         {/* Desktop Navigation Links */}
-        <nav className="hidden xl:flex items-center gap-1 bg-slate-100/80 dark:bg-slate-800/80 p-1.5 rounded-full border border-slate-200/60 dark:border-slate-700/60">
+        <nav className={`hidden xl:flex min-w-0 items-center justify-between gap-0.5 bg-slate-100/80 dark:bg-slate-800/80 p-1.5 rounded-full border border-slate-200/60 dark:border-slate-700/60 flex-nowrap ${
+          IS_PRODUCTION_READY
+            ? 'xl:order-3 xl:basis-full 2xl:order-none 2xl:basis-auto 2xl:flex-1'
+            : 'xl:flex-none'
+        }`}>
           {visibleNavItems.map((item) => {
             const active = isItemActive(item);
             return (
@@ -77,21 +81,23 @@ export const Header: React.FC<HeaderProps> = ({
                 key={item.id}
                 to={item.path}
                 onClick={() => onSelectTab && onSelectTab(item.id)}
-                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold transition-all cursor-pointer ${
+                className={`flex items-center gap-0.5 px-1.5 py-1.5 rounded-full text-[10px] font-bold text-center leading-tight transition-all cursor-pointer ${
+                  !IS_PRODUCTION_READY ? 'whitespace-nowrap' : ''
+                } ${
                   active
                     ? 'bg-blue-600 text-white shadow-sm shadow-blue-500/30'
                     : 'text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-200/50 dark:hover:bg-slate-700/50'
                 }`}
               >
                 {item.icon}
-                <span>{item.label}</span>
+                <span className={IS_PRODUCTION_READY ? 'max-w-[64px]' : 'max-w-none'}>{item.label}</span>
               </Link>
             );
           })}
         </nav>
 
         {/* Header Right Actions */}
-        <div className="hidden sm:flex items-center gap-3">
+        <div className="hidden xl:flex items-center gap-3 shrink-0">
           
           {/* Dark Mode Switcher */}
           <button
@@ -164,7 +170,7 @@ export const Header: React.FC<HeaderProps> = ({
               }}
               className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-blue-600 text-white font-bold text-sm shadow-md"
             >
-              <span>Collaborate & Consult 👋</span>
+              <span>Collaborate & Consult</span>
             </button>
           </div>
         </div>

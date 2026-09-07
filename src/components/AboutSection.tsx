@@ -156,30 +156,30 @@ export const AboutSection: React.FC = () => {
           </div>
 
           <h1 className="text-3xl sm:text-5xl font-black tracking-tight leading-tight">
-            Talk • Learn • Build <br />
+            Talk. Learn. Build. <br />
             <span className="bg-gradient-to-r from-cyan-400 via-teal-400 to-emerald-400 bg-clip-text text-transparent">
               One Home for Software Developers
             </span>
           </h1>
 
           <p className="text-base sm:text-lg text-slate-300 leading-relaxed font-normal">
-            Tech chats were scattered everywhere — across dozens of server channels, hidden forums, and fragmented feeds. 
-            We created <strong>Tech Exchange</strong> to unify developers around high-craft technical discussions, 
-            hands-on tutorials, tech industry insights, and custom software engineering services.
+            Tech Exchange brings together practical learning, thoughtful technical conversations, and software help. 
+            Developers can find useful material and meet other builders, while founders can work with us on products, 
+            automation, and technical decisions.
           </p>
 
           <div className="pt-2 flex flex-wrap items-center gap-4 text-xs sm:text-sm font-semibold text-slate-300">
             <div className="flex items-center gap-2 bg-slate-800/80 px-4 py-2 rounded-xl border border-slate-700">
               <Users className="w-4 h-4 text-cyan-400" />
-              <span>Growing Developer Community</span>
+              <span>Technical conversations</span>
             </div>
             <div className="flex items-center gap-2 bg-slate-800/80 px-4 py-2 rounded-xl border border-slate-700">
               <Code2 className="w-4 h-4 text-emerald-400" />
-              <span>Early Client Projects Shipped</span>
+              <span>Practical learning resources</span>
             </div>
             <div className="flex items-center gap-2 bg-slate-800/80 px-4 py-2 rounded-xl border border-slate-700">
               <Globe className="w-4 h-4 text-blue-400" />
-              <span>100% Remote Global Culture</span>
+              <span>Software help for product teams</span>
             </div>
           </div>
         </div>
@@ -192,7 +192,7 @@ export const AboutSection: React.FC = () => {
             Our Core Mission & Pillars
           </h2>
           <p className="text-sm text-slate-600 dark:text-slate-400">
-            Built by engineers, for engineers. Here is how we empower the global developer community.
+            A place to learn in public, make better decisions, and keep building.
           </p>
         </div>
 
@@ -227,7 +227,7 @@ export const AboutSection: React.FC = () => {
             </div>
             <h3 className="text-xl font-bold text-slate-900 dark:text-white">3. BUILD — Agency Services</h3>
             <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-              We design and ship high-performance software solutions for startups and enterprises — fullstack web apps, custom AI workflow automation, and cloud microservice pipelines.
+              We help founders and product teams turn ideas into usable software, improve existing systems, and introduce automation where it is genuinely useful.
             </p>
           </div>
 
@@ -297,32 +297,28 @@ export const AboutSection: React.FC = () => {
             </h2>
           </div>
           <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 max-w-md">
-            We are a 100% remote, developer-first team building tools, content, and software solutions for tech creators globally.
+            We are a remote team building useful tools, technical content, and software solutions for developers and product teams.
           </p>
         </div>
 
         {/* Benefits Grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           <div className="p-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 text-center space-y-1">
-            <span className="text-2xl">🌍</span>
             <div className="font-bold text-xs sm:text-sm text-slate-900 dark:text-white">100% Fully Remote</div>
             <div className="text-[11px] text-slate-500">Work from anywhere</div>
           </div>
 
           <div className="p-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 text-center space-y-1">
-            <span className="text-2xl">⏰</span>
             <div className="font-bold text-xs sm:text-sm text-slate-900 dark:text-white">Flexible Schedule</div>
             <div className="text-[11px] text-slate-500">Async-first work culture</div>
           </div>
 
           <div className="p-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 text-center space-y-1">
-            <span className="text-2xl">📚</span>
             <div className="font-bold text-xs sm:text-sm text-slate-900 dark:text-white">Learning Support</div>
             <div className="text-[11px] text-slate-500">Books, courses & tooling</div>
           </div>
 
           <div className="p-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 text-center space-y-1">
-            <span className="text-2xl">🚀</span>
             <div className="font-bold text-xs sm:text-sm text-slate-900 dark:text-white">Growth & Impact</div>
             <div className="text-[11px] text-slate-500">Build core platform tools</div>
           </div>
