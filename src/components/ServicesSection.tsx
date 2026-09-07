@@ -1,9 +1,9 @@
 import React from 'react';
 import { SERVICES } from '../data/initialData';
-import { Code, Cpu, Users, CheckCircle, ArrowRight, Sparkles, MessageSquare } from 'lucide-react';
+import { Code, Cpu, Users, CheckCircle, ArrowRight, Sparkles, MessageSquare, BookOpen } from 'lucide-react';
 
 interface ServicesSectionProps {
-  onOpenConsultation: () => void;
+  onOpenConsultation: (service?: string) => void;
 }
 
 export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenConsultation }) => {
@@ -12,6 +12,8 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenConsulta
       case 'Code': return <Code className="w-6 h-6 text-blue-600 dark:text-blue-400" />;
       case 'Cpu': return <Cpu className="w-6 h-6 text-blue-600 dark:text-blue-400" />;
       case 'Users': return <Users className="w-6 h-6 text-blue-600 dark:text-blue-400" />;
+      case 'MessageSquare': return <MessageSquare className="w-6 h-6 text-blue-600 dark:text-blue-400" />;
+      case 'BookOpen': return <BookOpen className="w-6 h-6 text-blue-600 dark:text-blue-400" />;
       default: return <Sparkles className="w-6 h-6 text-blue-600 dark:text-blue-400" />;
     }
   };
@@ -26,7 +28,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenConsulta
            <span>Engineering & Advisory — Nepal to Global</span>
         </div>
         <h2 className="font-heading text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white">
-          We Build Software. We Solve Hard Problems.
+          We Build Software. We Untangle Complexity.
         </h2>
         <p className="text-base text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">
           High-performance web apps, AI automation, and expert technical guidance — delivered by Nepal's top senior engineering talent to founders worldwide.
@@ -76,7 +78,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenConsulta
             </div>
 
             <button
-              onClick={onOpenConsultation}
+              onClick={() => onOpenConsultation(srv.title)}
               className="w-full py-3 rounded-xl bg-slate-900 hover:bg-blue-600 dark:bg-slate-800 dark:hover:bg-blue-600 text-white font-bold text-xs flex items-center justify-center gap-2 transition-all cursor-pointer shadow-xs"
             >
               <span>Get Started</span>
@@ -99,7 +101,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenConsulta
         </div>
 
         <button
-          onClick={onOpenConsultation}
+          onClick={() => onOpenConsultation()}
           className="px-8 py-4 rounded-2xl bg-white text-blue-600 hover:bg-slate-100 font-black text-sm shadow-lg cursor-pointer transform hover:scale-105 transition-all shrink-0"
         >
           Let's Talk 👋

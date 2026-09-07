@@ -381,48 +381,78 @@ sub.subscribe('chat_events', (message) => {
 export const SERVICES: TechService[] = [
   {
     id: 'srv-1',
-    title: 'Full-Stack Software Development',
-    subtitle: 'Your idea, production-ready — from pixel to deployment.',
-    description: 'We design, architect, and ship high-performance web products, SaaS platforms, and mobile apps that scale with your business — built by engineers who care about craft.',
+    title: 'Product Engineering & SaaS',
+    subtitle: 'Turn a strong product idea into software people can use.',
+    description: 'We design and ship production-ready web products, internal tools, and SaaS platforms with a focus on clear UX, maintainable architecture, and a reliable path from MVP to scale.',
     icon: 'Code',
     badge: 'Popular',
     features: [
-      'React, Next.js, Node.js, Python & Rust Stack',
-      'Responsive, High-Aesthetic UI/UX Systems',
-      'Robust API Architecture & Database Engineering',
-      'CI/CD Pipelines & Cloud Deployment (AWS, Vercel, GCP)'
+      'Modern frontend and backend product engineering',
+      'Responsive product interfaces and practical UX systems',
+      'Reliable APIs, authentication, and data architecture',
+      'Testing, release automation, and cloud deployment'
     ],
-    deliverables: ['Production Source Code', 'Full Architecture Specs', 'Automated Test Suite', 'Deployment Setup']
+    deliverables: ['Working Product Increment', 'Architecture Documentation', 'Automated Test Coverage', 'Deployment Setup']
   },
   {
     id: 'srv-2',
-    title: 'AI Systems & Autonomous Agents',
-    subtitle: 'Make AI work for your business — not the other way around.',
-    description: 'We build custom LLM pipelines, RAG-powered search, AI copilots, and autonomous agent workflows tailored to your data and operations.',
+    title: 'AI Automation & Data Systems',
+    subtitle: 'Move from AI experiments to useful, measurable workflows.',
+    description: 'We build grounded AI features that fit real operations: knowledge search, document workflows, internal copilots, and agent-assisted processes with evaluation and human control built in.',
     icon: 'Cpu',
     badge: 'Featured',
     features: [
-      'Custom RAG (Retrieval-Augmented Generation)',
-      'Autonomous Multi-Agent Orchestration',
-      'Vector Database Integration (Pinecone, Qdrant)',
-      'Fine-tuning & Local Model Deployment (Ollama, vLLM)'
+      'Grounded search and answers over your trusted content',
+      'Workflow automation and tool-using AI agents',
+      'Structured data, knowledge stores, and API integrations',
+      'Evaluation, observability, and production model deployment'
     ],
-    deliverables: ['AI Pipeline Code', 'Vector Store Setup', 'API Gateway', 'Evaluation Dashboard']
+    deliverables: ['AI Workflow Prototype', 'Integration and Data Plan', 'Evaluation Checks', 'Production Handoff']
   },
   {
     id: 'srv-3',
-    title: 'Technical Consultation & Audits',
-    subtitle: 'Senior engineering insight, on demand.',
-    description: 'Hitting scaling walls, security gaps, or tough architecture decisions? Book focused sessions with senior engineers who\'ve shipped production systems at scale.',
+    title: 'Technical Advisory & Code Review',
+    subtitle: 'Make better technical decisions before they become expensive.',
+    description: 'Get focused guidance for a codebase, pull request, system design, delivery plan, or production incident, with practical next steps your team can act on.',
     icon: 'Users',
     badge: 'Strategic',
     features: [
-      'Codebase Quality & Performance Audits',
-      'System Architecture Blueprinting',
-      'Tech Stack & Cloud Cost Optimization',
-      '1-on-1 Advisory & Technical Leadership'
+      'Codebase quality, security, and performance reviews',
+      'System architecture and scaling plans',
+      'Cloud reliability, delivery workflow, and cost review',
+      'Programming support, pair sessions, and engineering coaching'
     ],
-    deliverables: ['Comprehensive Audit Report', 'Refactoring Roadmap', '1-on-1 Advisory Session']
+    deliverables: ['Findings and Risk Report', 'Prioritized Technical Roadmap', 'Review or Advisory Session']
+  },
+  {
+    id: 'srv-4',
+    title: 'Developer Education & Tech Media',
+    subtitle: 'Make useful technical ideas easier to learn and share.',
+    description: 'We create and host practical developer content, from programming tutorials and documentation to architecture explainers, interviews, and Tech Talk episodes.',
+    icon: 'BookOpen',
+    badge: 'Educational',
+    features: [
+      'Step-by-step programming tutorials and implementation guides',
+      'API, product, and architecture documentation',
+      'Technical articles, explainers, interviews, and podcast episodes',
+      'Content shaped around your audience, product, and learning goals'
+    ],
+    deliverables: ['Published Tutorial or Episode', 'Documentation Outline', 'Technical Content Plan']
+  },
+  {
+    id: 'srv-5',
+    title: 'Developer Community & Events',
+    subtitle: 'Build a stronger technical community around your idea.',
+    description: 'We support developer communities through useful discussions, workshops, events, knowledge sharing, and partnerships that help people learn and build together.',
+    icon: 'Users',
+    badge: 'Community',
+    features: [
+      'Technical workshops, seminars, and community sessions',
+      'Developer-focused event and discussion planning',
+      'Partnerships with teams, tools, and local tech communities',
+      'Practical programming and architecture topics for builders'
+    ],
+    deliverables: ['Event or Workshop Plan', 'Session Content', 'Community Collaboration Brief']
   }
 ];
 

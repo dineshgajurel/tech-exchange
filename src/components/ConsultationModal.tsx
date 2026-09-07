@@ -1,21 +1,28 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { X, Send, Sparkles, CheckCircle2, Briefcase, Calendar, DollarSign } from 'lucide-react';
 import confetti from 'canvas-confetti';
 
 interface ConsultationModalProps {
   isOpen: boolean;
   onClose: () => void;
+  selectedService?: string;
 }
 
-export const ConsultationModal: React.FC<ConsultationModalProps> = ({ isOpen, onClose }) => {
+export const ConsultationModal: React.FC<ConsultationModalProps> = ({ isOpen, onClose, selectedService }) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
-  const [serviceType, setServiceType] = useState('Full-Stack Software Development');
+  const [serviceType, setServiceType] = useState('Product Engineering & SaaS');
   const [phone, setPhone] = useState('');
   const [budget, setBudget] = useState('NPR 50,000 – 150,000 ($400 – $1,100 USD)');
   const [timeline, setTimeline] = useState('Within 1 Month');
   const [description, setDescription] = useState('');
   const [submitted, setSubmitted] = useState(false);
+
+  useEffect(() => {
+    if (isOpen && selectedService) {
+      setServiceType(selectedService);
+    }
+  }, [isOpen, selectedService]);
 
   if (!isOpen) return null;
 
@@ -137,10 +144,11 @@ export const ConsultationModal: React.FC<ConsultationModalProps> = ({ isOpen, on
                 onChange={(e) => setServiceType(e.target.value)}
                 className="w-full px-3.5 py-2.5 text-xs rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white font-medium"
               >
-                <option value="Full-Stack Software Development">Full-Stack Software Development</option>
-                <option value="AI Systems & Autonomous Agents">AI Systems & Autonomous Agents</option>
-                <option value="1-on-1 Technical Consultation & Audit">1-on-1 Technical Consultation & Audit</option>
-                <option value="Podcast Guest / Sponsorship">Podcast Guest / Sponsorship</option>
+                <option value="Product Engineering & SaaS">Product Engineering & SaaS</option>
+                <option value="AI Automation & Data Systems">AI Automation & Data Systems</option>
+                <option value="Technical Advisory & Code Review">Technical Advisory & Code Review</option>
+                <option value="Developer Education & Tech Media">Developer Education & Tech Media</option>
+                <option value="Developer Community & Events">Developer Community & Events</option>
                 <option value="Other / General Inquiry">Other / General Inquiry</option>
               </select>
             </div>

@@ -55,8 +55,14 @@ export function App() {
   const [jobs, setJobs] = useState<JobListing[]>(INITIAL_JOBS);
 
   const [isConsultationOpen, setIsConsultationOpen] = useState(false);
+  const [selectedConsultationService, setSelectedConsultationService] = useState<string | undefined>();
   const [isLoungeOpen, setIsLoungeOpen] = useState(false);
   const [isCreatePostOpen, setIsCreatePostOpen] = useState(false);
+
+  const handleOpenConsultation = (service?: string) => {
+    setSelectedConsultationService(service);
+    setIsConsultationOpen(true);
+  };
 
   const handleAddLoungeMessage = (msg: Omit<LoungeMessage, 'id' | 'likes' | 'timestamp'>) => {
     const newMsg: LoungeMessage = {
@@ -82,7 +88,7 @@ export function App() {
       {/* Header Navigation */}
       <Header
         onSelectTab={handleSelectTab}
-        onOpenConsultation={() => setIsConsultationOpen(true)}
+        onOpenConsultation={handleOpenConsultation}
         darkMode={darkMode}
         onToggleDarkMode={toggleDarkMode}
       />
@@ -95,7 +101,7 @@ export function App() {
             element={
               <HomeSection
                 onSelectTab={handleSelectTab}
-                onOpenConsultation={() => setIsConsultationOpen(true)}
+                onOpenConsultation={handleOpenConsultation}
                 onOpenLounge={() => setIsLoungeOpen(true)}
               />
             }
@@ -103,7 +109,7 @@ export function App() {
           <Route path="/podcast" element={IS_PRODUCTION_READY ? <PodcastSection /> : <ComingSoon sectionName="Tech Talk" />} />
           <Route path="/tutorials" element={IS_PRODUCTION_READY ? <TutorialsSection /> : <ComingSoon sectionName="Tech Explained" />} />
           <Route path="/courses" element={IS_PRODUCTION_READY ? <CoursesSection /> : <ComingSoon sectionName="Courses" />} />
-          <Route path="/services" element={<ServicesSection onOpenConsultation={() => setIsConsultationOpen(true)} />} />
+          <Route path="/services" element={<ServicesSection onOpenConsultation={handleOpenConsultation} />} />
           <Route path="/portfolio" element={IS_PRODUCTION_READY ? <PortfolioSection onOpenConsultation={() => setIsConsultationOpen(true)} /> : <ComingSoon sectionName="Build Showcase" />} />
           <Route path="/news" element={IS_PRODUCTION_READY ? <NewsSection /> : <ComingSoon sectionName="Tech News" />} />
           <Route path="/jobs" element={IS_PRODUCTION_READY ? <JobsSection jobs={jobs} onAddJob={handleAddJob} /> : <ComingSoon sectionName="Tech Jobs" />} />
@@ -143,6 +149,7 @@ export function App() {
       <ConsultationModal
         isOpen={isConsultationOpen}
         onClose={() => setIsConsultationOpen(false)}
+        selectedService={selectedConsultationService}
       />
 
       <CommunityLoungeModal
