@@ -6,7 +6,7 @@ import confetti from 'canvas-confetti';
 
 type MediaFilter = 'all' | 'show' | 'event' | 'seminar' | 'video' | 'podcast';
 
-export const PodcastSection: React.FC = () => {
+export const PodcastSection: React.FC<{ pageHeading?: boolean }> = ({ pageHeading = false }) => {
   const [activeItem, setActiveItem] = useState<PodcastEpisode>(PODCAST_EPISODES[0]);
   const [activeFilter, setActiveFilter] = useState<MediaFilter>('all');
   const [isPlaying, setIsPlaying] = useState(false);
@@ -120,9 +120,11 @@ export const PodcastSection: React.FC = () => {
           <Tv className="w-4 h-4 text-blue-600" />
           <span>Tech Talk Hub — Shows, Seminars & Podcasts</span>
         </div>
-        <h2 className="font-heading text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
-          Tech Talk
-        </h2>
+        {pageHeading ? (
+          <h1 className="font-heading text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">Tech Talk</h1>
+        ) : (
+          <h2 className="font-heading text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">Tech Talk</h2>
+        )}
         <p className="text-sm text-slate-600 dark:text-slate-400 mt-1">
           Watch video shows, attend tech seminars & live meetups, watch video demos, and listen to podcasts.
         </p>

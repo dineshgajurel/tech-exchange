@@ -25,6 +25,7 @@ import { useDarkMode } from './hooks/useDarkMode';
 import { useForumPosts } from './hooks/useForumPosts';
 import { IS_PRODUCTION_READY } from './config';
 import { ComingSoon } from './components/ComingSoon';
+import { SEO } from './components/SEO';
 
 export function App() {
   const { darkMode, toggleDarkMode } = useDarkMode();
@@ -85,6 +86,7 @@ export function App() {
 
   return (
     <div className="min-h-screen flex flex-col bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 transition-colors">
+      <SEO />
       {/* Header Navigation */}
       <Header
         onSelectTab={handleSelectTab}
@@ -106,10 +108,10 @@ export function App() {
               />
             }
           />
-          <Route path="/podcast" element={IS_PRODUCTION_READY ? <PodcastSection /> : <ComingSoon sectionName="Tech Talk" />} />
-          <Route path="/tutorials" element={IS_PRODUCTION_READY ? <TutorialsSection /> : <ComingSoon sectionName="Tech Explained" />} />
-          <Route path="/courses" element={IS_PRODUCTION_READY ? <CoursesSection /> : <ComingSoon sectionName="Courses" />} />
-          <Route path="/services" element={<ServicesSection onOpenConsultation={handleOpenConsultation} />} />
+          <Route path="/podcast" element={IS_PRODUCTION_READY ? <PodcastSection pageHeading /> : <ComingSoon sectionName="Tech Talk" />} />
+          <Route path="/tutorials" element={IS_PRODUCTION_READY ? <TutorialsSection pageHeading /> : <ComingSoon sectionName="Tech Explained" />} />
+          <Route path="/courses" element={IS_PRODUCTION_READY ? <CoursesSection pageHeading /> : <ComingSoon sectionName="Courses" />} />
+          <Route path="/services" element={<ServicesSection onOpenConsultation={handleOpenConsultation} pageHeading />} />
           <Route path="/portfolio" element={IS_PRODUCTION_READY ? <PortfolioSection onOpenConsultation={() => setIsConsultationOpen(true)} /> : <ComingSoon sectionName="Build Showcase" />} />
           <Route path="/news" element={IS_PRODUCTION_READY ? <NewsSection /> : <ComingSoon sectionName="Tech News" />} />
           <Route path="/jobs" element={IS_PRODUCTION_READY ? <JobsSection jobs={jobs} onAddJob={handleAddJob} /> : <ComingSoon sectionName="Tech Jobs" />} />

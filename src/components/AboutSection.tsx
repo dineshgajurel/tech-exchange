@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   Users,
   Target,
@@ -77,6 +77,42 @@ export const AboutSection: React.FC = () => {
   const [applicantCvUrl, setApplicantCvUrl] = useState('');
   const [applicantNote, setApplicantNote] = useState('');
   const [appliedSuccess, setAppliedSuccess] = useState(false);
+
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.dataset.careerSchema = 'true';
+    script.textContent = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@graph': INTERNAL_ROLES.map((role) => ({
+        '@type': 'JobPosting',
+        title: role.title,
+        description: `${role.description} Key requirements: ${role.requirements.join('; ')}.`,
+        datePosted: new Date().toISOString().slice(0, 10),
+        identifier: {
+          '@type': 'PropertyValue',
+          name: 'Tech Exchange',
+          value: role.id,
+        },
+        employmentType: role.type.includes('Part-time') ? ['FULL_TIME', 'PART_TIME'] : 'FULL_TIME',
+        hiringOrganization: {
+          '@type': 'Organization',
+          name: 'Tech Exchange',
+          sameAs: 'https://www.techexchange.dev',
+          logo: 'https://www.techexchange.dev/logo.png',
+        },
+        jobLocationType: 'TELECOMMUTE',
+        applicantLocationRequirements: {
+          '@type': 'AdministrativeArea',
+          name: 'Worldwide',
+        },
+        url: `https://www.techexchange.dev/about#${role.id}`,
+      })),
+    });
+    document.head.appendChild(script);
+
+    return () => script.remove();
+  }, []);
 
   const GOOGLE_FORM_RESPONSE_URL =
     'https://docs.google.com/forms/d/e/1FAIpQLSdtPkKUhJilve_47oo8waKYvU3-YDoR6viTj00gRkzEME8SzQ/formResponse';
@@ -283,7 +319,7 @@ export const AboutSection: React.FC = () => {
       </section>
 
       {/* Careers Section */}
-      <section className="space-y-8 pt-4">
+      <section id="careers" aria-labelledby="careers-heading" className="space-y-8 pt-4">
         
         {/* Header */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-slate-200 dark:border-slate-800 pb-6">
@@ -292,7 +328,7 @@ export const AboutSection: React.FC = () => {
               <Briefcase className="w-4 h-4" />
               <span>Careers at Tech Exchange</span>
             </div>
-            <h2 className="text-2xl sm:text-4xl font-black text-slate-900 dark:text-white">
+            <h2 id="careers-heading" className="text-2xl sm:text-4xl font-black text-slate-900 dark:text-white">
               Join Our Engineering & Media Team
             </h2>
           </div>
@@ -335,6 +371,7 @@ export const AboutSection: React.FC = () => {
             {INTERNAL_ROLES.map((role) => (
               <div
                 key={role.id}
+                id={role.id}
                 className="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 hover:border-blue-500/50 transition-all flex flex-col md:flex-row md:items-center justify-between gap-6 shadow-xs"
               >
                 <div className="space-y-2">

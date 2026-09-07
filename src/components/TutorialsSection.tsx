@@ -3,7 +3,7 @@ import { TUTORIALS } from '../data/initialData';
 import { BookOpen, Code2, Clock, Sparkles, X, Check, Copy, Share2, ArrowRight, Layers } from 'lucide-react';
 import { Tutorial } from '../types';
 
-export const TutorialsSection: React.FC = () => {
+export const TutorialsSection: React.FC<{ pageHeading?: boolean }> = ({ pageHeading = false }) => {
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
   const [activeTutorial, setActiveTutorial] = useState<Tutorial | null>(null);
   const [copied, setCopied] = useState(false);
@@ -31,9 +31,11 @@ export const TutorialsSection: React.FC = () => {
             <BookOpen className="w-3.5 h-3.5 text-blue-600" />
             <span>Tech Explained — Knowledge Hub</span>
           </div>
-          <h2 className="font-heading text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white">
-            Tutorials, Guides & Deep Dives
-          </h2>
+          {pageHeading ? (
+            <h1 className="font-heading text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white">Tutorials, Guides & Deep Dives</h1>
+          ) : (
+            <h2 className="font-heading text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white">Tutorials, Guides & Deep Dives</h2>
+          )}
           <p className="text-sm text-slate-600 dark:text-slate-400 mt-1 max-w-2xl">
             Big technical concepts explained simply. Step-by-step engineering breakdowns, interactive code snippets, and architecture blueprints.
           </p>

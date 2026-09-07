@@ -7,7 +7,7 @@ import confetti from 'canvas-confetti';
 type CategoryFilter = 'All' | 'Fullstack Web' | 'AI & LLM Engineering' | 'Data & Python' | 'DevOps & Cloud' | 'Mobile Dev';
 type LevelFilter = 'All' | 'Beginner' | 'Intermediate' | 'Advanced';
 
-export const CoursesSection: React.FC = () => {
+export const CoursesSection: React.FC<{ pageHeading?: boolean }> = ({ pageHeading = false }) => {
   const [selectedCategory, setSelectedCategory] = useState<CategoryFilter>('All');
   const [selectedLevel, setSelectedLevel] = useState<LevelFilter>('All');
   const [searchQuery, setSearchQuery] = useState('');
@@ -60,9 +60,11 @@ export const CoursesSection: React.FC = () => {
             <span>Tech Exchange Academy — Practical Programming Courses</span>
           </div>
 
-          <h2 className="font-heading text-3xl sm:text-5xl font-black tracking-tight leading-tight text-white">
-            Master Software Engineering & AI Engineering
-          </h2>
+          {pageHeading ? (
+            <h1 className="font-heading text-3xl sm:text-5xl font-black tracking-tight leading-tight text-white">Master Software Engineering & AI Engineering</h1>
+          ) : (
+            <h2 className="font-heading text-3xl sm:text-5xl font-black tracking-tight leading-tight text-white">Master Software Engineering & AI Engineering</h2>
+          )}
 
           <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
             Practical, project-based courses built for developers in Nepal & remote software teams. Hands-on code, real-world architecture, and verified certificates.

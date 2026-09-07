@@ -4,9 +4,10 @@ import { Code, Cpu, Users, CheckCircle, ArrowRight, Sparkles, MessageSquare, Boo
 
 interface ServicesSectionProps {
   onOpenConsultation: (service?: string) => void;
+  pageHeading?: boolean;
 }
 
-export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenConsultation }) => {
+export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenConsultation, pageHeading = false }) => {
   const getIcon = (iconName: string) => {
     switch (iconName) {
       case 'Code': return <Code className="w-6 h-6 text-blue-600 dark:text-blue-400" />;
@@ -27,9 +28,15 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onOpenConsulta
           <Sparkles className="w-3.5 h-3.5 text-blue-600" />
            <span>Engineering support for founders and product teams</span>
         </div>
-        <h2 className="font-heading text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white">
-          Software Solutions for Real Business Needs.
-        </h2>
+        {pageHeading ? (
+          <h1 className="font-heading text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white">
+            Software Solutions for Real Business Needs.
+          </h1>
+        ) : (
+          <h2 className="font-heading text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white">
+            Software Solutions for Real Business Needs.
+          </h2>
+        )}
         <p className="text-base text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">
           We help founders and small teams plan, build, improve, and explain software. Start with a product idea, a codebase, or a technical question.
         </p>

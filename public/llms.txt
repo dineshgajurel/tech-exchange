@@ -1,0 +1,24 @@
+# Tech Exchange
+
+> Tech Exchange is Nepal's developer community and engineering studio for practical learning, thoughtful collaboration, and software services.
+
+## Primary pages
+
+- [Home](https://www.techexchange.dev/): Overview of the Tech Exchange community and engineering studio.
+- [about](https://www.techexchange.dev/about): Mission, culture, and remote career opportunities at Tech Exchange. See the careers section at /about#careers.
+- [services](https://www.techexchange.dev/services): Software engineering, AI agent, web application, and consulting services.
+
+## Careers
+
+- [about#careers](https://www.techexchange.dev/about#careers): Open remote engineering and media roles at Tech Exchange.
+
+## Community and learning
+
+
+
+## Other pages
+
+- [privacy](https://www.techexchange.dev/privacy): Privacy policy.
+- [terms](https://www.techexchange.dev/terms): Terms of service.
+
+For the complete URL list and crawl guidance, see [sitemap.xml](https://www.techexchange.dev/sitemap.xml) and [robots.txt](https://www.techexchange.dev/robots.txt).
