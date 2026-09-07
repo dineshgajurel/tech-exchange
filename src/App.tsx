@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Routes, Route, useNavigate, Navigate } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { Routes, Route, useLocation, useNavigate, Navigate } from 'react-router-dom';
 import { Header } from './components/Header';
 import { HomeSection } from './components/HomeSection';
 import { PodcastSection } from './components/PodcastSection';
@@ -29,7 +29,20 @@ import { SEO } from './components/SEO';
 
 export function App() {
   const { darkMode, toggleDarkMode } = useDarkMode();
+  const { pathname, hash } = useLocation();
   const navigate = useNavigate();
+
+  useEffect(() => {
+    if (hash) {
+      const targetId = decodeURIComponent(hash.slice(1));
+      requestAnimationFrame(() => {
+        document.getElementById(targetId)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+      return;
+    }
+
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+  }, [pathname, hash]);
 
   const handleSelectTab = (tab: SectionTab) => {
     const path = tab === 'home' ? '/' : `/${tab}`;
