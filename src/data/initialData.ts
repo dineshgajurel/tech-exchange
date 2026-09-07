@@ -561,6 +561,7 @@ export const INITIAL_JOBS: JobListing[] = [
     salaryRange: 'Competitive Salary',
     description: 'We are looking for a Full-Stack Developer to build platform features, interactive web applications, developer utilities, and reliable backend services.',
     requirements: [
+      '3+ years of professional full-stack development experience.',
       'Strong proficiency in React, Next.js, TypeScript, and Node.js backend development.',
       'Experience with relational or NoSQL database design (PostgreSQL, MongoDB, Redis).',
       'Knowledge of responsive UI layouts, CSS, and modern API architecture (REST/GraphQL).',
@@ -583,6 +584,7 @@ export const INITIAL_JOBS: JobListing[] = [
     salaryRange: 'Competitive Salary',
     description: 'Lead content production for Tech Talk podcasts, write step-by-step developer tutorials, curate tech news updates, and foster developer community growth.',
     requirements: [
+      '2+ years of experience in technical content, media production, or developer community management.',
       'Experience in technical writing, podcast hosting/editing, or developer community management.',
       'Strong written and verbal communication skills with a focus on software engineering topics.',
       'Ability to independently plan content schedules, interview tech leaders, and publish developer guides.'

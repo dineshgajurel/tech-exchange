@@ -44,6 +44,7 @@ const INTERNAL_ROLES: OpenRole[] = [
     salary: 'Competitive Salary',
     description: 'Help build and scale Tech Exchange platform modules, developer tools, interactive web applications, and backend APIs.',
     requirements: [
+      '3+ years of professional experience building production web applications',
       'Strong hands-on experience building production web applications with React, Next.js, and TypeScript',
       'Understand Next.js routing, server-side rendering, data fetching, and performance fundamentals',
       'Build and integrate reliable Node.js REST or GraphQL APIs with clear validation and error handling',
@@ -60,10 +61,27 @@ const INTERNAL_ROLES: OpenRole[] = [
     salary: 'Competitive Salary',
     description: 'Manage Tech Talk podcasts, write step-by-step developer tutorials, publish tech news, and foster developer community growth.',
     requirements: [
+      '2+ years of experience in technical content, media production, or developer community work',
       'Explain software concepts accurately through tutorials, articles, interviews, or short-form media',
       'Plan and produce developer-focused content from research through publication',
       'Use basic audio, video, and editing workflows to create polished episodes and clips',
       'Engage respectfully with technical communities and turn audience feedback into better content'
+    ]
+  },
+  {
+    id: 'te-role-3',
+    title: 'Video Editor & Content Producer',
+    department: 'Media & Community',
+    location: '100% Remote',
+    type: 'Full-time / Part-time',
+    salary: 'Competitive Salary',
+    description: 'Edit Tech Talk episodes, developer tutorials, short-form clips, and social media videos that make technical ideas clear and engaging.',
+    requirements: [
+      '2+ years of professional video editing or content production experience',
+      'Experience editing video for podcasts, tutorials, interviews, or social media',
+      'Comfortable with tools such as Adobe Premiere Pro, DaVinci Resolve, Final Cut Pro, or similar',
+      'Strong sense of pacing, audio quality, captions, visual storytelling, and platform formats',
+      'Organize raw footage, project files, thumbnails, and exports reliably in a remote workflow'
     ]
   }
 ];
